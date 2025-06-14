@@ -15,7 +15,7 @@ const About = () => {
           <Card className="w-full max-w-sm border-none shadow-xl overflow-hidden">
             <CardContent className="p-0">
               <img 
-                src="https://images.unsplash.com/photo-1516035069371-29a1b244cc32?q=80&w=1964&auto=format&fit=crop"
+                src="/lovable-uploads/27b0d5ec-f720-416e-b010-7827e0c65c4f.png"
                 alt="Tharun holding a camera"
                 className="rounded-lg object-cover w-full h-auto"
               />
