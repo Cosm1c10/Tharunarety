@@ -1,4 +1,6 @@
 
+import { Button } from "@/components/ui/button";
+
 const Header = () => {
   return (
     <header className="flex justify-between items-center w-full">
@@ -7,11 +9,19 @@ const Header = () => {
           Tharun Arety
         </a>
       </div>
-      <nav className="hidden md:flex items-center gap-10 text-base font-light">
-        <a href="#about" className="hover:opacity-70 transition-opacity">About Me</a>
-        <a href="#portfolio" className="hover:opacity-70 transition-opacity">Portfolio</a>
-        <a href="#photography" className="hover:opacity-70 transition-opacity">Photography</a>
-        <a href="#contact" className="hover:opacity-70 transition-opacity">Contact</a>
+      <nav className="hidden md:flex items-center gap-2 text-base">
+        <Button variant="ghost" asChild>
+          <a href="#about">About Me</a>
+        </Button>
+        <Button variant="ghost" asChild>
+          <a href="#portfolio">Portfolio</a>
+        </Button>
+        <Button variant="ghost" asChild>
+          <a href="#photography">Photography</a>
+        </Button>
+        <Button variant="ghost" asChild>
+          <a href="#contact">Contact</a>
+        </Button>
       </nav>
     </header>
   );
