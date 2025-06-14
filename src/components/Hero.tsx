@@ -1,4 +1,3 @@
-
 import { ArrowDown } from 'lucide-react';
 import Header from '@/components/Header';
 const Hero = () => {
@@ -25,19 +24,15 @@ const Hero = () => {
             <div className="flex gap-8 md:gap-12 mb-8 md:mb-10">
               <div>
                 <p className="text-4xl md:text-5xl font-light">
-                  Product
-                </p>
+              </p>
                 <p className="text-xs md:text-sm text-gray-500 font-light mt-1">
-                  Designer
-                </p>
+              </p>
               </div>
               <div>
                 <p className="text-4xl md:text-5xl font-light">
-                  Mechanical
-                </p>
+              </p>
                 <p className="text-xs md:text-sm text-gray-500 font-light mt-1">
-                  Engineer
-                </p>
+              </p>
               </div>
             </div>
             <h1 className="text-[8rem] sm:text-[10rem] md:text-display font-extralight leading-none -ml-1 md:-ml-2">Hello</h1>
