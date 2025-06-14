@@ -7,10 +7,10 @@ const Header = () => (
       <PenTool size={32} strokeWidth={1.5} />
     </div>
     <nav className="hidden md:flex items-center gap-10 text-base font-light">
-      <a href="#" className="hover:opacity-70 transition-opacity">About Me</a>
-      <a href="#" className="hover:opacity-70 transition-opacity">Portfolio</a>
-      <a href="#" className="hover:opacity-70 transition-opacity">Services</a>
-      <a href="#" className="hover:opacity-70 transition-opacity">Blog</a>
+      <a href="#about" className="hover:opacity-70 transition-opacity">About Me</a>
+      <a href="#portfolio" className="hover:opacity-70 transition-opacity">Portfolio</a>
+      <a href="#photography" className="hover:opacity-70 transition-opacity">Photography</a>
+      <a href="#contact" className="hover:opacity-70 transition-opacity">Contact</a>
     </nav>
   </header>
 );

@@ -46,4 +46,8 @@
     @apply bg-background text-foreground;
     font-family: 'Poppins', sans-serif;
   }
+
+  html {
+    @apply scroll-smooth;
+  }
 }
