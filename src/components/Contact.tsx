@@ -28,7 +28,7 @@ const Contact = () => {
                     </a>
                     <a href="https://www.linkedin.com/in/tharun-arety/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
                         <Linkedin className="h-6 w-6 text-primary"/>
-                        <span className="text-lg group-hover:underline">LinkedIn Profile</span>
+                        <span className="text-lg group-hover:underline">linked in</span>
                     </a>
                 </div>
             </div>
