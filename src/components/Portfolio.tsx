@@ -1,3 +1,4 @@
+
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Lightbulb, Code, Rocket, Linkedin } from "lucide-react";
@@ -51,7 +52,7 @@ const Portfolio = () => {
 
         <div className="text-center flex flex-col sm:flex-row gap-4 justify-center">
           <Button size="lg">View My Projects</Button>
-          <Button size="lg" variant="outline" asChild>
+          <Button size="lg" asChild>
             <a href="https://www.linkedin.com/in/tharun-arety/" target="_blank" rel="noopener noreferrer">
               <Linkedin />
               LinkedIn Profile
