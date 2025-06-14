@@ -1,7 +1,8 @@
+
 import { ArrowDown } from 'lucide-react';
 import Header from '@/components/Header';
 const Hero = () => {
-  return <section id="home" className="bg-background text-foreground min-h-screen font-sans relative overflow-hidden">
+  return <section id="home" className="bg-background text-foreground min-h-screen font-sans relative">
       
       {/* Decorative Side Elements */}
       <div className="hidden md:block absolute top-1/2 -left-16 transform -translate-y-1/2 -rotate-90 z-20">
@@ -18,7 +19,7 @@ const Hero = () => {
       <div className="relative min-h-screen flex flex-col p-8 md:p-12">
         <Header />
 
-        <main className="flex-grow grid md:grid-cols-2 gap-8 items-center pt-16 md:pt-0">
+        <div className="flex-grow grid md:grid-cols-2 gap-8 items-center pt-16 md:pt-0">
           {/* Left Column: Text content */}
           <div className="relative z-10 order-2 md:order-1 mt-8 md:mt-0">
             <div className="flex gap-8 md:gap-12 mb-8 md:mb-10">
@@ -45,7 +46,7 @@ const Hero = () => {
 
           {/* Right Column: Empty for spacing */}
           <div className="relative order-1 md:order-2 h-64 md:h-auto"></div>
-        </main>
+        </div>
       </div>
 
       {/* Background Image Container */}
