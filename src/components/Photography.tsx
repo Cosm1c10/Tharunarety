@@ -1,4 +1,14 @@
 
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+
+const photos = [
+  { src: "/lovable-uploads/f7ebdad9-473e-4e45-987f-215d662e1c47.png", alt: "A person and a child walking down a long, ornate temple hallway" },
+  { src: "/lovable-uploads/17bd82c2-e0e5-4600-a2dd-64b73e4a8b86.png", alt: "A white horse in a field of yellow flowers" },
+  { src: "/lovable-uploads/68fb0042-4c44-4a77-a5f3-14ba2fc1898d.png", alt: "A tram on grassy tracks between rows of autumn trees" },
+  { src: "/lovable-uploads/868314e2-5d2d-4b16-950d-6e89ca616144.png", alt: "A man holding a professional camera." },
+  { src: "/lovable-uploads/90d240f7-5b0d-40b8-a20d-68997c0ed2f1.png", alt: "A person with a camera on a tripod facing a mountain range." },
+];
+
 const Photography = () => {
   return (
     <section id="photography" className="py-20 md:py-32 px-8 md:px-12 bg-secondary">
@@ -11,11 +21,25 @@ const Photography = () => {
         {/* Photo Gallery */}
         <div className="mb-20">
           <h3 className="text-2xl font-light text-center mb-8">Photography Showcase</h3>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-            <img src="/lovable-uploads/f7ebdad9-473e-4e45-987f-215d662e1c47.png" alt="A person and a child walking down a long, ornate temple hallway" className="w-full h-full object-cover rounded-lg shadow-md aspect-square" />
-            <img src="/lovable-uploads/17bd82c2-e0e5-4600-a2dd-64b73e4a8b86.png" alt="A white horse in a field of yellow flowers" className="w-full h-full object-cover rounded-lg shadow-md aspect-square" />
-            <img src="/lovable-uploads/68fb0042-4c44-4a77-a5f3-14ba2fc1898d.png" alt="A tram on grassy tracks between rows of autumn trees" className="w-full h-full object-cover rounded-lg shadow-md aspect-square" />
-          </div>
+          <Carousel
+            opts={{
+              align: "start",
+              loop: true,
+            }}
+            className="w-full max-w-sm sm:max-w-xl md:max-w-4xl lg:max-w-6xl mx-auto"
+          >
+            <CarouselContent>
+              {photos.map((photo, index) => (
+                <CarouselItem key={index} className="sm:basis-1/2 lg:basis-1/3">
+                  <div className="p-1">
+                    <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover rounded-lg shadow-md aspect-square" />
+                  </div>
+                </CarouselItem>
+              ))}
+            </CarouselContent>
+            <CarouselPrevious />
+            <CarouselNext />
+          </Carousel>
         </div>
 
         {/* Video Gallery */}
