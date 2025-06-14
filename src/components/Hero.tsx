@@ -1,14 +1,11 @@
-
 import { ArrowDown } from 'lucide-react';
 import Header from '@/components/Header';
-
 const Hero = () => {
-  return (
-    <section id="home" className="bg-background text-foreground min-h-screen font-sans relative overflow-hidden">
+  return <section id="home" className="bg-background text-foreground min-h-screen font-sans relative overflow-hidden">
       
       {/* Decorative Side Elements */}
       <div className="hidden md:block absolute top-1/2 -left-16 transform -translate-y-1/2 -rotate-90 z-20">
-          <span className="text-sm font-light tracking-[0.3em] uppercase text-gray-500 whitespace-nowrap">Product designer</span>
+          <span className="text-sm font-light tracking-[0.3em] uppercase text-gray-500 whitespace-nowrap"></span>
       </div>
       <div className="absolute bottom-8 left-8 md:left-12 flex items-center gap-12 text-sm font-light z-20">
         <span>2024</span>
@@ -26,12 +23,16 @@ const Hero = () => {
           <div className="relative z-10 order-2 md:order-1 mt-8 md:mt-0">
             <div className="flex gap-8 md:gap-12 mb-8 md:mb-10">
               <div>
-                <p className="text-4xl md:text-5xl font-light">+200</p>
-                <p className="text-xs md:text-sm text-gray-500 font-light mt-1">Project completed</p>
+                <p className="text-4xl md:text-5xl font-light">
+              </p>
+                <p className="text-xs md:text-sm text-gray-500 font-light mt-1">
+              </p>
               </div>
               <div>
-                <p className="text-4xl md:text-5xl font-light">+50</p>
-                <p className="text-xs md:text-sm text-gray-500 font-light mt-1">Startup raised</p>
+                <p className="text-4xl md:text-5xl font-light">
+              </p>
+                <p className="text-xs md:text-sm text-gray-500 font-light mt-1">
+              </p>
               </div>
             </div>
             <h1 className="text-[8rem] sm:text-[10rem] md:text-display font-extralight leading-none -ml-1 md:-ml-2">Hello</h1>
@@ -51,7 +52,6 @@ const Hero = () => {
         }} />
           </div>
       </div>
-    </section>
-  );
+    </section>;
 };
 export default Hero;
