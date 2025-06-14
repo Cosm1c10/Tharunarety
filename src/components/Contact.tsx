@@ -1,5 +1,5 @@
 
-import { Mail, MapPin, Camera, Linkedin } from "lucide-react";
+import { Mail, MapPin, Instagram, Linkedin } from "lucide-react";
 
 const Contact = () => {
   return (
@@ -23,7 +23,7 @@ const Contact = () => {
                         <span className="text-lg">Ausburg, Germany</span>
                     </div>
                     <a href="https://www.instagram.com/tharuns_perspective" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
-                        <Camera className="h-6 w-6 text-primary"/>
+                        <Instagram className="h-6 w-6 text-primary"/>
                         <span className="text-lg group-hover:underline">@tharuns_perspective</span>
                     </a>
                     <a href="https://www.linkedin.com/in/tharun-arety/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
@@ -38,3 +38,4 @@ const Contact = () => {
   );
 };
 export default Contact;
+
