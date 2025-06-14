@@ -1,17 +1,14 @@
-
 import Header from '@/components/Header';
 import { ArrowDown } from 'lucide-react';
-
 const Index = () => {
-  return (
-    <div className="bg-background text-foreground min-h-screen font-sans relative overflow-hidden">
+  return <div className="bg-background text-foreground min-h-screen font-sans relative overflow-hidden">
       
       {/* Decorative Side Elements */}
       <div className="hidden md:block absolute top-1/2 -left-16 transform -translate-y-1/2 -rotate-90 z-20">
-          <span className="text-sm font-light tracking-[0.3em] uppercase text-gray-500 whitespace-nowrap">Product designer</span>
+          <span className="text-sm font-light tracking-[0.3em] uppercase text-gray-500 whitespace-nowrap"></span>
       </div>
       <div className="absolute bottom-8 left-8 md:left-12 flex items-center gap-12 text-sm font-light z-20">
-        <span>2024</span>
+        <span>2025</span>
         <a href="#more" className="flex items-center gap-2 hover:opacity-70 transition-opacity">
           Scroll down <ArrowDown size={16} />
         </a>
@@ -26,18 +23,19 @@ const Index = () => {
           <div className="relative z-10 order-2 md:order-1 mt-8 md:mt-0">
             <div className="flex gap-8 md:gap-12 mb-8 md:mb-10">
               <div>
-                <p className="text-4xl md:text-5xl font-light">+200</p>
-                <p className="text-xs md:text-sm text-gray-500 font-light mt-1">Project completed</p>
+                <p className="text-4xl md:text-5xl font-light"></p>
+                <p className="text-xs md:text-sm text-gray-500 font-light mt-1">
+              </p>
               </div>
               <div>
-                <p className="text-4xl md:text-5xl font-light">+50</p>
-                <p className="text-xs md:text-sm text-gray-500 font-light mt-1">Startup raised</p>
+                <p className="text-4xl md:text-5xl font-light">
+              </p>
+                <p className="text-xs md:text-sm text-gray-500 font-light mt-1">
+              </p>
               </div>
             </div>
             <h1 className="text-[8rem] sm:text-[10rem] md:text-display font-extralight leading-none -ml-1 md:-ml-2">Hello</h1>
-            <p className="text-lg md:text-xl font-light mt-4 ml-1">
-              — It's Tharun arety a design wizard
-            </p>
+            <p className="text-lg md:text-xl font-light mt-4 ml-1">— It's Tharun arety.</p>
           </div>
 
           {/* Right Column: Empty for spacing */}
@@ -48,16 +46,11 @@ const Index = () => {
       {/* Background Image Container */}
       <div className="absolute top-0 right-0 h-full w-full md:w-1/2 z-0">
           <div className="h-full w-full relative overflow-hidden">
-              <img
-                  src="/lovable-uploads/868314e2-5d2d-4b16-950d-6e89ca616144.png"
-                  alt="Portrait of Tharun arety, a product designer."
-                  className="absolute top-0 right-0 h-full w-auto max-w-none opacity-30 md:opacity-100"
-                  style={{ transform: 'translateX(28%) scale(1.6)' }}
-              />
+              <img src="/lovable-uploads/868314e2-5d2d-4b16-950d-6e89ca616144.png" alt="Portrait of Tharun arety, a product designer." className="absolute top-0 right-0 h-full w-auto max-w-none opacity-30 md:opacity-100" style={{
+          transform: 'translateX(28%) scale(1.6)'
+        }} />
           </div>
       </div>
-    </div>
-  );
+    </div>;
 };
-
 export default Index;
