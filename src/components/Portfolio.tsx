@@ -1,7 +1,6 @@
-
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Lightbulb, Code, Rocket } from "lucide-react";
+import { Lightbulb, Code, Rocket, Linkedin } from "lucide-react";
 
 const Portfolio = () => {
   return (
@@ -50,8 +49,14 @@ const Portfolio = () => {
           </Card>
         </div>
 
-        <div className="text-center">
+        <div className="text-center flex flex-col sm:flex-row gap-4 justify-center">
           <Button size="lg">View My Projects</Button>
+          <Button size="lg" variant="outline" asChild>
+            <a href="https://www.linkedin.com/in/tharun-arety/" target="_blank" rel="noopener noreferrer">
+              <Linkedin />
+              LinkedIn Profile
+            </a>
+          </Button>
         </div>
       </div>
     </section>
