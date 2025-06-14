@@ -36,7 +36,7 @@ const Index = () => {
             </div>
             <h1 className="text-[8rem] sm:text-[10rem] md:text-display font-extralight leading-none -ml-1 md:-ml-2">Hello</h1>
             <p className="text-lg md:text-xl font-light mt-4 ml-1">
-              — It's D.Nova a design wizard
+              — It's Tharun arety a design wizard
             </p>
           </div>
 
@@ -49,8 +49,8 @@ const Index = () => {
       <div className="absolute top-0 right-0 h-full w-full md:w-1/2 z-0">
           <div className="h-full w-full relative overflow-hidden">
               <img
-                  src="/lovable-uploads/90d240f7-5b0d-40b8-a20d-68997c0ed2f1.png"
-                  alt="Portrait of D.Nova, a product designer."
+                  src="/lovable-uploads/868314e2-5d2d-4b16-950d-6e89ca616144.png"
+                  alt="Portrait of Tharun arety, a product designer."
                   className="absolute top-0 right-0 h-full w-auto max-w-none opacity-30 md:opacity-100"
                   style={{ transform: 'translateX(28%) scale(1.6)' }}
               />
