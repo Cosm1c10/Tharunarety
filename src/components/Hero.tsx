@@ -1,18 +1,6 @@
-
 import { ArrowDown } from 'lucide-react';
 import Header from '@/components/Header';
 const Hero = () => {
-  const handleScrollClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault();
-    const targetId = e.currentTarget.getAttribute('href')?.substring(1);
-    if (!targetId) return;
-
-    const targetElement = document.getElementById(targetId);
-    if (targetElement) {
-      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
-  };
-
   return <section id="home" className="bg-background text-foreground min-h-screen font-sans relative overflow-hidden">
       
       {/* Decorative Side Elements */}
@@ -21,7 +9,7 @@ const Hero = () => {
       </div>
       <div className="absolute bottom-8 left-8 md:left-12 flex items-center gap-12 text-sm font-light z-20">
         <span>2024</span>
-        <a href="#about" onClick={handleScrollClick} className="flex items-center gap-2 hover:opacity-70 transition-opacity">
+        <a href="#about" className="flex items-center gap-2 hover:opacity-70 transition-opacity">
           Scroll down <ArrowDown size={16} />
         </a>
       </div>
@@ -36,15 +24,19 @@ const Hero = () => {
             <div className="flex gap-8 md:gap-12 mb-8 md:mb-10">
               <div>
                 <p className="text-4xl md:text-5xl font-light">
-              </p>
+                  Product
+                </p>
                 <p className="text-xs md:text-sm text-gray-500 font-light mt-1">
-              </p>
+                  Designer
+                </p>
               </div>
               <div>
                 <p className="text-4xl md:text-5xl font-light">
-              </p>
+                  Mechanical
+                </p>
                 <p className="text-xs md:text-sm text-gray-500 font-light mt-1">
-              </p>
+                  Engineer
+                </p>
               </div>
             </div>
             <h1 className="text-[8rem] sm:text-[10rem] md:text-display font-extralight leading-none -ml-1 md:-ml-2">Hello</h1>
