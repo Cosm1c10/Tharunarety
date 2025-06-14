@@ -1,6 +1,18 @@
+
 import { ArrowDown } from 'lucide-react';
 import Header from '@/components/Header';
 const Hero = () => {
+  const handleScrollClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    const targetId = e.currentTarget.getAttribute('href')?.substring(1);
+    if (!targetId) return;
+
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+  };
+
   return <section id="home" className="bg-background text-foreground min-h-screen font-sans relative overflow-hidden">
       
       {/* Decorative Side Elements */}
@@ -9,7 +21,7 @@ const Hero = () => {
       </div>
       <div className="absolute bottom-8 left-8 md:left-12 flex items-center gap-12 text-sm font-light z-20">
         <span>2024</span>
-        <a href="#about" className="flex items-center gap-2 hover:opacity-70 transition-opacity">
+        <a href="#about" onClick={handleScrollClick} className="flex items-center gap-2 hover:opacity-70 transition-opacity">
           Scroll down <ArrowDown size={16} />
         </a>
       </div>
