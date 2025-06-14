@@ -6,6 +6,9 @@ import {
   NavigationMenuList,
   navigationMenuTriggerStyle,
 } from "@/components/ui/navigation-menu";
+import { Sheet, SheetContent, SheetTrigger, SheetClose } from "@/components/ui/sheet";
+import { Button } from "@/components/ui/button";
+import { Menu } from "lucide-react";
 
 const navItems = [
   { href: "#home", label: "Home" },
@@ -23,7 +26,7 @@ const Header = () => {
           Tharun Arety
         </a>
       </div>
-      <nav>
+      <nav className="hidden md:block">
         <NavigationMenu>
           <NavigationMenuList>
             {navItems.map((item) => (
@@ -36,6 +39,30 @@ const Header = () => {
           </NavigationMenuList>
         </NavigationMenu>
       </nav>
+      <div className="md:hidden">
+        <Sheet>
+          <SheetTrigger asChild>
+            <Button variant="outline" size="icon">
+              <Menu className="h-6 w-6" />
+              <span className="sr-only">Open navigation menu</span>
+            </Button>
+          </SheetTrigger>
+          <SheetContent side="right">
+            <nav className="grid gap-4 text-lg font-medium mt-8">
+              {navItems.map((item) => (
+                <SheetClose asChild key={item.label}>
+                  <a
+                    href={item.href}
+                    className="block px-2 py-1 text-muted-foreground hover:text-foreground"
+                  >
+                    {item.label}
+                  </a>
+                </SheetClose>
+              ))}
+            </nav>
+          </SheetContent>
+        </Sheet>
+      </div>
     </header>
   );
 };
