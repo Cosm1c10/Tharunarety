@@ -36,7 +36,7 @@ const Hero = () => {
               </div>
             </div>
             <h1 className="text-[6rem] sm:text-[8rem] md:text-[10rem] lg:text-display font-extralight leading-none -ml-1 md:-ml-2">Hello</h1>
-            <p className="text-lg md:text-xl font-light mt-4 ml-1">— It's Tharun arety.</p>
+            <p className="text-lg md:text-xl font-light mt-4 ml-1">— It's Tharun Arety.</p>
           </div>
 
           {/* Right Column: Empty for spacing */}
