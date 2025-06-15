@@ -20,13 +20,13 @@ const navItems = [
 
 const Header = () => {
   return (
-    <header className="flex items-center justify-between w-full">
+    <header className="relative flex items-center justify-between w-full">
       <div className="flex items-center gap-2">
         <a href="#home" className="text-xl font-semibold hover:opacity-70 transition-opacity">
           Tharun Arety
         </a>
       </div>
-      <nav className="hidden md:block">
+      <nav className="hidden md:block absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
         <NavigationMenu>
           <NavigationMenuList>
             {navItems.map((item) => (
