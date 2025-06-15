@@ -1,4 +1,3 @@
-
 import { Mail, MapPin, Instagram, Linkedin } from "lucide-react";
 
 const Contact = () => {
@@ -28,7 +27,7 @@ const Contact = () => {
                     </a>
                     <a href="https://www.linkedin.com/in/tharun-arety/" target="_blank" rel="noopener noreferrer" className="flex items-center gap-4 group">
                         <Linkedin className="h-6 w-6 text-primary"/>
-                        <span className="text-lg group-hover:underline">LinkedIn</span>
+                        <span className="text-lg group-hover:underline">Tharun Arety</span>
                     </a>
                 </div>
             </div>
@@ -38,4 +37,3 @@ const Contact = () => {
   );
 };
 export default Contact;
-
