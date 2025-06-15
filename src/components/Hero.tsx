@@ -31,7 +31,7 @@ const Hero = () => {
           <div className="relative z-10 order-1 md:order-2 self-center md:ml-12">
             <div className="flex flex-col items-center text-center md:items-start md:text-left">
               <h1 className="text-[6rem] sm:text-[8rem] md:text-[10rem] lg:text-display font-extralight leading-none text-white">Hello</h1>
-              <p className="text-lg md:text-xl font-light mt-4 md:pl-24 text-white">— It's Tharun Arety.</p>
+              <p className="text-lg md:text-xl font-light mt-4 md:pl-24 text-primary">— It's Tharun Arety.</p>
             </div>
           </div>
         </div>
