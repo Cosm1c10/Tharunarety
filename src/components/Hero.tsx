@@ -24,7 +24,7 @@ const Hero = () => {
         <div className="flex-grow grid md:grid-cols-2 gap-8 items-end pt-16 md:pt-0">
           {/* Left Column: Image */}
           <div className="relative order-2 md:order-1 mt-8 md:mt-0 flex items-end justify-center">
-            <img src="/lovable-uploads/868314e2-5d2d-4b16-950d-6e89ca616144.png" alt="Portrait of Tharun arety, a product designer." className="max-h-[75vh] md:max-h-[90vh] w-auto object-contain" />
+            <img src="/lovable-uploads/d4e4e8c7-d90f-41dd-8902-ca3175ae9fce.png" alt="Portrait of Tharun arety, a product designer." className="max-h-[75vh] md:max-h-[90vh] w-auto object-contain" />
           </div>
 
           {/* Right Column: Text content */}
