@@ -1,3 +1,4 @@
+
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const photos = [
@@ -27,9 +28,9 @@ const Photography = () => {
           >
             <CarouselContent>
               {photos.map((photo, index) => (
-                <CarouselItem key={index} className="sm:basis-1/2 lg:basis-1/3">
+                <CarouselItem key={index} className="md:basis-1/2">
                   <div className="p-1">
-                    <img src={photo.src} alt={photo.alt} className="w-full h-full object-contain rounded-lg shadow-md aspect-square" />
+                    <img src={photo.src} alt={photo.alt} className="w-full h-auto object-contain rounded-lg shadow-md" />
                   </div>
                 </CarouselItem>
               ))}
