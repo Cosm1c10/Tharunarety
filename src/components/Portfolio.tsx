@@ -1,7 +1,14 @@
 
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Lightbulb, Code, Rocket, Linkedin } from "lucide-react";
+import { Lightbulb, Code, Rocket, Linkedin, FileText } from "lucide-react";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "@/components/ui/dialog";
 
 const Portfolio = () => {
   return (
@@ -51,7 +58,23 @@ const Portfolio = () => {
         </div>
 
         <div className="text-center flex flex-col sm:flex-row gap-4 justify-center">
-          <Button size="lg">View My Projects</Button>
+          <Dialog>
+            <DialogTrigger asChild>
+              <Button size="lg">
+                <FileText />
+                My Resume
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="max-w-4xl h-[90vh] overflow-y-auto">
+              <DialogHeader>
+                <DialogTitle>Tharun Arety's Resume</DialogTitle>
+              </DialogHeader>
+              <div className="space-y-4">
+                <img src="/lovable-uploads/0fe8f441-4b05-4c68-8de4-fb6cb2ee0e48.png" alt="Resume Page 1" className="w-full h-auto rounded-md" />
+                <img src="/lovable-uploads/e735b105-e6ab-4dc3-b6d4-82123a44246e.png" alt="Resume Page 2" className="w-full h-auto rounded-md" />
+              </div>
+            </DialogContent>
+          </Dialog>
           <Button size="lg" asChild>
             <a href="https://www.linkedin.com/in/tharun-arety/" target="_blank" rel="noopener noreferrer">
               <Linkedin />
