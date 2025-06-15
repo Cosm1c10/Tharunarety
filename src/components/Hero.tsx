@@ -1,4 +1,3 @@
-
 import { ArrowDown } from 'lucide-react';
 import Header from '@/components/Header';
 const Hero = () => {
@@ -9,7 +8,8 @@ const Hero = () => {
           <span className="text-sm font-light tracking-[0.3em] uppercase text-gray-500 whitespace-nowrap"></span>
       </div>
       <div className="absolute bottom-8 left-8 md:left-auto md:right-12 flex items-center gap-12 text-sm font-light z-20">
-        <span>2025</span>
+        <span>
+      </span>
         <a href="#about" className="flex items-center gap-2 hover:opacity-70 transition-opacity">
           Scroll down <ArrowDown size={16} />
         </a>
