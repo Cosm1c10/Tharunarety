@@ -17,7 +17,7 @@ const Hero = () => {
       </div>
 
       {/* Main content container */}
-      <div className="relative min-h-screen flex flex-col px-8 pt-8 md:px-12 md:pt-12">
+      <div className="relative min-h-screen flex flex-col px-8 pt-4 md:px-12 md:pt-6">
         
         <Header />
 

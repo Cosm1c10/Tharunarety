@@ -14,19 +14,19 @@ const Header = () => {
       </div>
 
       <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-1">
-        <Button variant="ghost" asChild>
+        <Button variant="ghost" asChild className="text-base px-5 py-3">
           <a href="#home">Home</a>
         </Button>
-        <Button variant="ghost" asChild>
+        <Button variant="ghost" asChild className="text-base px-5 py-3">
           <a href="#about">About Me</a>
         </Button>
-        <Button variant="ghost" asChild>
+        <Button variant="ghost" asChild className="text-base px-5 py-3">
           <a href="#portfolio">Portfolio</a>
         </Button>
-        <Button variant="ghost" asChild>
+        <Button variant="ghost" asChild className="text-base px-5 py-3">
           <a href="#photography">Photography</a>
         </Button>
-        <Button variant="ghost" asChild>
+        <Button variant="ghost" asChild className="text-base px-5 py-3">
           <a href="#contact">Contact</a>
         </Button>
       </nav>
