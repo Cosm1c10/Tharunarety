@@ -1,3 +1,4 @@
+
 import { ArrowDown } from 'lucide-react';
 import Header from '@/components/Header';
 const Hero = () => {
@@ -28,25 +29,7 @@ const Hero = () => {
 
           {/* Right Column: Text content */}
           <div className="relative z-10 order-1 md:order-2">
-            <div className="flex gap-8 md:gap-12 mb-8 md:mb-10 justify-center md:justify-start">
-              <div>
-                <p className="text-4xl md:text-5xl font-light">
-                  Product
-                </p>
-                <p className="text-xs md:text-sm text-gray-500 font-light mt-1">
-                  Design
-                </p>
-              </div>
-              <div>
-                <p className="text-4xl md:text-5xl font-light">
-                  Frontend
-                </p>
-                <p className="text-xs md:text-sm text-gray-500 font-light mt-1">
-                  Development
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col items-center text-center">
+            <div className="flex flex-col items-center text-center md:items-start md:text-left">
               <h1 className="text-[6rem] sm:text-[8rem] md:text-[10rem] lg:text-display font-extralight leading-none">Hello</h1>
               <p className="text-lg md:text-xl font-light mt-4">— It's Tharun Arety.</p>
             </div>
