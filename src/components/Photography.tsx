@@ -1,5 +1,6 @@
 
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const photos = [
   { src: "/lovable-uploads/7aa43e64-683d-4f49-b13b-88b789fe91a1.png", alt: "Boats on a river in front of a city waterfront" },
@@ -32,7 +33,9 @@ const Photography = () => {
               {photos.map((photo, index) => (
                 <CarouselItem key={index}>
                   <div className="p-1">
-                    <img src={photo.src} alt={photo.alt} className="w-full h-auto object-contain rounded-lg shadow-md" />
+                    <AspectRatio ratio={16 / 9} className="overflow-hidden rounded-lg shadow-md">
+                      <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover" />
+                    </AspectRatio>
                   </div>
                 </CarouselItem>
               ))}
