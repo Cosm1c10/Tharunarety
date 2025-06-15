@@ -1,3 +1,4 @@
+
 import { ArrowDown } from 'lucide-react';
 import Header from '@/components/Header';
 const Hero = () => {
@@ -21,12 +22,14 @@ const Hero = () => {
         <Header />
 
         <div className="flex-grow grid md:grid-cols-2 gap-8 items-center pt-16 md:pt-0">
-          {/* Left Column: Empty for spacing */}
-          <div className="relative order-1 md:order-1 h-64 md:h-auto"></div>
+          {/* Left Column: Image */}
+          <div className="relative order-2 md:order-1 mt-8 md:mt-0 flex items-end justify-center">
+            <img src="/lovable-uploads/868314e2-5d2d-4b16-950d-6e89ca616144.png" alt="Portrait of Tharun arety, a product designer." className="max-h-[60vh] md:max-h-[70vh] w-auto object-contain" />
+          </div>
 
           {/* Right Column: Text content */}
-          <div className="relative z-10 order-2 md:order-2 mt-8 md:mt-0">
-            <div className="flex gap-8 md:gap-12 mb-8 md:mb-10">
+          <div className="relative z-10 order-1 md:order-2">
+            <div className="flex gap-8 md:gap-12 mb-8 md:mb-10 justify-center md:justify-start">
               <div>
                 <p className="text-4xl md:text-5xl font-light">
               </p>
@@ -48,10 +51,6 @@ const Hero = () => {
         </div>
       </div>
 
-      {/* Background Image Container */}
-      <div className="absolute top-0 left-0 h-full w-full md:w-1/2 z-0 flex items-end">
-          <img src="/lovable-uploads/868314e2-5d2d-4b16-950d-6e89ca616144.png" alt="Portrait of Tharun arety, a product designer." className="w-full h-auto object-contain opacity-30 md:opacity-100" />
-      </div>
     </section>;
 };
 export default Hero;
