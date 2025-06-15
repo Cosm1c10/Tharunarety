@@ -12,7 +12,7 @@ const photos = [
 
 const Photography = () => {
   return (
-    <section id="photography" className="py-20 md:py-32 px-8 md:px-12 bg-secondary">
+    <section id="photography" className="py-20 md:py-32 px-8 md:px-12 bg-black">
       <div className="container mx-auto">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-light mb-2">Tharun's Perspective</h2>
