@@ -17,6 +17,7 @@ const Hero = () => {
 
       {/* Main content container */}
       <div className="relative min-h-screen flex flex-col p-8 md:p-12">
+        
         <Header />
 
         <div className="flex-grow grid md:grid-cols-2 gap-8 items-center pt-16 md:pt-0">
@@ -48,10 +49,8 @@ const Hero = () => {
       </div>
 
       {/* Background Image Container */}
-      <div className="absolute top-0 left-0 h-full w-full md:w-1/2 z-0">
-          <div className="h-full w-full relative overflow-hidden">
-              <img src="/lovable-uploads/868314e2-5d2d-4b16-950d-6e89ca616144.png" alt="Portrait of Tharun arety, a product designer." className="absolute top-0 left-0 h-full w-full object-contain opacity-30 md:opacity-100" />
-          </div>
+      <div className="absolute top-0 left-0 h-full w-full md:w-1/2 z-0 flex items-end">
+          <img src="/lovable-uploads/868314e2-5d2d-4b16-950d-6e89ca616144.png" alt="Portrait of Tharun arety, a product designer." className="w-full h-auto object-contain opacity-30 md:opacity-100" />
       </div>
     </section>;
 };
