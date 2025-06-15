@@ -1,12 +1,9 @@
-
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 
 const photos = [
-  { src: "/lovable-uploads/f7ebdad9-473e-4e45-987f-215d662e1c47.png", alt: "A person and a child walking down a long, ornate temple hallway" },
-  { src: "/lovable-uploads/17bd82c2-e0e5-4600-a2dd-64b73e4a8b86.png", alt: "A white horse in a field of yellow flowers" },
-  { src: "/lovable-uploads/68fb0042-4c44-4a77-a5f3-14ba2fc1898d.png", alt: "A tram on grassy tracks between rows of autumn trees" },
-  { src: "/lovable-uploads/fcab8905-96d4-4360-bdf7-0e93351d4af1.png", alt: "A scenic view of a lake and mountains" },
-  { src: "/lovable-uploads/e9c3ea52-8366-41df-91ef-da26c4b8e32b.png", alt: "The milky way over a forest silhouette" },
+  { src: "/lovable-uploads/7aa43e64-683d-4f49-b13b-88b789fe91a1.png", alt: "Boats on a river in front of a city waterfront" },
+  { src: "/lovable-uploads/68dc8ba2-bd19-4edc-8f22-a3733f916f19.png", alt: "Misty mountain ranges at sunset" },
+  { src: "/lovable-uploads/ac76c6d4-2412-4651-93d0-b074874c0ed2.png", alt: "A boat on a lake with a village and snow-capped mountains" },
 ];
 
 const Photography = () => {
@@ -32,7 +29,7 @@ const Photography = () => {
               {photos.map((photo, index) => (
                 <CarouselItem key={index} className="sm:basis-1/2 lg:basis-1/3">
                   <div className="p-1">
-                    <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover rounded-lg shadow-md aspect-square" />
+                    <img src={photo.src} alt={photo.alt} className="w-full h-full object-contain rounded-lg shadow-md aspect-square" />
                   </div>
                 </CarouselItem>
               ))}
