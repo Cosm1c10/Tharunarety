@@ -1,4 +1,3 @@
-
 import { ArrowDown } from 'lucide-react';
 import Header from '@/components/Header';
 const Hero = () => {
@@ -24,8 +23,8 @@ const Hero = () => {
           <div className="relative order-1 md:order-1 h-64 md:h-auto"></div>
 
           {/* Right Column: Text content */}
-          <div className="relative z-10 order-2 md:order-2 mt-8 md:mt-0">
-            <div className="flex gap-8 md:gap-12 mb-8 md:mb-10">
+          <div className="relative z-10 order-2 md:order-2 mt-8 md:mt-0 text-right">
+            <div className="flex gap-8 md:gap-12 mb-8 md:mb-10 justify-end">
               <div>
                 <p className="text-4xl md:text-5xl font-light">
               </p>
