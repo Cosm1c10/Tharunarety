@@ -39,8 +39,10 @@ const Hero = () => {
               </p>
               </div>
             </div>
-            <h1 className="text-[6rem] sm:text-[8rem] md:text-[10rem] lg:text-display font-extralight leading-none">Hello</h1>
-            <p className="text-lg md:text-xl font-light mt-4 text-right">— It's Tharun Arety.</p>
+            <div className="flex flex-col items-center text-center">
+              <h1 className="text-[6rem] sm:text-[8rem] md:text-[10rem] lg:text-display font-extralight leading-none">Hello</h1>
+              <p className="text-lg md:text-xl font-light mt-4">— It's Tharun Arety.</p>
+            </div>
           </div>
         </div>
       </div>
