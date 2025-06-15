@@ -19,10 +19,26 @@ const navItems = [
 ];
 
 const Header = () => {
+  const handleNavClick = (
+    e: React.MouseEvent<HTMLAnchorElement>,
+    href: string
+  ) => {
+    e.preventDefault();
+    const targetId = href.replace("#", "");
+    const targetElement = document.getElementById(targetId);
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: "smooth" });
+    }
+  };
+
   return (
     <header className="relative flex items-center justify-between w-full">
       <div className="flex items-center gap-2">
-        <a href="#home" className="text-xl font-semibold hover:opacity-70 transition-opacity">
+        <a
+          href="#home"
+          onClick={(e) => handleNavClick(e, "#home")}
+          className="text-xl font-semibold hover:opacity-70 transition-opacity"
+        >
           Tharun Arety
         </a>
       </div>
@@ -31,7 +47,11 @@ const Header = () => {
           <NavigationMenuList>
             {navItems.map((item) => (
               <NavigationMenuItem key={item.label}>
-                <NavigationMenuLink href={item.href} className={navigationMenuTriggerStyle()}>
+                <NavigationMenuLink
+                  href={item.href}
+                  onClick={(e) => handleNavClick(e, item.href)}
+                  className={navigationMenuTriggerStyle()}
+                >
                   {item.label}
                 </NavigationMenuLink>
               </NavigationMenuItem>
@@ -53,6 +73,7 @@ const Header = () => {
                 <SheetClose asChild key={item.label}>
                   <a
                     href={item.href}
+                    onClick={(e) => handleNavClick(e, item.href)}
                     className="block px-2 py-1 text-muted-foreground hover:text-foreground"
                   >
                     {item.label}
