@@ -59,7 +59,7 @@ const Photography3DAlbum = ({ photos, albumName }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsTransitioning(false);
-    }, 600);
+    }, 300);
     return () => clearTimeout(timer);
   }, [currentIndex]);
 
@@ -120,7 +120,7 @@ const Photography3DAlbum = ({ photos, albumName }) => {
   return (
     <div className="w-full">
       {/* 3D Carousel Container */}
-      <div className="relative h-[300px] md:h-[400px] mb-8 flex items-center justify-center overflow-hidden" style={{ perspective: '1000px' }}>
+      <div className="relative h-[400px] md:h-[500px] mb-8 flex items-center justify-center overflow-hidden" style={{ perspective: '1200px' }}>
         <div className="relative w-full h-full">
           {photos.map((photo, index) => {
             const position = getSlidePosition(index);
@@ -129,7 +129,7 @@ const Photography3DAlbum = ({ photos, albumName }) => {
             return (
               <div
                 key={index}
-                className={`absolute left-1/2 top-1/2 w-[320px] md:w-[480px] h-[200px] md:h-[300px] cursor-pointer transition-all duration-600 ease-in-out transform -translate-y-1/2 ${
+                className={`absolute left-1/2 top-1/2 w-[400px] md:w-[600px] h-[250px] md:h-[375px] cursor-pointer transition-all duration-300 ease-in-out transform -translate-y-1/2 ${
                   position === 0 ? 'cursor-default' : 'hover:scale-105'
                 }`}
                 style={styles}
@@ -182,7 +182,7 @@ const Photography3DAlbum = ({ photos, albumName }) => {
         {photos.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full transition-all duration-300 hover:scale-110 ${
+            className={`w-3 h-3 rounded-full transition-all duration-200 hover:scale-110 ${
               index === currentIndex
                 ? 'bg-primary scale-125'
                 : 'bg-white/30 hover:bg-white/50'
