@@ -3,6 +3,10 @@ import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Lightbulb, Code, Rocket, Linkedin, FileText, ExternalLink, Github } from "lucide-react";
+import { Breadcrumbs } from "@/components/ui/breadcrumbs";
+import { FloatingActionButton } from "@/components/ui/floating-action-button";
+import { LoadingSpinner } from "@/components/ui/loading-spinner";
+import { NotificationBadge } from "@/components/ui/notification-badge";
 import {
   Dialog,
   DialogContent,
@@ -43,8 +47,20 @@ const Portfolio = () => {
   return (
     <div className="bg-background text-foreground font-sans min-h-screen">
       <Header />
+      <FloatingActionButton />
       
       <main className="pt-20">
+        {/* Breadcrumbs */}
+        <div className="px-8 md:px-12 py-4">
+          <div className="container mx-auto">
+            <Breadcrumbs 
+              items={[
+                { label: "Portfolio", isActive: true }
+              ]}
+            />
+          </div>
+        </div>
+
         {/* Hero Section */}
         <section className="py-20 md:py-32 px-8 md:px-12">
           <div className="container mx-auto text-center">
@@ -137,15 +153,17 @@ const Portfolio = () => {
             <h2 className="text-3xl font-light text-center mb-12">Featured Projects</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project, index) => (
-                <Card key={index} className="h-full">
+                <Card key={index} className="h-full hover:shadow-lg transition-shadow duration-300">
                   <CardHeader>
                     <CardTitle className="text-xl">{project.title}</CardTitle>
                     <div className="flex items-center gap-2">
-                      <span className={`px-2 py-1 rounded-full text-xs ${
-                        project.status === 'Completed' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
-                      }`}>
-                        {project.status}
-                      </span>
+                      <NotificationBadge count={project.status === 'Completed' ? 1 : 0}>
+                        <span className={`px-2 py-1 rounded-full text-xs ${
+                          project.status === 'Completed' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
+                        }`}>
+                          {project.status}
+                        </span>
+                      </NotificationBadge>
                     </div>
                   </CardHeader>
                   <CardContent>
@@ -170,7 +188,7 @@ const Portfolio = () => {
             <h2 className="text-3xl font-light text-center mb-12">Technical Skills</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {skills.map((skillGroup, index) => (
-                <Card key={index}>
+                <Card key={index} className="hover:shadow-lg transition-shadow duration-300">
                   <CardHeader>
                     <CardTitle className="text-lg">{skillGroup.category}</CardTitle>
                   </CardHeader>

@@ -1,7 +1,7 @@
 
 import { useEffect } from 'react';
-import Hero from '@/components/Hero';
-import About from '@/components/About';
+import EnhancedHero from '@/components/enhanced-hero';
+import EnhancedAbout from '@/components/enhanced-about';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 
@@ -19,8 +19,8 @@ const Index = () => {
   return (
     <div className="bg-background text-foreground font-sans">
       <main>
-        <Hero />
-        <About />
+        <EnhancedHero />
+        <EnhancedAbout />
         <Contact />
       </main>
       <Footer />
