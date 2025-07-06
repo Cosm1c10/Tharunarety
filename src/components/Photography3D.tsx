@@ -103,7 +103,7 @@ const Photography3D = () => {
         </div>
 
         {/* 3D Carousel Container */}
-        <div className="relative h-[500px] md:h-[600px] mb-8" style={{ perspective: '1000px' }}>
+        <div className="relative h-[400px] md:h-[500px] mb-8" style={{ perspective: '1000px' }}>
           <div className="relative w-full h-full">
             {photos.map((photo, index) => {
               const position = getSlidePosition(index);
@@ -112,7 +112,7 @@ const Photography3D = () => {
               return (
                 <div
                   key={index}
-                  className={`absolute left-1/2 top-1/2 w-[300px] md:w-[400px] h-[200px] md:h-[300px] cursor-pointer transition-all duration-600 ease-in-out transform -translate-y-1/2 ${
+                  className={`absolute left-1/2 top-1/2 w-[320px] md:w-[480px] h-[180px] md:h-[270px] cursor-pointer transition-all duration-600 ease-in-out transform -translate-y-1/2 ${
                     position === 0 ? 'cursor-default' : 'hover:scale-105'
                   }`}
                   style={styles}
@@ -174,12 +174,6 @@ const Photography3D = () => {
           ))}
         </div>
 
-        {/* Image Counter */}
-        <div className="text-center mt-4">
-          <span className="text-sm text-muted-foreground">
-            {currentIndex + 1} / {photos.length}
-          </span>
-        </div>
       </div>
     </section>
   );
