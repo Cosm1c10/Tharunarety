@@ -5,9 +5,6 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
-import { ImageGallery } from "@/components/ui/image-gallery";
-import { Breadcrumbs } from "@/components/ui/breadcrumbs";
-import { FloatingActionButton } from "@/components/ui/floating-action-button";
 
 const photographyAlbums = {
   portraits: [
@@ -38,20 +35,8 @@ const Photography = () => {
   return (
     <div className="bg-background text-foreground font-sans min-h-screen">
       <Header />
-      <FloatingActionButton />
       
       <main className="pt-20">
-        {/* Breadcrumbs */}
-        <div className="px-8 md:px-12 py-4">
-          <div className="container mx-auto">
-            <Breadcrumbs 
-              items={[
-                { label: "Photography", isActive: true }
-              ]}
-            />
-          </div>
-        </div>
-
         {/* Hero Section */}
         <section className="py-20 md:py-32 px-8 md:px-12">
           <div className="container mx-auto text-center">
@@ -91,7 +76,7 @@ const Photography = () => {
                                   <img 
                                     src={photo.src} 
                                     alt={photo.alt} 
-                                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-500" 
+                                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
                                   />
                                 </AspectRatio>
                                 <div className="p-3 text-center">
@@ -109,21 +94,6 @@ const Photography = () => {
                 </TabsContent>
               ))}
             </Tabs>
-          </div>
-        </section>
-
-        {/* Gallery Section */}
-        <section className="py-20 md:py-32 px-8 md:px-12">
-          <div className="container mx-auto">
-            <h2 className="text-3xl font-light text-center mb-12">Photo Gallery</h2>
-            <ImageGallery 
-              images={[
-                ...photographyAlbums.portraits,
-                ...photographyAlbums.landscapes,
-                ...photographyAlbums.street
-              ]}
-              className="max-w-6xl mx-auto"
-            />
           </div>
         </section>
 
