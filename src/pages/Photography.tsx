@@ -101,35 +101,15 @@ const Photography = () => {
             <div className="grid md:grid-cols-2 gap-8">
               {videos.map((video) => (
                 <div key={video.id} className="relative h-0 pb-[56.25%]">
-                  <div className="absolute top-0 left-0 w-full h-full rounded-lg overflow-hidden bg-gray-900 flex items-center justify-center group cursor-pointer">
-                    <a 
-                      href={`https://www.youtube.com/watch?v=${video.id}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="w-full h-full relative block"
-                    >
-                      <img 
-                        src={`https://img.youtube.com/vi/${video.id}/maxresdefault.jpg`}
-                        alt={video.title}
-                        className="w-full h-full object-cover"
-                        onError={(e) => {
-                          e.currentTarget.src = `https://img.youtube.com/vi/${video.id}/hqdefault.jpg`;
-                        }}
-                      />
-                      <div className="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center group-hover:bg-opacity-20 transition-all duration-300">
-                        <div className="w-16 h-16 bg-red-600 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                          <svg className="w-6 h-6 text-white ml-1" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M8 5v14l11-7z"/>
-                          </svg>
-                        </div>
-                      </div>
-                      <div className="absolute bottom-4 left-4 right-4">
-                        <h3 className="text-white font-medium text-sm bg-black bg-opacity-70 px-2 py-1 rounded">
-                          {video.title}
-                        </h3>
-                      </div>
-                    </a>
-                  </div>
+                  <iframe 
+                    className="absolute top-0 left-0 w-full h-full rounded-lg"
+                    src={`https://www.youtube-nocookie.com/embed/${video.id}?rel=0&modestbranding=1&autoplay=0&mute=0&controls=1&showinfo=0&fs=1&cc_load_policy=0&iv_load_policy=3&autohide=0`}
+                    title={video.title}
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  />
                 </div>
               ))}
             </div>
