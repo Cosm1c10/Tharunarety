@@ -103,11 +103,12 @@ const Photography = () => {
                 <div key={video.id} className="relative h-0 pb-[56.25%]">
                   <iframe 
                     className="absolute top-0 left-0 w-full h-full rounded-lg" 
-                    src={`https://www.youtube.com/embed/${video.id}`} 
+                    src={`https://www.youtube.com/embed/${video.id}?rel=0&modestbranding=1&autohide=1&showinfo=0&controls=1`}
                     title={video.title}
-                    frameBorder="0" 
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                     allowFullScreen
+                    loading="lazy"
                   />
                 </div>
               ))}
