@@ -23,10 +23,10 @@ const photographyAlbums = {
 };
 
 const videos = [
-  { id: "0GjZr4VbDtw", title: "Video 1" },
-  { id: "-YJWSWVd6Hs", title: "Video 2" },
-  { id: "wKHAoi-3c1o", title: "Video 3" },
-  { id: "OVPgSBYB8Ok", title: "Video 4" },
+  { id: "0GjZr4VbDtw", title: "Videography Showcase 1" },
+  { id: "-YJWSWVd6Hs", title: "Videography Showcase 2" },
+  { id: "wKHAoi-3c1o", title: "Videography Showcase 3" },
+  { id: "OVPgSBYB8Ok", title: "Videography Showcase 4" },
 ];
 
 const Photography = () => {
