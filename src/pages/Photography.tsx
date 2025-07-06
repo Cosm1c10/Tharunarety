@@ -64,21 +64,24 @@ const Photography = () => {
                       align: "start",
                       loop: true,
                     }}
-                    className="w-full max-w-sm sm:max-w-xl md:max-w-4xl lg:max-w-6xl mx-auto"
+                    className="w-full max-w-5xl mx-auto"
                   >
                     <CarouselContent>
                       {photos.map((photo, index) => (
-                        <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
-                          <div className="p-1">
+                        <CarouselItem key={index} className="basis-full">
+                          <div className="p-4">
                             <Card>
                               <CardContent className="p-0">
-                                <AspectRatio ratio={16 / 9} className="overflow-hidden rounded-lg">
+                                <AspectRatio ratio={4 / 3} className="overflow-hidden rounded-lg shadow-2xl">
                                   <img 
                                     src={photo.src} 
                                     alt={photo.alt} 
-                                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-300" 
+                                    className="w-full h-full object-cover hover:scale-102 transition-transform duration-500" 
                                   />
                                 </AspectRatio>
+                                <div className="p-4 text-center">
+                                  <p className="text-sm text-muted-foreground">{photo.alt}</p>
+                                </div>
                               </CardContent>
                             </Card>
                           </div>
