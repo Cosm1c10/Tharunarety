@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
+import Photography3D from '@/components/Photography3D';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
@@ -44,6 +45,9 @@ const Photography = () => {
             <p className="text-xl text-muted-foreground mb-8">Capturing moments through photography and videography</p>
           </div>
         </section>
+
+        {/* 3D Photography Showcase */}
+        <Photography3D />
 
         {/* Photography Albums Section */}
         <section className="py-20 md:py-32 px-8 md:px-12">
