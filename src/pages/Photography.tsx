@@ -101,21 +101,42 @@ const Photography = () => {
         <section className="py-20 md:py-32 px-8 md:px-12 bg-black">
           <div className="container mx-auto">
             <h2 className="text-3xl font-light text-center mb-12">Videography Showcase</h2>
-            <div className="grid md:grid-cols-2 gap-8">
-              {videos.map((video) => (
-                <div key={video.id} className="relative h-0 pb-[56.25%]">
-                  <iframe 
-                    className="absolute top-0 left-0 w-full h-full rounded-lg"
-                    src={`https://www.youtube-nocookie.com/embed/${video.id}?rel=0&modestbranding=1&autoplay=0&mute=0&controls=1&showinfo=0&fs=1&cc_load_policy=0&iv_load_policy=3&autohide=0`}
-                    title={video.title}
-                    frameBorder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    referrerPolicy="strict-origin-when-cross-origin"
-                    allowFullScreen
-                  />
-                </div>
-              ))}
-            </div>
+            <Carousel
+              opts={{
+                align: "start",
+                loop: true,
+              }}
+              className="w-full max-w-4xl mx-auto"
+            >
+              <CarouselContent>
+                {videos.map((video) => (
+                  <CarouselItem key={video.id} className="basis-full">
+                    <div className="p-2">
+                      <Card>
+                        <CardContent className="p-0">
+                          <AspectRatio ratio={16 / 10} className="overflow-hidden rounded-lg shadow-lg">
+                            <iframe 
+                              className="w-full h-full"
+                              src={`https://www.youtube-nocookie.com/embed/${video.id}?rel=0&modestbranding=1&autoplay=0&mute=0&controls=1&showinfo=0&fs=1&cc_load_policy=0&iv_load_policy=3&autohide=0`}
+                              title={video.title}
+                              frameBorder="0"
+                              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                              referrerPolicy="strict-origin-when-cross-origin"
+                              allowFullScreen
+                            />
+                          </AspectRatio>
+                          <div className="p-3 text-center">
+                            <p className="text-sm text-muted-foreground">{video.title}</p>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    </div>
+                  </CarouselItem>
+                ))}
+              </CarouselContent>
+              <CarouselPrevious />
+              <CarouselNext />
+            </Carousel>
           </div>
         </section>
       </main>
