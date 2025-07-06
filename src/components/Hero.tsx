@@ -1,5 +1,6 @@
 
 import { ArrowDown } from 'lucide-react';
+import { Button } from '@/components/ui/button';
 import Header from '@/components/Header';
 const Hero = () => {
   return <section id="home" className="bg-background text-foreground min-h-screen font-sans relative">
