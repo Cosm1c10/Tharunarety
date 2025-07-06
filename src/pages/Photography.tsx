@@ -120,7 +120,7 @@ const Photography3DAlbum = ({ photos, albumName }) => {
   return (
     <div className="w-full">
       {/* 3D Carousel Container */}
-      <div className="relative h-[500px] md:h-[700px] mb-8 flex items-center justify-center overflow-hidden" style={{ perspective: '1500px' }}>
+      <div className="relative h-[300px] md:h-[400px] mb-8 flex items-center justify-center overflow-hidden" style={{ perspective: '1000px' }}>
         <div className="relative w-full h-full">
           {photos.map((photo, index) => {
             const position = getSlidePosition(index);
@@ -129,7 +129,7 @@ const Photography3DAlbum = ({ photos, albumName }) => {
             return (
               <div
                 key={index}
-                className={`absolute left-1/2 top-1/2 w-[500px] md:w-[800px] h-[300px] md:h-[500px] cursor-pointer transition-all duration-300 ease-in-out transform -translate-y-1/2 ${
+                className={`absolute left-1/2 top-1/2 w-[320px] md:w-[480px] h-[180px] md:h-[270px] cursor-pointer transition-all duration-300 ease-in-out transform -translate-y-1/2 ${
                   position === 0 ? 'cursor-default' : 'hover:scale-105'
                 }`}
                 style={styles}
@@ -157,23 +157,23 @@ const Photography3DAlbum = ({ photos, albumName }) => {
         <Button
           variant="outline"
           size="icon"
-          className="absolute left-8 md:left-16 top-1/2 -translate-y-1/2 z-20 bg-black/70 border-white/30 text-white hover:bg-white/20 w-14 h-14"
+          className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 bg-black/50 border-white/20 text-white hover:bg-white/20 w-12 h-12"
           onClick={prevSlide}
           disabled={isTransitioning}
           aria-label="Previous image"
         >
-          <ChevronLeft className="h-8 w-8" />
+          <ChevronLeft className="h-6 w-6" />
         </Button>
         
         <Button
           variant="outline"
           size="icon"
-          className="absolute right-8 md:right-16 top-1/2 -translate-y-1/2 z-20 bg-black/70 border-white/30 text-white hover:bg-white/20 w-14 h-14"
+          className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 bg-black/50 border-white/20 text-white hover:bg-white/20 w-12 h-12"
           onClick={nextSlide}
           disabled={isTransitioning}
           aria-label="Next image"
         >
-          <ChevronRight className="h-8 w-8" />
+          <ChevronRight className="h-6 w-6" />
         </Button>
       </div>
 
