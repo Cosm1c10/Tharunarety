@@ -103,7 +103,7 @@ const Photography3D = () => {
         </div>
 
         {/* 3D Carousel Container */}
-        <div className="relative h-[400px] md:h-[500px] mb-8" style={{ perspective: '1000px' }}>
+        <div className="relative h-[300px] md:h-[400px] mb-8 flex items-center justify-center" style={{ perspective: '1000px' }}>
           <div className="relative w-full h-full">
             {photos.map((photo, index) => {
               const position = getSlidePosition(index);
@@ -140,21 +140,21 @@ const Photography3D = () => {
           <Button
             variant="outline"
             size="icon"
-            className="absolute left-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 border-white/20 text-white hover:bg-white/20"
+            className="absolute left-4 md:left-8 top-1/2 -translate-y-1/2 z-20 bg-black/50 border-white/20 text-white hover:bg-white/20 w-12 h-12"
             onClick={prevSlide}
             disabled={isTransitioning}
           >
-            <ChevronLeft className="h-4 w-4" />
+            <ChevronLeft className="h-6 w-6" />
           </Button>
           
           <Button
             variant="outline"
             size="icon"
-            className="absolute right-4 top-1/2 -translate-y-1/2 z-20 bg-black/50 border-white/20 text-white hover:bg-white/20"
+            className="absolute right-4 md:right-8 top-1/2 -translate-y-1/2 z-20 bg-black/50 border-white/20 text-white hover:bg-white/20 w-12 h-12"
             onClick={nextSlide}
             disabled={isTransitioning}
           >
-            <ChevronRight className="h-4 w-4" />
+            <ChevronRight className="h-6 w-6" />
           </Button>
         </div>
 
@@ -163,13 +163,14 @@ const Photography3D = () => {
           {photos.map((_, index) => (
             <button
               key={index}
-              className={`w-3 h-3 rounded-full transition-all duration-300 ${
+              className={`w-3 h-3 rounded-full transition-all duration-300 hover:scale-110 ${
                 index === currentIndex
                   ? 'bg-primary scale-125'
                   : 'bg-white/30 hover:bg-white/50'
               }`}
               onClick={() => goToSlide(index)}
               disabled={isTransitioning}
+              aria-label={`Go to slide ${index + 1}`}
             />
           ))}
         </div>
