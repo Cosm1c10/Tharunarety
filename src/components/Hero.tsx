@@ -13,7 +13,14 @@ const Hero = () => {
         <span>
       </span>
         <a href="#about" className="flex items-center gap-2 hover:opacity-70 transition-opacity">
-          Scroll down <ArrowDown size={16} />
+          <span onClick={() => {
+            const aboutSection = document.getElementById('about');
+            if (aboutSection) {
+              aboutSection.scrollIntoView({ behavior: 'smooth' });
+            }
+          }} className="cursor-pointer flex items-center gap-2">
+            Scroll down <ArrowDown size={16} />
+          </span>
         </a>
       </div>
 
