@@ -1,4 +1,3 @@
-
 import { ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import Header from '@/components/Header';
@@ -39,8 +38,10 @@ const Hero = () => {
           <div className="relative z-10 order-1 md:order-2 self-center md:ml-12 opacity-0 animate-slide-in-right">
             <div className="flex flex-col items-center text-center md:items-start md:text-left">
               <div className="opacity-0 animate-fade-in-up">
-                <h1 className="text-[8rem] sm:text-[10rem] md:text-[12rem] lg:text-[14rem] font-extralight leading-none text-white">Hi</h1>
-                <div className="flex flex-col md:flex-row items-center md:items-baseline gap-2 md:gap-4 mt-2">
+                <div className="text-center">
+                  <h1 className="text-[4rem] sm:text-[5rem] md:text-[6rem] lg:text-[7rem] font-extralight leading-none text-white">Hi</h1>
+                </div>
+                <div className="flex flex-col md:flex-row items-center md:items-baseline gap-2 md:gap-4 mt-2 justify-center md:justify-start">
                   <span className="text-2xl md:text-3xl font-light text-muted-foreground">It's</span>
                   <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-white">Tharun Arety</span>
                 </div>
