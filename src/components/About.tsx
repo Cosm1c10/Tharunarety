@@ -1,4 +1,5 @@
 import { Card, CardContent } from "@/components/ui/card";
+import { AspectRatio } from "@/components/ui/aspect-ratio";
 
 const About = () => {
   return (
@@ -22,11 +23,13 @@ const About = () => {
           <div className="flex justify-center opacity-0 animate-slide-in-right animation-delay-200">
             <Card className="w-full max-w-sm border-none shadow-xl overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-500 group">
               <CardContent className="p-0">
-                <img 
-                  src="/lovable-uploads/WhatsApp Image 2025-07-08 at 23.25.25.jpeg"
-                  alt="Tharun Arety - Professional portrait"
-                  className="rounded-lg object-cover w-full h-auto group-hover:scale-110 transition-transform duration-700"
-                />
+                <AspectRatio ratio={4 / 5} className="overflow-hidden rounded-lg">
+                  <img 
+                    src="/lovable-uploads/WhatsApp Image 2025-07-08 at 23.25.25.jpeg"
+                    alt="Tharun Arety - Professional portrait"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                </AspectRatio>
               </CardContent>
             </Card>
           </div>
@@ -36,13 +39,15 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           {/* Left Column - Mountain Adventure Image */}
           <div className="flex justify-center opacity-0 animate-slide-in-left animation-delay-400 order-2 lg:order-1">
-            <Card className="w-full max-w-lg border-none shadow-xl overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-500 group">
+            <Card className="w-full max-w-sm border-none shadow-xl overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-500 group">
               <CardContent className="p-0">
-                <img 
-                  src="/lovable-uploads/my icon.jpg"
-                  alt="Tharun on a mountain adventure, showcasing his love for hiking and exploration"
-                  className="rounded-lg object-cover w-full h-auto group-hover:scale-110 transition-transform duration-700"
-                />
+                <AspectRatio ratio={4 / 5} className="overflow-hidden rounded-lg">
+                  <img 
+                    src="/lovable-uploads/my icon.jpg"
+                    alt="Tharun on a mountain adventure, showcasing his love for hiking and exploration"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                </AspectRatio>
               </CardContent>
             </Card>
           </div>
@@ -70,11 +75,13 @@ const About = () => {
           <div className="flex justify-center opacity-0 animate-slide-in-right animation-delay-1000">
             <Card className="w-full max-w-sm border-none shadow-xl overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-500 group">
               <CardContent className="p-0">
-                <img 
-                  src="/lovable-uploads/27b0d5ec-f720-416e-b010-7827e0c65c4f.png"
-                  alt="Tharun holding a camera, showcasing his passion for photography and visual storytelling"
-                  className="rounded-lg object-cover w-full h-auto group-hover:scale-110 transition-transform duration-700"
-                />
+                <AspectRatio ratio={4 / 5} className="overflow-hidden rounded-lg">
+                  <img 
+                    src="/lovable-uploads/27b0d5ec-f720-416e-b010-7827e0c65c4f.png"
+                    alt="Tharun holding a camera, showcasing his passion for photography and visual storytelling"
+                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  />
+                </AspectRatio>
               </CardContent>
             </Card>
           </div>
