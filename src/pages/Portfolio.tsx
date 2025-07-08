@@ -34,7 +34,7 @@ const projects = [
 
 const skills = [
   { category: "FEM Simulation", items: ["Abaqus", "Ansys", "Nastran", "MSC Apex"] },
-  { category: "Programming", items: ["Python", "Pandas", "Matplotlib", "TensorFlow", "Scikit-learn"] },
+  { category: "Programming", items: ["Python", "Pandas", "Matplotlib", "Torch-FEM", "Scikit-learn"] },
   { category: "CAD & Design", items: ["CATIA", "Solidworks", "Rapid Prototyping"] },
   { category: "Languages", items: ["Telugu (Native)", "English (C1)", "German (B2)", "Hindi (C1)"] }
 ];
