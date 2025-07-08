@@ -46,10 +46,12 @@ const Hero = () => {
                   <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-primary">Tharun Arety</span>
                 </div>
               </div>
-              <p className="text-lg md:text-xl font-light mt-4 text-primary text-center md:text-left opacity-0 animate-fade-in-up animation-delay-200">— Shaping the Future with Materials Science, Framing the Present Through Photography.</p>
+              <p className="text-lg md:text-xl font-light mt-4 text-center md:text-left opacity-0 animate-fade-in-up animation-delay-200">
+                <span className="text-white">— Shaping the Future with Materials Science,</span> <span className="text-primary">Framing the Present Through Photography.</span>
+              </p>
               <div className="flex gap-4 mt-8 opacity-0 animate-fade-in-up animation-delay-600">
                 <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-300 hover:shadow-lg">
-                  <a href="/portfolio">Explore Engineering Portfolio</a>
+                  <a href="/portfolio">Explore Engineering Projects</a>
                 </Button>
                 <Button variant="outline" asChild className="border-primary text-primary hover:bg-primary hover:text-primary-foreground hover:scale-105 transition-all duration-300 hover:shadow-lg">
                   <a href="/photography">Discover My Visual Stories</a>
