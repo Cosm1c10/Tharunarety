@@ -138,9 +138,9 @@ const Portfolio = () => {
             <h2 className="text-3xl font-light text-center mb-12">Featured Projects</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
               {projects.map((project, index) => (
-                <Card key={index} className="h-full">
+                <Card key={index} className="h-full hover:shadow-xl hover:scale-105 transition-all duration-300 group opacity-0 animate-fade-in-up" style={{animationDelay: `${index * 0.2}s`}}>
                   <CardHeader>
-                    <CardTitle className="text-xl">{project.title}</CardTitle>
+                    <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">{project.title}</CardTitle>
                     <div className="flex items-center gap-2">
                       <span className={`px-2 py-1 rounded-full text-xs ${
                         project.status === 'Completed' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
@@ -171,14 +171,14 @@ const Portfolio = () => {
             <h2 className="text-3xl font-light text-center mb-12">Technical Skills</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
               {skills.map((skillGroup, index) => (
-                <Card key={index}>
+                <Card key={index} className="hover:shadow-xl hover:scale-105 transition-all duration-300 group opacity-0 animate-fade-in-up" style={{animationDelay: `${index * 0.15}s`}}>
                   <CardHeader>
-                    <CardTitle className="text-lg">{skillGroup.category}</CardTitle>
+                    <CardTitle className="text-lg group-hover:text-primary transition-colors duration-300">{skillGroup.category}</CardTitle>
                   </CardHeader>
                   <CardContent>
                     <div className="space-y-2">
                       {skillGroup.items.map((skill, skillIndex) => (
-                        <div key={skillIndex} className="text-sm text-muted-foreground">
+                        <div key={skillIndex} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">
                           {skill}
                         </div>
                       ))}
