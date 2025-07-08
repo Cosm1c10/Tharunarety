@@ -18,13 +18,13 @@ const About = () => {
             </p>
           </div>
 
-          {/* Right Column - Portrait Image */}
+          {/* Right Column - New Portrait Image */}
           <div className="flex justify-center opacity-0 animate-slide-in-right animation-delay-200">
             <Card className="w-full max-w-sm border-none shadow-xl overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-500 group">
               <CardContent className="p-0">
                 <img 
-                  src="/lovable-uploads/27b0d5ec-f720-416e-b010-7827e0c65c4f.png"
-                  alt="Tharun holding a camera"
+                  src="/lovable-uploads/WhatsApp Image 2025-07-08 at 23.25.25.jpeg"
+                  alt="Tharun Arety - Professional portrait"
                   className="rounded-lg object-cover w-full h-auto group-hover:scale-110 transition-transform duration-700"
                 />
               </CardContent>
@@ -56,7 +56,7 @@ const About = () => {
           </div>
         </div>
 
-        {/* Third Section - Text Left, Creative Visual Right */}
+        {/* Third Section - Text Left, Camera Image Right */}
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           {/* Left Column - Creative Lens Text */}
           <div className="opacity-0 animate-slide-in-left animation-delay-800">
@@ -66,24 +66,17 @@ const About = () => {
             </p>
           </div>
 
-          {/* Right Column - Creative Visual Element */}
+          {/* Right Column - Camera Image */}
           <div className="flex justify-center opacity-0 animate-slide-in-right animation-delay-1000">
-            <div className="relative">
-              <Card className="w-full max-w-sm border-none shadow-xl overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-500 group">
-                <CardContent className="p-0 relative">
-                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent z-10 group-hover:from-primary/30 transition-all duration-500"></div>
-                  <div className="p-8 text-center relative z-20">
-                    <div className="w-20 h-20 mx-auto mb-4 bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors duration-300">
-                      <svg className="w-10 h-10 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                        <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
-                      </svg>
-                    </div>
-                    <h5 className="text-lg font-semibold text-foreground mb-2">Visual Storytelling</h5>
-                    <p className="text-sm text-muted-foreground">Capturing moments, evoking emotions, sharing perspectives</p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+            <Card className="w-full max-w-sm border-none shadow-xl overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-500 group">
+              <CardContent className="p-0">
+                <img 
+                  src="/lovable-uploads/27b0d5ec-f720-416e-b010-7827e0c65c4f.png"
+                  alt="Tharun holding a camera, showcasing his passion for photography and visual storytelling"
+                  className="rounded-lg object-cover w-full h-auto group-hover:scale-110 transition-transform duration-700"
+                />
+              </CardContent>
+            </Card>
           </div>
         </div>
       </div>
