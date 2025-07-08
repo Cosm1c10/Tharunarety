@@ -140,7 +140,7 @@ const Portfolio = () => {
         {/* Hero Section */}
         <section className="py-20 md:py-32 px-8 md:px-12">
           <div className="container mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-light mb-4">My Engineering Portfolio</h1>
+            <h1 className="text-4xl md:text-6xl font-light mb-4">My Engineering Projects</h1>
             <h2 className="text-2xl font-light mb-4 text-primary">Driving Innovation in Materials Science</h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
               Materials Engineering professional with expertise in FEM simulations, Python programming, 
