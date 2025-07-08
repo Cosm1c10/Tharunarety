@@ -3,7 +3,9 @@ import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
+import Autoplay from "embla-carousel-autoplay";
 import { Database, Zap, Layers, Building, Atom, Linkedin, FileText, ExternalLink, Github } from "lucide-react";
+import { useRef } from "react";
 import {
   Dialog,
   DialogContent,
@@ -114,6 +116,10 @@ const engineeringApproachCards = [
 ];
 
 const Portfolio = () => {
+  const plugin = useRef(
+    Autoplay({ delay: 3000, stopOnInteraction: true })
+  );
+
   return (
     <div className="bg-background text-foreground font-sans min-h-screen">
       <Header />
@@ -168,10 +174,13 @@ const Portfolio = () => {
 
             <div className="mb-12 opacity-0 animate-fade-in-up animation-delay-400">
               <Carousel
+                plugins={[plugin.current]}
                 opts={{
                   align: "start",
                   loop: true,
                 }}
+                onMouseEnter={plugin.current.stop}
+                onMouseLeave={plugin.current.reset}
                 className="w-full max-w-7xl mx-auto"
               >
                 <CarouselContent className="-ml-2 md:-ml-4">
@@ -180,7 +189,7 @@ const Portfolio = () => {
                     return (
                       <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
                         <div className="p-1">
-                          <Card className="text-left hover:shadow-xl hover:scale-105 transition-all duration-300 group h-full">
+                          <Card className="text-left hover:shadow-xl hover:scale-105 transition-all duration-300 group h-full min-h-[400px] flex flex-col">
                             <CardHeader>
                               <div className="flex items-center gap-3 mb-2">
                                 <div className="bg-secondary p-3 rounded-full w-fit group-hover:bg-primary/20 transition-colors duration-300">
@@ -189,7 +198,7 @@ const Portfolio = () => {
                                 <CardTitle className="text-xl font-medium">{card.title}</CardTitle>
                               </div>
                             </CardHeader>
-                            <CardContent>
+                            <CardContent className="flex-1 flex flex-col justify-between">
                               <div className="space-y-4">
                                 {card.sections.map((section, sectionIndex) => (
                                   <div key={sectionIndex}>
