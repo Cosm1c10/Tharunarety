@@ -144,7 +144,7 @@ const Portfolio = () => {
             <div 
               className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
               style={{
-                backgroundImage: 'url(/lovable-uploads/WhatsApp Image 2025-07-09 at 00.44.42.jpeg)',
+                backgroundImage: 'url(/lovable-uploads/WhatsApp%20Image%202025-07-09%20at%2000.44.42.jpeg)',
                 backgroundPosition: 'center',
                 transform: 'scale(1.05)',
               }}
@@ -198,7 +198,7 @@ const Portfolio = () => {
             <div 
               className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
               style={{
-                backgroundImage: 'url(/lovable-uploads/WhatsApp Image 2025-07-09 at 00.46.38.jpeg)',
+                backgroundImage: 'url(/lovable-uploads/WhatsApp%20Image%202025-07-09%20at%2000.46.38.jpeg)',
                 backgroundPosition: 'center',
                 transform: 'scale(1.1)',
               }}
