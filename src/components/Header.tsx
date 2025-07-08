@@ -24,7 +24,7 @@ const Header = () => {
           <a href={location.pathname === "/" ? "#about" : "/#about"}>About Me</a>
         </Button>
         <Button variant="ghost" asChild className="text-base px-5 py-3 hover:scale-105 transition-all duration-300">
-          <a href="/portfolio">Portfolio</a>
+          <a href="/portfolio">Engineering</a>
         </Button>
         <Button variant="ghost" asChild className="text-base px-5 py-3 hover:scale-105 transition-all duration-300">
           <a href="/photography">Photography</a>
