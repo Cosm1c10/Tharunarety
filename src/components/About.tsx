@@ -22,7 +22,6 @@ const About = () => {
               My passion for observation extends into <strong className="text-foreground">visual storytelling</strong>. Whether through <strong className="text-foreground">photography</strong> or <strong className="text-foreground">cinematic videos</strong>, I'm driven to capture fleeting moments and share unique perspectives. This blend of analytical rigor and artistic expression truly defines who I am.
             </p>
           </div>
-          </p>
         </div>
         <div className="flex justify-center">
           <Card className="w-full max-w-sm border-none shadow-xl overflow-hidden">
