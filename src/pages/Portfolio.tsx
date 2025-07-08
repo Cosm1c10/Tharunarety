@@ -13,30 +13,30 @@ import {
 
 const projects = [
   {
-    title: "Pneumonia Detection with CNNs",
-    description: "Deep learning model for medical image analysis using Convolutional Neural Networks to detect pneumonia in chest X-rays.",
-    technologies: ["Python", "TensorFlow", "CNN", "Medical Imaging"],
+    title: "Fibre Orientation Optimization in Laminated Composites",
+    description: "Significantly enhanced material performance by applying advanced optimization techniques using adaptive evolutionary algorithms.",
+    technologies: ["Python", "Ansys", "FEM", "Optimization Algorithms"],
     status: "Completed"
   },
   {
-    title: "Sign Language to Text Conversion",
-    description: "Real-time sign language recognition system that converts hand gestures into text using computer vision and machine learning.",
-    technologies: ["Python", "OpenCV", "Machine Learning", "Computer Vision"],
+    title: "Bio-inspired Nano-composite Analysis",
+    description: "Analyzed strain concentration factor around holes in bio-inspired nano-composites using discrete FE simulations and Python parameterization.",
+    technologies: ["Python", "FEM Simulation", "Material Science", "Parameterization"],
     status: "Completed"
   },
   {
-    title: "Structural Optimization Techniques",
-    description: "Advanced engineering analysis and optimization methods for structural design and material efficiency.",
-    technologies: ["MATLAB", "FEA", "Optimization Algorithms", "Mechanical Engineering"],
+    title: "CNT-infused Rubber Nano-Composites",
+    description: "Research and development of carbon nanotube-infused rubber nano-composites with comprehensive mechanical, thermal, and tribological testing.",
+    technologies: ["Material Testing", "CNT Technology", "Mechanical Engineering", "Research"],
     status: "Research"
   }
 ];
 
 const skills = [
-  { category: "Programming", items: ["Python", "MATLAB", "C++", "JavaScript"] },
-  { category: "Machine Learning", items: ["TensorFlow", "PyTorch", "Scikit-learn", "Computer Vision"] },
-  { category: "Engineering", items: ["FEA", "CAD", "Material Science", "Structural Analysis"] },
-  { category: "Tools", items: ["Git", "Docker", "Linux", "AWS"] }
+  { category: "FEM Simulation", items: ["Abaqus", "Ansys", "Nastran", "MSC Apex"] },
+  { category: "Programming", items: ["Python", "Pandas", "Matplotlib", "TensorFlow", "Scikit-learn"] },
+  { category: "CAD & Design", items: ["CATIA", "Solidworks", "Rapid Prototyping"] },
+  { category: "Languages", items: ["Telugu (Native)", "English (C1)", "German (B2)", "Hindi (C1)"] }
 ];
 
 const Portfolio = () => {
@@ -48,10 +48,11 @@ const Portfolio = () => {
         {/* Hero Section */}
         <section className="py-20 md:py-32 px-8 md:px-12">
           <div className="container mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-light mb-4">Professional Portfolio</h1>
+            <h1 className="text-4xl md:text-6xl font-light mb-4">My Engineering Portfolio</h1>
+            <h2 className="text-2xl font-light mb-4 text-primary">Driving Innovation in Materials Science</h2>
             <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-              Mechanical engineer specializing in material science with expertise in machine learning, 
-              computer vision, and structural optimization.
+              Materials Engineering professional with expertise in FEM simulations, Python programming, 
+              and advanced optimization techniques. Dedicated to pushing the boundaries of what's possible in materials science.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Dialog>

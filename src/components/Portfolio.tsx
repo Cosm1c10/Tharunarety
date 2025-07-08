@@ -15,9 +15,9 @@ const Portfolio = () => {
     <section id="portfolio" className="py-20 md:py-32 px-8 md:px-12">
       <div className="container mx-auto">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-light mb-2">Explore My Engineering Approach</h2>
+          <h2 className="text-3xl font-light mb-2">Engineering Approach</h2>
           <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-            My engineering approach is rooted in analytical rigor, innovative algorithm design, and a relentless pursuit of efficient, impactful solutions. I believe effective engineering transforms complex challenges into real-world value.
+            My engineering approach is rooted in analytical rigor, innovative algorithm design, and a relentless pursuit of efficient, impactful solutions. I thrive on projects that demand analytical rigor and practical application, always seeking to push the boundaries of what's possible in materials science.
           </p>
         </div>
 
@@ -29,8 +29,8 @@ const Portfolio = () => {
               </div>
             </CardHeader>
             <CardContent>
-              <CardTitle className="text-xl font-medium mb-2">Insightful Problem Definition</CardTitle>
-              <CardDescription>I begin by meticulously analyzing complex problems, translating them into clear objectives, and identifying the core data and algorithmic needs.</CardDescription>
+              <CardTitle className="text-xl font-medium mb-2">Problem Definition</CardTitle>
+              <CardDescription>Meticulously analyzing complex problems, translating them into clear objectives, and identifying core data and algorithmic needs for materials engineering challenges.</CardDescription>
             </CardContent>
           </Card>
           <Card className="text-center">
@@ -40,8 +40,8 @@ const Portfolio = () => {
               </div>
             </CardHeader>
             <CardContent>
-              <CardTitle className="text-xl font-medium mb-2">Strategic Solution Development</CardTitle>
-              <CardDescription>My focus is on designing and implementing robust software solutions and machine learning models, from Pneumonia Detection with CNNs to Structural Optimization techniques, ensuring a strategic approach to each challenge.</CardDescription>
+              <CardTitle className="text-xl font-medium mb-2">Solution Development</CardTitle>
+              <CardDescription>Designing and implementing robust FEM simulations and optimization algorithms, from fibre orientation optimization to bio-inspired nano-composite analysis, ensuring strategic approach to each challenge.</CardDescription>
             </CardContent>
           </Card>
           <Card className="text-center">
@@ -51,8 +51,8 @@ const Portfolio = () => {
               </div>
             </CardHeader>
             <CardContent>
-              <CardTitle className="text-xl font-medium mb-2">Impactful Deployment & Refinement</CardTitle>
-              <CardDescription>I am committed to delivering systems that perform effectively and efficiently in real-world scenarios, continuously refining them to achieve optimal results and tangible impact, as seen in projects like Sign Language to Text Conversion.</CardDescription>
+              <CardTitle className="text-xl font-medium mb-2">Deployment & Refinement</CardTitle>
+              <CardDescription>Delivering engineering solutions that perform effectively in real-world scenarios, continuously refining methodologies to achieve optimal results and tangible impact in materials science applications.</CardDescription>
             </CardContent>
           </Card>
         </div>

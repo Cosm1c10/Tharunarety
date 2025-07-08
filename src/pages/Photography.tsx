@@ -40,8 +40,13 @@ const Photography = () => {
         {/* Hero Section */}
         <section className="py-20 md:py-32 px-8 md:px-12">
           <div className="container mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-light mb-4">Tharun's Perspective</h1>
-            <p className="text-xl text-muted-foreground mb-8">Capturing moments through photography and videography</p>
+            <h1 className="text-4xl md:text-6xl font-light mb-4">My Visual Stories</h1>
+            <p className="text-xl text-muted-foreground mb-4">Photography, Filmmaking & Cinematic Videos</p>
+            <p className="text-lg text-muted-foreground max-w-4xl mx-auto mb-8">
+              Beyond the world of simulations and materials, I find immense joy and creative expression through visual storytelling. 
+              Whether through the timeless art of photography or the dynamic narrative of filmmaking and cinematic videos, 
+              I'm driven to observe the unseen, capture fleeting moments, and tell compelling stories through light, composition, and movement.
+            </p>
           </div>
         </section>
 
