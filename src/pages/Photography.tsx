@@ -45,8 +45,8 @@ const Photography = () => {
               <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mt-2">to</div>
               <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-primary mt-2">Tharun's Perspective</div>
             </h1>
-            <p className="text-xl text-muted-foreground mb-4 opacity-0 animate-fade-in-up animation-delay-200">Photography, Filmmaking & Cinematic Videos</p>
-            <p className="text-lg text-muted-foreground max-w-4xl mx-auto mb-8 opacity-0 animate-fade-in-up animation-delay-400">
+            <p className="text-lg text-muted-foreground mb-4 opacity-0 animate-fade-in-up animation-delay-200">Photography, Filmmaking & Cinematic Videos</p>
+            <p className="text-base text-muted-foreground max-w-4xl mx-auto mb-8 opacity-0 animate-fade-in-up animation-delay-400">
               Beyond the world of simulations and materials, I find immense joy and creative expression through visual storytelling. 
               Whether through the timeless art of photography or the dynamic narrative of filmmaking and cinematic videos, 
               I'm driven to observe the unseen, capture fleeting moments, and tell compelling stories through light, composition, and movement.
@@ -89,7 +89,7 @@ const Photography = () => {
                                   />
                                 </AspectRatio>
                                 <div className="p-3 text-center group-hover:bg-secondary/20 transition-colors duration-300">
-                                  <p className="text-sm text-muted-foreground">{photo.alt}</p>
+                                  <p className="text-xs text-muted-foreground">{photo.alt}</p>
                                 </div>
                               </CardContent>
                             </Card>
@@ -135,7 +135,7 @@ const Photography = () => {
                             />
                           </AspectRatio>
                           <div className="p-3 text-center group-hover:bg-secondary/20 transition-colors duration-300">
-                            <p className="text-sm text-muted-foreground">{video.title}</p>
+                            <p className="text-xs text-muted-foreground">{video.title}</p>
                           </div>
                         </CardContent>
                       </Card>
