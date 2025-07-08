@@ -2,6 +2,7 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card, CardContent, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Database, Zap, Layers, Building, Atom, Linkedin, FileText, ExternalLink, Github } from "lucide-react";
 import {
   Dialog,
@@ -37,6 +38,79 @@ const skills = [
   { category: "Programming", items: ["Python", "Pandas", "Matplotlib", "Torch-FEM", "Scikit-learn"] },
   { category: "CAD & Design", items: ["CATIA", "Solidworks", "Rapid Prototyping"] },
   { category: "Languages", items: ["Telugu (Native)", "English (C1)", "German (B2)", "Hindi (C1)"] }
+];
+
+const engineeringApproachCards = [
+  {
+    icon: Database,
+    title: "Data-Driven Simulations",
+    sections: [
+      {
+        subtitle: "Predictive Modeling:",
+        description: "I leverage Finite Element Method (FEM) and advanced computational tools to accurately simulate material behaviors and structural responses, transforming complex data into actionable insights for design."
+      },
+      {
+        subtitle: "Performance Forecasting:",
+        description: "My approach enables precise forecasting of performance under various conditions, crucial for validating structural designs and optimizing advanced material applications."
+      }
+    ]
+  },
+  {
+    icon: Zap,
+    title: "Optimization Algorithms",
+    sections: [
+      {
+        subtitle: "Intelligent Design Search:",
+        description: "I apply sophisticated Evolutionary Algorithms (e.g., Genetic Algorithms) to autonomously explore vast design spaces, identifying global optima for intricate engineering problems."
+      },
+      {
+        subtitle: "Efficiency & Maximization:",
+        description: "This methodology is critical for structural optimization, maximizing properties like stiffness-to-weight ratios in advanced materials, and achieving peak performance."
+      }
+    ]
+  },
+  {
+    icon: Layers,
+    title: "Advanced Composite Materials",
+    sections: [
+      {
+        subtitle: "Carbon Reinforced Composites (CFRPs):",
+        description: "Expertise in the design, analysis, and characterization of CFRPs, focusing on fiber orientation optimization and enhancing mechanical properties for high-performance applications."
+      },
+      {
+        subtitle: "Ceramic Matrix Composites (CMCs):",
+        description: "Knowledge in the unique properties and challenges of CMCs, understanding their high-temperature capabilities and brittle matrix behavior for specialized structural integrity."
+      }
+    ]
+  },
+  {
+    icon: Building,
+    title: "Structural Design",
+    sections: [
+      {
+        subtitle: "Integrated Engineering Solutions:",
+        description: "I translate complex material properties and simulation insights into robust and efficient structural designs. This involves applying principles of mechanics to ensure integrity, durability, and compliance with performance requirements."
+      },
+      {
+        subtitle: "Performance-Driven Architecture:",
+        description: "My focus is on creating structures that are not only sound but are also optimized for their intended function, particularly when utilizing advanced composite materials and informed by data-driven simulations."
+      }
+    ]
+  },
+  {
+    icon: Atom,
+    title: "Materials Engineering",
+    sections: [
+      {
+        subtitle: "Fundamental Understanding:",
+        description: "A strong foundation in the science of materials engineering informs every design choice, from microstructural considerations to macroscopic properties and failure mechanisms."
+      },
+      {
+        subtitle: "Material Characterization & Application:",
+        description: "Expertise in evaluating and selecting materials based on specific application requirements, ensuring optimal performance, durability, and cost-effectiveness in diverse engineering contexts."
+      }
+    ]
+  }
 ];
 
 const Portfolio = () => {
@@ -92,121 +166,48 @@ const Portfolio = () => {
               </p>
             </div>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12 opacity-0 animate-fade-in-up animation-delay-400">
-              <Card className="text-left hover:shadow-xl hover:scale-105 transition-all duration-300 group">
-                <CardHeader>
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="bg-secondary p-3 rounded-full w-fit group-hover:bg-primary/20 transition-colors duration-300">
-                      <Database className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-300" />
-                    </div>
-                    <CardTitle className="text-xl font-medium">Data-Driven Simulations</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-primary mb-2">Predictive Modeling:</h4>
-                      <CardDescription>I leverage Finite Element Method (FEM) and advanced computational tools to accurately simulate material behaviors and structural responses, transforming complex data into actionable insights for design.</CardDescription>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-primary mb-2">Performance Forecasting:</h4>
-                      <CardDescription>My approach enables precise forecasting of performance under various conditions, crucial for validating structural designs and optimizing advanced material applications.</CardDescription>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="text-left hover:shadow-xl hover:scale-105 transition-all duration-300 group animation-delay-200">
-                <CardHeader>
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="bg-secondary p-3 rounded-full w-fit group-hover:bg-primary/20 transition-colors duration-300">
-                      <Zap className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-300" />
-                    </div>
-                    <CardTitle className="text-xl font-medium">Optimization Algorithms</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-primary mb-2">Intelligent Design Search:</h4>
-                      <CardDescription>I apply sophisticated Evolutionary Algorithms (e.g., Genetic Algorithms) to autonomously explore vast design spaces, identifying global optima for intricate engineering problems.</CardDescription>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-primary mb-2">Efficiency & Maximization:</h4>
-                      <CardDescription>This methodology is critical for structural optimization, maximizing properties like stiffness-to-weight ratios in advanced materials, and achieving peak performance.</CardDescription>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="text-left hover:shadow-xl hover:scale-105 transition-all duration-300 group animation-delay-400">
-                <CardHeader>
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="bg-secondary p-3 rounded-full w-fit group-hover:bg-primary/20 transition-colors duration-300">
-                      <Layers className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-300" />
-                    </div>
-                    <CardTitle className="text-xl font-medium">Advanced Composite Materials</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-primary mb-2">Carbon Reinforced Composites (CFRPs):</h4>
-                      <CardDescription>Expertise in the design, analysis, and characterization of CFRPs, focusing on fiber orientation optimization and enhancing mechanical properties for high-performance applications.</CardDescription>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-primary mb-2">Ceramic Matrix Composites (CMCs):</h4>
-                      <CardDescription>Knowledge in the unique properties and challenges of CMCs, understanding their high-temperature capabilities and brittle matrix behavior for specialized structural integrity.</CardDescription>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="text-left hover:shadow-xl hover:scale-105 transition-all duration-300 group animation-delay-600">
-                <CardHeader>
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="bg-secondary p-3 rounded-full w-fit group-hover:bg-primary/20 transition-colors duration-300">
-                      <Building className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-300" />
-                    </div>
-                    <CardTitle className="text-xl font-medium">Structural Design</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-primary mb-2">Integrated Engineering Solutions:</h4>
-                      <CardDescription>I translate complex material properties and simulation insights into robust and efficient structural designs. This involves applying principles of mechanics to ensure integrity, durability, and compliance with performance requirements.</CardDescription>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-primary mb-2">Performance-Driven Architecture:</h4>
-                      <CardDescription>My focus is on creating structures that are not only sound but are also optimized for their intended function, particularly when utilizing advanced composite materials and informed by data-driven simulations.</CardDescription>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-              
-              <Card className="text-left hover:shadow-xl hover:scale-105 transition-all duration-300 group animation-delay-800 md:col-span-2 lg:col-span-1">
-                <CardHeader>
-                  <div className="flex items-center gap-3 mb-2">
-                    <div className="bg-secondary p-3 rounded-full w-fit group-hover:bg-primary/20 transition-colors duration-300">
-                      <Atom className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-300" />
-                    </div>
-                    <CardTitle className="text-xl font-medium">Materials Engineering</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <div className="space-y-4">
-                    <div>
-                      <h4 className="font-semibold text-primary mb-2">Fundamental Understanding:</h4>
-                      <CardDescription>A strong foundation in the science of materials engineering informs every design choice, from microstructural considerations to macroscopic properties and failure mechanisms.</CardDescription>
-                    </div>
-                    <div>
-                      <h4 className="font-semibold text-primary mb-2">Material Characterization & Application:</h4>
-                      <CardDescription>Expertise in evaluating and selecting materials based on specific application requirements, ensuring optimal performance, durability, and cost-effectiveness in diverse engineering contexts.</CardDescription>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
+            <div className="mb-12 opacity-0 animate-fade-in-up animation-delay-400">
+              <Carousel
+                opts={{
+                  align: "start",
+                  loop: true,
+                }}
+                className="w-full max-w-7xl mx-auto"
+              >
+                <CarouselContent className="-ml-2 md:-ml-4">
+                  {engineeringApproachCards.map((card, index) => {
+                    const IconComponent = card.icon;
+                    return (
+                      <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                        <div className="p-1">
+                          <Card className="text-left hover:shadow-xl hover:scale-105 transition-all duration-300 group h-full">
+                            <CardHeader>
+                              <div className="flex items-center gap-3 mb-2">
+                                <div className="bg-secondary p-3 rounded-full w-fit group-hover:bg-primary/20 transition-colors duration-300">
+                                  <IconComponent className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-300" />
+                                </div>
+                                <CardTitle className="text-xl font-medium">{card.title}</CardTitle>
+                              </div>
+                            </CardHeader>
+                            <CardContent>
+                              <div className="space-y-4">
+                                {card.sections.map((section, sectionIndex) => (
+                                  <div key={sectionIndex}>
+                                    <h4 className="font-semibold text-primary mb-2">{section.subtitle}</h4>
+                                    <CardDescription>{section.description}</CardDescription>
+                                  </div>
+                                ))}
+                              </div>
+                            </CardContent>
+                          </Card>
+                        </div>
+                      </CarouselItem>
+                    );
+                  })}
+                </CarouselContent>
+                <CarouselPrevious />
+                <CarouselNext />
+              </Carousel>
             </div>
 
             <div className="text-center flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-in-up animation-delay-600">
