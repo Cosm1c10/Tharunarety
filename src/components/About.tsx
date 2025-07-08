@@ -12,9 +12,8 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-start">
           {/* Left Column - Text Content */}
           <div className="space-y-8">
-            {/* Greeting and Introduction */}
+            {/* Introduction */}
             <div className="opacity-0 animate-slide-in-left">
-              <h4 className="text-xl font-semibold mb-4 text-primary">Greeting and Introduction</h4>
               <p className="text-muted-foreground leading-relaxed hover:text-foreground transition-colors duration-300">
                 Greetings! I'm Tharun Arety, a dedicated <strong className="text-foreground">Materials Engineering professional</strong> with a drive for innovation and a strong aptitude for leveraging digital tools to solve complex engineering challenges. My journey is defined by a robust understanding of FEM simulations (Abaqus, Ansys) and a versatile programming skillset in Python, encompassing powerful libraries like Pandas, Matplotlib, Scikit-learn, and TensorFlow. I thrive on projects that demand analytical rigor and practical application, always seeking to push the boundaries of what's possible in materials science.
               </p>
