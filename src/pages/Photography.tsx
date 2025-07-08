@@ -40,7 +40,11 @@ const Photography = () => {
         {/* Hero Section */}
         <section className="py-20 md:py-32 px-8 md:px-12 opacity-0 animate-fade-in-up">
           <div className="container mx-auto text-center">
-            <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light mb-4 opacity-0 animate-fade-in-up">Welcome to Tharun's Perspective</h1>
+            <h1 className="font-light mb-4 opacity-0 animate-fade-in-up">
+              <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl">Welcome</span>
+              <span className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl mx-4">to</span>
+              <span className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl">Tharun's Perspective</span>
+            </h1>
             <p className="text-xl text-muted-foreground mb-4 opacity-0 animate-fade-in-up animation-delay-200">Photography, Filmmaking & Cinematic Videos</p>
             <p className="text-lg text-muted-foreground max-w-4xl mx-auto mb-8 opacity-0 animate-fade-in-up animation-delay-400">
               Beyond the world of simulations and materials, I find immense joy and creative expression through visual storytelling. 
