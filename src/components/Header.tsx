@@ -1,4 +1,3 @@
-
 import { Button } from "@/components/ui/button";
 import { useLocation } from "react-router-dom";
 
@@ -30,15 +29,7 @@ const Header = () => {
           <a href="/photography">Photography</a>
         </Button>
         <Button variant="ghost" asChild className="text-base px-5 py-3">
-          <a href={location.pathname === "/" ? "#contact" : "/#contact"} onClick={(e) => {
-            if (location.pathname === "/") {
-              e.preventDefault();
-              const contactSection = document.getElementById('contact');
-              if (contactSection) {
-                contactSection.scrollIntoView({ behavior: 'smooth' });
-              }
-            }
-          }}>Contact</a>
+          <a href={location.pathname === "/" ? "#contact" : "/#contact"}>Contact</a>
         </Button>
       </nav>
     </header>
