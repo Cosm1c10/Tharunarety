@@ -43,7 +43,7 @@ const About = () => {
               <CardContent className="p-0">
                 <AspectRatio ratio={4 / 5} className="overflow-hidden rounded-lg">
                   <img 
-                    src="/lovable-uploads/my icon.jpg"
+                    src="/lovable-uploads/IMG_3766.JPG"
                     alt="Tharun on a mountain adventure, showcasing his love for hiking and exploration"
                     className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                   />
