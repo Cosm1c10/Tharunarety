@@ -35,21 +35,21 @@ const Hero = () => {
           </div>
 
           {/* Right Column: Text content */}
-          <div className="relative z-10 order-1 md:order-2 self-center md:ml-12 opacity-0 animate-slide-in-right">
-            <div className="flex flex-col items-center text-center md:items-start md:text-left">
+          <div className="relative z-10 order-1 md:order-2 self-center opacity-0 animate-slide-in-right">
+            <div className="flex flex-col items-center text-center">
               <div className="opacity-0 animate-fade-in-up">
                 <div className="text-center">
                   <h1 className="text-[4rem] sm:text-[5rem] md:text-[6rem] lg:text-[7rem] font-extralight leading-none text-white">Hello!</h1>
                 </div>
-                <div className="flex flex-col md:flex-row items-center md:items-baseline gap-2 md:gap-4 mt-2 justify-center md:justify-start">
+                <div className="flex flex-col md:flex-row items-center md:items-baseline gap-2 md:gap-4 mt-2 justify-center">
                   <span className="text-2xl md:text-3xl font-light text-muted-foreground">I'm</span>
                   <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-primary">Tharun Arety</span>
                 </div>
               </div>
-              <p className="text-lg md:text-xl font-light mt-4 text-white text-center opacity-0 animate-fade-in-up animation-delay-200">
+              <p className="text-lg md:text-xl font-light mt-4 text-white text-center max-w-2xl opacity-0 animate-fade-in-up animation-delay-200">
                 Shaping the Future with Materials Science, Framing the Present Through Photography.
               </p>
-              <div className="flex gap-4 mt-8 opacity-0 animate-fade-in-up animation-delay-600">
+              <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center opacity-0 animate-fade-in-up animation-delay-600">
                 <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-300 hover:shadow-lg">
                   <a href="/portfolio">Explore Engineering Projects</a>
                 </Button>
