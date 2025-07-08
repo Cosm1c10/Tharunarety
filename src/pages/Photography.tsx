@@ -33,20 +33,37 @@ const Photography = () => {
   const [activeAlbum, setActiveAlbum] = useState('portraits');
 
   return (
-    <div className="bg-background text-foreground font-sans min-h-screen">
+    <div className="bg-background text-foreground font-sans min-h-screen relative">
       <Header />
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 md:py-32 px-8 md:px-12 opacity-0 animate-fade-in-up">
+        <section className="py-20 md:py-32 px-8 md:px-12 opacity-0 animate-fade-in-up relative overflow-hidden">
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0 z-0">
+            <div 
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+              style={{
+                backgroundImage: 'url(/lovable-uploads/XS20.png)',
+                backgroundPosition: 'center right',
+                transform: 'scale(1.1)',
+              }}
+            />
+            {/* Dark overlay for better text readability */}
+            <div className="absolute inset-0 bg-black/70" />
+            {/* Gradient overlay for smooth text transition */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70" />
+          </div>
+          
           <div className="container mx-auto text-center">
-            <h1 className="font-light mb-4 opacity-0 animate-fade-in-up leading-tight">
-              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white">Welcome</div>
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mt-2">to</div>
-              <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-primary mt-2">Tharun's Perspective</div>
+            <h1 className="font-light mb-4 opacity-0 animate-fade-in-up leading-tight relative z-10">
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white drop-shadow-2xl">Welcome</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mt-2 drop-shadow-2xl">to</div>
+              <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-primary mt-2 drop-shadow-2xl font-medium">Tharun's Perspective</div>
             </h1>
-            <p className="text-lg text-muted-foreground mb-4 opacity-0 animate-fade-in-up animation-delay-200">Photography, Filmmaking & Cinematic Videos</p>
-            <p className="text-base text-muted-foreground max-w-4xl mx-auto mb-8 opacity-0 animate-fade-in-up animation-delay-400">
+            <p className="text-lg text-white/90 mb-4 opacity-0 animate-fade-in-up animation-delay-200 relative z-10 drop-shadow-lg font-medium">Photography, Filmmaking & Cinematic Videos</p>
+            <p className="text-base text-white/80 max-w-4xl mx-auto mb-8 opacity-0 animate-fade-in-up animation-delay-400 relative z-10 drop-shadow-lg leading-relaxed">
               Beyond the world of simulations and materials, I find immense joy and creative expression through visual storytelling. 
               Whether through the timeless art of photography or the dynamic narrative of filmmaking and cinematic videos, 
               I'm driven to observe the unseen, capture fleeting moments, and tell compelling stories through light, composition, and movement.
@@ -55,7 +72,7 @@ const Photography = () => {
         </section>
 
         {/* Photography Albums Section */}
-        <section className="py-20 md:py-32 px-8 md:px-12 opacity-0 animate-fade-in-up animation-delay-600">
+        <section className="py-20 md:py-32 px-8 md:px-12 opacity-0 animate-fade-in-up animation-delay-600 bg-background/95 backdrop-blur-sm">
           <div className="container mx-auto">
             <h2 className="text-3xl font-light text-center mb-12 opacity-0 animate-fade-in-up">Photography Albums</h2>
             
@@ -107,7 +124,7 @@ const Photography = () => {
         </section>
 
         {/* Videography Section */}
-        <section className="py-20 md:py-32 px-8 md:px-12 bg-black opacity-0 animate-fade-in-up animation-delay-800">
+        <section className="py-20 md:py-32 px-8 md:px-12 bg-black/95 backdrop-blur-sm opacity-0 animate-fade-in-up animation-delay-800">
           <div className="container mx-auto">
             <h2 className="text-3xl font-light text-center mb-12 opacity-0 animate-fade-in-up">Videography Showcase</h2>
             <Carousel
