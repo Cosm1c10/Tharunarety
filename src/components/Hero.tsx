@@ -38,7 +38,13 @@ const Hero = () => {
           {/* Right Column: Text content */}
           <div className="relative z-10 order-1 md:order-2 self-center md:ml-12 opacity-0 animate-slide-in-right">
             <div className="flex flex-col items-center text-center md:items-start md:text-left">
-              <h1 className="text-[6rem] sm:text-[8rem] md:text-[10rem] lg:text-display font-extralight leading-none text-white opacity-0 animate-fade-in-up">Hello</h1>
+              <div className="opacity-0 animate-fade-in-up">
+                <h1 className="text-[8rem] sm:text-[10rem] md:text-[12rem] lg:text-[14rem] font-extralight leading-none text-white">Hi</h1>
+                <div className="flex flex-col md:flex-row items-center md:items-baseline gap-2 md:gap-4 mt-2">
+                  <span className="text-2xl md:text-3xl font-light text-muted-foreground">It's</span>
+                  <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-white">Tharun Arety</span>
+                </div>
+              </div>
               <p className="text-lg md:text-xl font-light mt-4 text-primary text-center md:text-left opacity-0 animate-fade-in-up animation-delay-200">— Shaping the Future with Materials Science, Framing the Present Through Photography.</p>
               <p className="text-sm md:text-base font-light mt-2 text-muted-foreground text-center md:text-left max-w-md opacity-0 animate-fade-in-up animation-delay-400">
                 Materials Engineering professional driven by innovation in FEM simulations and Python programming, passionate visual storyteller through photography and cinematic videos.
