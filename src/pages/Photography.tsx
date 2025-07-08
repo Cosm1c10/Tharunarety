@@ -39,21 +39,44 @@ const Photography = () => {
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 md:py-32 px-8 md:px-12 opacity-0 animate-fade-in-up relative overflow-hidden">
-          {/* Background Image with Overlay */}
+          {/* Sophisticated Background with iPhone and Camera Setup */}
           <div className="absolute inset-0 z-0">
+            {/* Left side - iPhone Camera Detail */}
             <div 
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-50"
               style={{
-                backgroundImage: 'url(/lovable-uploads/XS20.png)',
-                backgroundPosition: 'center right',
-                transform: 'scale(1.1)',
+                backgroundImage: 'url(/pngimg.com%20-%20iphone16_PNG4.png)',
+                backgroundPosition: 'left center',
+                backgroundSize: 'contain',
+                clipPath: 'polygon(0 0, 65% 0, 45% 100%, 0 100%)',
+                transform: 'scale(1.2) translateX(-10%)',
               }}
             />
-            {/* Dark overlay for better text readability */}
-            <div className="absolute inset-0 bg-black/70" />
-            {/* Gradient overlay for smooth text transition */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70" />
+            
+            {/* Right side - Camera Setup */}
+            <div 
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+              style={{
+                backgroundImage: 'url(/lovable-uploads/XS20.png)',
+                backgroundPosition: 'right center',
+                clipPath: 'polygon(35% 0, 100% 0, 100% 100%, 55% 100%)',
+                transform: 'scale(1.15) translateX(5%)',
+              }}
+            />
+            
+            {/* Sophisticated layered overlays for text readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/85 via-black/70 to-black/80" />
+            
+            {/* Enhanced gradient overlays for smooth transitions */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/60 to-black/85" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/80" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/70" />
+            
+            {/* Center blend effect for seamless integration */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/75 to-transparent" />
+            
+            {/* Subtle radial gradient for depth */}
+            <div className="absolute inset-0 bg-radial-gradient from-transparent via-black/40 to-black/80" />
           </div>
           
           <div className="container mx-auto text-center">
@@ -72,12 +95,25 @@ const Photography = () => {
         </section>
 
         {/* Photography Albums Section */}
-        <section className="py-20 md:py-32 px-8 md:px-12 opacity-0 animate-fade-in-up animation-delay-600 bg-background/95 backdrop-blur-sm">
+        <section className="py-20 md:py-32 px-8 md:px-12 opacity-0 animate-fade-in-up animation-delay-600 bg-background/98 backdrop-blur-md relative overflow-hidden">
+          {/* Subtle background pattern */}
+          <div className="absolute inset-0 z-0 opacity-5">
+            <div 
+              className="absolute inset-0 bg-repeat"
+              style={{
+                backgroundImage: 'url(/pngimg.com%20-%20iphone16_PNG4.png)',
+                backgroundSize: '200px 200px',
+                backgroundPosition: 'center',
+                transform: 'rotate(15deg) scale(0.3)',
+              }}
+            />
+          </div>
+          
           <div className="container mx-auto">
-            <h2 className="text-3xl font-light text-center mb-12 opacity-0 animate-fade-in-up">Photography Albums</h2>
+            <h2 className="text-3xl font-light text-center mb-12 opacity-0 animate-fade-in-up relative z-10">Photography Albums</h2>
             
-            <Tabs value={activeAlbum} onValueChange={setActiveAlbum} className="w-full opacity-0 animate-scale-in animation-delay-200">
-              <TabsList className="grid w-full grid-cols-3 mb-12 hover:shadow-lg transition-shadow duration-300">
+            <Tabs value={activeAlbum} onValueChange={setActiveAlbum} className="w-full opacity-0 animate-scale-in animation-delay-200 relative z-10">
+              <TabsList className="grid w-full grid-cols-3 mb-12 hover:shadow-lg transition-shadow duration-300 bg-background/90 backdrop-blur-sm">
                 <TabsTrigger value="portraits">Portraits</TabsTrigger>
                 <TabsTrigger value="landscapes">Landscapes</TabsTrigger>
                 <TabsTrigger value="street">Street Photography</TabsTrigger>
@@ -96,7 +132,7 @@ const Photography = () => {
                       {photos.map((photo, index) => (
                         <CarouselItem key={index} className="basis-full">
                           <div className="p-2">
-                            <Card className="hover:shadow-xl transition-shadow duration-300 group">
+                            <Card className="hover:shadow-xl transition-shadow duration-300 group bg-background/95 backdrop-blur-sm border-white/10">
                               <CardContent className="p-0">
                                 <AspectRatio ratio={16 / 10} className="overflow-hidden rounded-lg shadow-lg group-hover:shadow-2xl transition-shadow duration-300">
                                   <img 
@@ -124,21 +160,35 @@ const Photography = () => {
         </section>
 
         {/* Videography Section */}
-        <section className="py-20 md:py-32 px-8 md:px-12 bg-black/95 backdrop-blur-sm opacity-0 animate-fade-in-up animation-delay-800">
+        <section className="py-20 md:py-32 px-8 md:px-12 bg-black/98 backdrop-blur-md opacity-0 animate-fade-in-up animation-delay-800 relative overflow-hidden">
+          {/* Subtle iPhone pattern for videography section */}
+          <div className="absolute inset-0 z-0 opacity-3">
+            <div 
+              className="absolute inset-0 bg-repeat"
+              style={{
+                backgroundImage: 'url(/pngimg.com%20-%20iphone16_PNG4.png)',
+                backgroundSize: '150px 150px',
+                backgroundPosition: 'center',
+                transform: 'rotate(-10deg) scale(0.2)',
+                filter: 'invert(1)',
+              }}
+            />
+          </div>
+          
           <div className="container mx-auto">
-            <h2 className="text-3xl font-light text-center mb-12 opacity-0 animate-fade-in-up">Videography Showcase</h2>
+            <h2 className="text-3xl font-light text-center mb-12 opacity-0 animate-fade-in-up relative z-10">Videography Showcase</h2>
             <Carousel
               opts={{
                 align: "start",
                 loop: true,
               }}
-              className="w-full max-w-4xl mx-auto opacity-0 animate-scale-in animation-delay-200"
+              className="w-full max-w-4xl mx-auto opacity-0 animate-scale-in animation-delay-200 relative z-10"
             >
               <CarouselContent>
                 {videos.map((video) => (
                   <CarouselItem key={video.id} className="basis-full">
                     <div className="p-2">
-                      <Card className="hover:shadow-xl transition-shadow duration-300 group">
+                      <Card className="hover:shadow-xl transition-shadow duration-300 group bg-background/95 backdrop-blur-sm border-white/10">
                         <CardContent className="p-0">
                           <AspectRatio ratio={16 / 10} className="overflow-hidden rounded-lg shadow-lg group-hover:shadow-2xl transition-shadow duration-300">
                             <iframe 
