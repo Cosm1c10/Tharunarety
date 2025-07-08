@@ -9,35 +9,17 @@ const About = () => {
           <h3 className="text-xl font-medium text-primary">Engineering with Vision, Life with Passion</h3>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 items-start">
-          {/* Left Column - Text Content */}
-          <div className="space-y-8">
-            {/* Introduction */}
-            <div className="opacity-0 animate-slide-in-left">
-              <p className="text-muted-foreground leading-relaxed hover:text-foreground transition-colors duration-300">
-                Greetings! I'm Tharun Arety, a dedicated <strong className="text-foreground">Materials Engineering professional</strong> with a drive for innovation and a strong aptitude for leveraging digital tools to solve complex engineering challenges. My journey is defined by a robust understanding of FEM simulations (Abaqus, Ansys) and a versatile programming skillset in Python, encompassing powerful libraries like Pandas, Matplotlib, Scikit-learn, and TensorFlow. I thrive on projects that demand analytical rigor and practical application, always seeking to push the boundaries of what's possible in materials science.
-              </p>
-            </div>
-
-            {/* Beyond the Technical */}
-            <div className="opacity-0 animate-fade-in-up animation-delay-200">
-              <h4 className="text-xl font-semibold mb-4 text-primary">Beyond the Technical: A World of Exploration and Creation</h4>
-              <p className="text-muted-foreground leading-relaxed hover:text-foreground transition-colors duration-300">
-                While my professional life is steeped in data-driven solutions and complex simulations, my personal world is vibrant with a different kind of exploration and creation. I believe true innovation comes from a diverse set of experiences. When I step away from the screen, you'll often find me on a <strong className="text-foreground">hiking trail</strong>, exploring new landscapes and finding tranquility in nature's vastness. My love for <strong className="text-foreground">traveling</strong> constantly fuels my curiosity, allowing me to immerse myself in different cultures and perspectives, which in turn enriches my approach to problem-solving, both technical and creative.
-              </p>
-            </div>
-
-            {/* My Creative Lens */}
-            <div className="opacity-0 animate-slide-in-left animation-delay-400">
-              <h4 className="text-xl font-semibold mb-4 text-primary">My Creative Lens: Photography and Filmmaking</h4>
-              <p className="text-muted-foreground leading-relaxed hover:text-foreground transition-colors duration-300">
-                My passion for observation extends naturally into the realm of <strong className="text-foreground">visual storytelling</strong>. Whether it's through <strong className="text-foreground">photography</strong> or <strong className="text-foreground">cinematic videos</strong>, I'm driven to capture fleeting moments, evoke emotion, and share unique perspectives. Filmmaking, in particular, allows me to weave narratives, playing with light, composition, and movement to craft compelling stories. It's a creative outlet that sharpens my eye for detail and challenges me to bring visions to life, much like engineering challenges demand a meticulous approach to design and execution. This blend of analytical rigor and artistic expression truly defines who I am.
-              </p>
-            </div>
+        {/* First Section - Text Left, Image Right */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+          {/* Left Column - Introduction Text */}
+          <div className="opacity-0 animate-slide-in-left">
+            <p className="text-muted-foreground leading-relaxed hover:text-foreground transition-colors duration-300 text-lg">
+              Greetings! I'm Tharun Arety, a dedicated <strong className="text-foreground">Materials Engineering professional</strong> with a drive for innovation and a strong aptitude for leveraging digital tools to solve complex engineering challenges. My journey is defined by a robust understanding of FEM simulations (Abaqus, Ansys) and a versatile programming skillset in Python, encompassing powerful libraries like Pandas, Matplotlib, Scikit-learn, and TensorFlow. I thrive on projects that demand analytical rigor and practical application, always seeking to push the boundaries of what's possible in materials science.
+            </p>
           </div>
 
-          {/* Right Column - Image */}
-          <div className="flex justify-center opacity-0 animate-slide-in-right animation-delay-600">
+          {/* Right Column - Portrait Image */}
+          <div className="flex justify-center opacity-0 animate-slide-in-right animation-delay-200">
             <Card className="w-full max-w-sm border-none shadow-xl overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-500 group">
               <CardContent className="p-0">
                 <img 
@@ -47,6 +29,61 @@ const About = () => {
                 />
               </CardContent>
             </Card>
+          </div>
+        </div>
+
+        {/* Second Section - Image Left, Text Right */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
+          {/* Left Column - Mountain Adventure Image */}
+          <div className="flex justify-center opacity-0 animate-slide-in-left animation-delay-400 order-2 lg:order-1">
+            <Card className="w-full max-w-lg border-none shadow-xl overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-500 group">
+              <CardContent className="p-0">
+                <img 
+                  src="/lovable-uploads/my icon.jpg"
+                  alt="Tharun on a mountain adventure, showcasing his love for hiking and exploration"
+                  className="rounded-lg object-cover w-full h-auto group-hover:scale-110 transition-transform duration-700"
+                />
+              </CardContent>
+            </Card>
+          </div>
+
+          {/* Right Column - Beyond the Technical Text */}
+          <div className="opacity-0 animate-slide-in-right animation-delay-600 order-1 lg:order-2">
+            <h4 className="text-2xl font-semibold mb-6 text-primary">Beyond the Technical: A World of Exploration and Creation</h4>
+            <p className="text-muted-foreground leading-relaxed hover:text-foreground transition-colors duration-300 text-lg">
+              While my professional life is steeped in data-driven solutions and complex simulations, my personal world is vibrant with a different kind of exploration and creation. I believe true innovation comes from a diverse set of experiences. When I step away from the screen, you'll often find me on a <strong className="text-foreground">hiking trail</strong>, exploring new landscapes and finding tranquility in nature's vastness. My love for <strong className="text-foreground">traveling</strong> constantly fuels my curiosity, allowing me to immerse myself in different cultures and perspectives, which in turn enriches my approach to problem-solving, both technical and creative.
+            </p>
+          </div>
+        </div>
+
+        {/* Third Section - Text Left, Creative Visual Right */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Creative Lens Text */}
+          <div className="opacity-0 animate-slide-in-left animation-delay-800">
+            <h4 className="text-2xl font-semibold mb-6 text-primary">My Creative Lens: Photography and Filmmaking</h4>
+            <p className="text-muted-foreground leading-relaxed hover:text-foreground transition-colors duration-300 text-lg">
+              My passion for observation extends naturally into the realm of <strong className="text-foreground">visual storytelling</strong>. Whether it's through <strong className="text-foreground">photography</strong> or <strong className="text-foreground">cinematic videos</strong>, I'm driven to capture fleeting moments, evoke emotion, and share unique perspectives. Filmmaking, in particular, allows me to weave narratives, playing with light, composition, and movement to craft compelling stories. It's a creative outlet that sharpens my eye for detail and challenges me to bring visions to life, much like engineering challenges demand a meticulous approach to design and execution. This blend of analytical rigor and artistic expression truly defines who I am.
+            </p>
+          </div>
+
+          {/* Right Column - Creative Visual Element */}
+          <div className="flex justify-center opacity-0 animate-slide-in-right animation-delay-1000">
+            <div className="relative">
+              <Card className="w-full max-w-sm border-none shadow-xl overflow-hidden hover:shadow-2xl hover:scale-105 transition-all duration-500 group">
+                <CardContent className="p-0 relative">
+                  <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-transparent z-10 group-hover:from-primary/30 transition-all duration-500"></div>
+                  <div className="p-8 text-center relative z-20">
+                    <div className="w-20 h-20 mx-auto mb-4 bg-primary/20 rounded-full flex items-center justify-center group-hover:bg-primary/30 transition-colors duration-300">
+                      <svg className="w-10 h-10 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                        <path fillRule="evenodd" d="M4 3a2 2 0 00-2 2v10a2 2 0 002 2h12a2 2 0 002-2V5a2 2 0 00-2-2H4zm12 12H4l4-8 3 6 2-4 3 6z" clipRule="evenodd" />
+                      </svg>
+                    </div>
+                    <h5 className="text-lg font-semibold text-foreground mb-2">Visual Storytelling</h5>
+                    <p className="text-sm text-muted-foreground">Capturing moments, evoking emotions, sharing perspectives</p>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
           </div>
         </div>
       </div>
