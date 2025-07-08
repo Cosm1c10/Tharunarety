@@ -41,16 +41,16 @@ const Hero = () => {
                 <div className="text-center">
                   <h1 className="text-[4rem] sm:text-[5rem] md:text-[6rem] lg:text-[7rem] font-extralight leading-none text-white">Hello!</h1>
                 </div>
-                <div className="flex flex-col md:flex-row items-center md:items-baseline gap-2 md:gap-4 mt-2 justify-center md:justify-start">
+                <div className="flex flex-col md:flex-row items-center md:items-baseline gap-2 md:gap-4 mt-6 justify-center md:justify-start">
                   <span className="text-2xl md:text-3xl font-light text-muted-foreground">I'm</span>
                   <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-primary">Tharun Arety</span>
                 </div>
               </div>
-              <p className="text-lg md:text-xl font-light mt-4 text-primary text-center md:text-left opacity-0 animate-fade-in-up animation-delay-200">— Shaping the Future with Materials Science, Framing the Present Through Photography.</p>
-              <p className="text-sm md:text-base font-light mt-2 text-muted-foreground text-center md:text-left max-w-md opacity-0 animate-fade-in-up animation-delay-400">
+              <p className="text-lg md:text-xl font-light mt-8 text-primary text-center md:text-left opacity-0 animate-fade-in-up animation-delay-200">— Shaping the Future with Materials Science, Framing the Present Through Photography.</p>
+              <p className="text-sm md:text-base font-light mt-6 text-muted-foreground text-center md:text-left max-w-md opacity-0 animate-fade-in-up animation-delay-400">
                 Materials Engineering professional driven by innovation in FEM simulations and Python programming, passionate visual storyteller through photography and cinematic videos.
               </p>
-              <div className="flex gap-4 mt-8 opacity-0 animate-fade-in-up animation-delay-600">
+              <div className="flex gap-4 mt-10 opacity-0 animate-fade-in-up animation-delay-600">
                 <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-300 hover:shadow-lg">
                   <a href="/portfolio">Explore Engineering Portfolio</a>
                 </Button>
