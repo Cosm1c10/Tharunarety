@@ -14,7 +14,7 @@ const About = () => {
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-20">
           {/* Left Column - Introduction Text */}
           <div className="opacity-0 animate-slide-in-left">
-            <p className="text-muted-foreground leading-relaxed hover:text-foreground transition-colors duration-300 text-lg">
+            <p className="text-muted-foreground leading-relaxed hover:text-foreground transition-colors duration-300 text-lg text-justify">
               Greetings! I'm Tharun Arety, a dedicated <strong className="text-foreground">Materials Engineering professional</strong> with a drive for innovation and a strong aptitude for leveraging digital tools to solve complex engineering challenges. My journey is defined by a robust understanding of FEM simulations (Abaqus, Ansys) and a versatile programming skillset in Python, encompassing powerful libraries like Pandas, Matplotlib, Scikit-learn, and Torch-FEM. I thrive on projects that demand analytical rigor and practical application, always seeking to push the boundaries of what's possible in materials science.
             </p>
           </div>
@@ -55,7 +55,7 @@ const About = () => {
           {/* Right Column - Beyond the Technical Text */}
           <div className="opacity-0 animate-slide-in-right animation-delay-600 order-1 lg:order-2">
             <h4 className="text-2xl font-semibold mb-6 text-primary">Beyond the Technical: A World of Exploration and Creation</h4>
-            <p className="text-muted-foreground leading-relaxed hover:text-foreground transition-colors duration-300 text-lg">
+            <p className="text-muted-foreground leading-relaxed hover:text-foreground transition-colors duration-300 text-lg text-justify">
               While my professional life is steeped in data-driven solutions and complex simulations, my personal world is vibrant with a different kind of exploration and creation. I believe true innovation comes from a diverse set of experiences. When I step away from the screen, you'll often find me on a <strong className="text-foreground">hiking trail</strong>, exploring new landscapes and finding tranquility in nature's vastness. My love for <strong className="text-foreground">traveling</strong> constantly fuels my curiosity, allowing me to immerse myself in different cultures and perspectives, which in turn enriches my approach to problem-solving, both technical and creative.
             </p>
           </div>
@@ -66,7 +66,7 @@ const About = () => {
           {/* Left Column - Creative Lens Text */}
           <div className="opacity-0 animate-slide-in-left animation-delay-800">
             <h4 className="text-2xl font-semibold mb-6 text-primary">My Creative Lens: Photography and Filmmaking</h4>
-            <p className="text-muted-foreground leading-relaxed hover:text-foreground transition-colors duration-300 text-lg">
+            <p className="text-muted-foreground leading-relaxed hover:text-foreground transition-colors duration-300 text-lg text-justify">
               My passion for observation extends naturally into the realm of <strong className="text-foreground">visual storytelling</strong>. Whether it's through <strong className="text-foreground">photography</strong> or <strong className="text-foreground">cinematic videos</strong>, I'm driven to capture fleeting moments, evoke emotion, and share unique perspectives. Filmmaking, in particular, allows me to weave narratives, playing with light, composition, and movement to craft compelling stories. It's a creative outlet that sharpens my eye for detail and challenges me to bring visions to life, much like engineering challenges demand a meticulous approach to design and execution. This blend of analytical rigor and artistic expression truly defines who I am.
             </p>
           </div>
