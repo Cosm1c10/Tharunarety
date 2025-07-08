@@ -139,21 +139,39 @@ const Portfolio = () => {
       <main className="pt-20">
         {/* Hero Section */}
         <section className="py-20 md:py-32 px-8 md:px-12 relative overflow-hidden">
-          {/* Background Image with Overlay */}
+          {/* Blended Background Images */}
           <div className="absolute inset-0 z-0">
+            {/* Left side - Material Cross-Section */}
             <div 
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
               style={{
-                backgroundImage: 'url(/lovable-uploads/WhatsApp%20Image%202025-07-09%20at%2000.44.42.jpeg)',
-                backgroundPosition: 'center',
-                transform: 'scale(1.05)',
+                backgroundImage: 'url(/WhatsApp%20Image%202025-07-09%20at%2000.44.42.jpeg)',
+                backgroundPosition: 'left center',
+                clipPath: 'polygon(0 0, 60% 0, 40% 100%, 0 100%)',
+                transform: 'scale(1.1)',
               }}
             />
-            {/* Dark overlay for better text readability */}
-            <div className="absolute inset-0 bg-black/80" />
-            {/* Gradient overlay for sophisticated depth */}
-            <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/70 to-black/60" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/50" />
+            
+            {/* Right side - FEM Simulation */}
+            <div 
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+              style={{
+                backgroundImage: 'url(/WhatsApp%20Image%202025-07-09%20at%2000.46.38.jpeg)',
+                backgroundPosition: 'right center',
+                clipPath: 'polygon(40% 0, 100% 0, 100% 100%, 60% 100%)',
+                transform: 'scale(1.1)',
+              }}
+            />
+            
+            {/* Blending overlay in the center */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/95 to-black/90" />
+            
+            {/* Additional sophisticated overlays */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/90" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-transparent to-black/70" />
+            
+            {/* Center blend effect */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/80 to-transparent" />
           </div>
           
           <div className="container mx-auto text-center">
@@ -193,21 +211,38 @@ const Portfolio = () => {
 
         {/* Engineering Approach Section */}
         <section className="py-20 md:py-32 px-8 md:px-12 relative overflow-hidden opacity-0 animate-fade-in-up">
-          {/* Background Image with Overlay */}
+          {/* Blended Background Images for Engineering Approach */}
           <div className="absolute inset-0 z-0">
+            {/* Left side - FEM Simulation with different positioning */}
             <div 
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
               style={{
-                backgroundImage: 'url(/lovable-uploads/WhatsApp%20Image%202025-07-09%20at%2000.46.38.jpeg)',
-                backgroundPosition: 'center',
-                transform: 'scale(1.1)',
+                backgroundImage: 'url(/WhatsApp%20Image%202025-07-09%20at%2000.46.38.jpeg)',
+                backgroundPosition: 'left center',
+                clipPath: 'polygon(0 0, 55% 0, 45% 100%, 0 100%)',
+                transform: 'scale(1.15) rotate(1deg)',
               }}
             />
-            {/* Dark overlay for better text readability */}
-            <div className="absolute inset-0 bg-black/90" />
-            {/* Gradient overlay for depth */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/85 to-black/90" />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/90 to-black/95" />
+            
+            {/* Right side - Material Cross-Section with different positioning */}
+            <div 
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+              style={{
+                backgroundImage: 'url(/WhatsApp%20Image%202025-07-09%20at%2000.44.42.jpeg)',
+                backgroundPosition: 'right center',
+                clipPath: 'polygon(45% 0, 100% 0, 100% 100%, 55% 100%)',
+                transform: 'scale(1.15) rotate(-1deg)',
+              }}
+            />
+            
+            {/* Sophisticated layered overlays */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/90 to-black/95" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/85 via-black/75 to-black/95" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/80" />
+            
+            {/* Dynamic center blend */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/85 to-transparent" />
+            <div className="absolute inset-0 bg-radial-gradient from-transparent via-black/60 to-black/90" />
           </div>
           
           <div className="container mx-auto">
@@ -233,7 +268,7 @@ const Portfolio = () => {
                     return (
                       <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
                         <div className="p-1">
-                          <Card className="text-left hover:shadow-xl hover:scale-105 transition-all duration-300 group h-[500px] flex flex-col">
+                          <Card className="text-left hover:shadow-xl hover:scale-105 transition-all duration-300 group h-[500px] flex flex-col bg-background/95 backdrop-blur-sm border-white/10">
                             <CardHeader>
                               <div className="flex items-center gap-3 mb-2">
                                 <div className="bg-secondary/80 backdrop-blur-sm p-3 rounded-full w-fit group-hover:bg-primary/30 transition-colors duration-300">
