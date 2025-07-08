@@ -145,7 +145,7 @@ const Portfolio = () => {
             <div 
               className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
               style={{
-                backgroundImage: 'url(/lovable-uploads/WhatsApp%20Image%202025-07-09%20at%2000.44.42.jpeg)',
+                backgroundImage: 'url(/WhatsApp%20Image%202025-07-09%20at%2000.44.42.jpeg)',
                 backgroundPosition: 'left center',
                 clipPath: 'polygon(0 0, 60% 0, 40% 100%, 0 100%)',
                 transform: 'scale(1.1)',
@@ -156,7 +156,7 @@ const Portfolio = () => {
             <div 
               className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
               style={{
-                backgroundImage: 'url(/lovable-uploads/WhatsApp%20Image%202025-07-09%20at%2000.46.38.jpeg)',
+                backgroundImage: 'url(/WhatsApp%20Image%202025-07-09%20at%2000.46.38.jpeg)',
                 backgroundPosition: 'right center',
                 clipPath: 'polygon(40% 0, 100% 0, 100% 100%, 60% 100%)',
                 transform: 'scale(1.1)',
@@ -217,7 +217,7 @@ const Portfolio = () => {
             <div 
               className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
               style={{
-                backgroundImage: 'url(/lovable-uploads/WhatsApp%20Image%202025-07-09%20at%2000.46.38.jpeg)',
+                backgroundImage: 'url(/WhatsApp%20Image%202025-07-09%20at%2000.46.38.jpeg)',
                 backgroundPosition: 'left center',
                 clipPath: 'polygon(0 0, 55% 0, 45% 100%, 0 100%)',
                 transform: 'scale(1.15) rotate(1deg)',
@@ -228,7 +228,7 @@ const Portfolio = () => {
             <div 
               className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
               style={{
-                backgroundImage: 'url(/lovable-uploads/WhatsApp%20Image%202025-07-09%20at%2000.44.42.jpeg)',
+                backgroundImage: 'url(/WhatsApp%20Image%202025-07-09%20at%2000.44.42.jpeg)',
                 backgroundPosition: 'right center',
                 clipPath: 'polygon(45% 0, 100% 0, 100% 100%, 55% 100%)',
                 transform: 'scale(1.15) rotate(-1deg)',
