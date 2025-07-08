@@ -46,7 +46,7 @@ const Hero = () => {
                   <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-primary">Tharun Arety</span>
                 </div>
               </div>
-              <p className="text-lg md:text-xl font-light mt-4 text-white text-center md:text-left opacity-0 animate-fade-in-up animation-delay-200">
+              <p className="text-lg md:text-xl font-light mt-4 text-white text-center opacity-0 animate-fade-in-up animation-delay-200">
                 — Shaping the Future with Materials Science, Framing the Present Through Photography.
               </p>
               <div className="flex gap-4 mt-8 opacity-0 animate-fade-in-up animation-delay-600">
