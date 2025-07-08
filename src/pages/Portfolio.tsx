@@ -138,18 +138,35 @@ const Portfolio = () => {
       
       <main className="pt-20">
         {/* Hero Section */}
-        <section className="py-20 md:py-32 px-8 md:px-12">
+        <section className="py-20 md:py-32 px-8 md:px-12 relative overflow-hidden">
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0 z-0">
+            <div 
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-30"
+              style={{
+                backgroundImage: 'url(/lovable-uploads/WhatsApp Image 2025-07-09 at 00.44.42.jpeg)',
+                backgroundPosition: 'center',
+                transform: 'scale(1.05)',
+              }}
+            />
+            {/* Dark overlay for better text readability */}
+            <div className="absolute inset-0 bg-black/80" />
+            {/* Gradient overlay for sophisticated depth */}
+            <div className="absolute inset-0 bg-gradient-to-br from-black/90 via-black/70 to-black/60" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/50" />
+          </div>
+          
           <div className="container mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-light mb-4">My Engineering Projects</h1>
-            <h2 className="text-2xl font-light mb-4 text-primary">Driving Innovation in Materials Science</h2>
-            <p className="text-xl text-muted-foreground mb-8 max-w-3xl mx-auto">
+            <h1 className="text-4xl md:text-6xl font-light mb-4 relative z-10 text-white drop-shadow-2xl">My Engineering Projects</h1>
+            <h2 className="text-2xl font-light mb-4 text-primary relative z-10 drop-shadow-xl">Driving Innovation in Materials Science</h2>
+            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto relative z-10 drop-shadow-lg leading-relaxed">
               Materials Engineering professional with expertise in FEM simulations, Python programming, 
               and advanced optimization techniques. Dedicated to pushing the boundaries of what's possible in materials science.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button size="lg">
+                  <Button size="lg" className="hover:scale-105 transition-all duration-300 hover:shadow-xl drop-shadow-lg">
                     <FileText />
                     View Resume
                   </Button>
@@ -164,7 +181,7 @@ const Portfolio = () => {
                   </div>
                 </DialogContent>
               </Dialog>
-              <Button size="lg" variant="outline" asChild>
+              <Button size="lg" variant="outline" asChild className="hover:scale-105 transition-all duration-300 hover:shadow-xl drop-shadow-lg border-white/30 text-white hover:bg-white hover:text-black">
                 <a href="https://www.linkedin.com/in/tharun-arety/" target="_blank" rel="noopener noreferrer">
                   <Linkedin />
                   LinkedIn Profile
@@ -175,16 +192,33 @@ const Portfolio = () => {
         </section>
 
         {/* Engineering Approach Section */}
-        <section className="py-20 md:py-32 px-8 md:px-12 bg-black opacity-0 animate-fade-in-up">
+        <section className="py-20 md:py-32 px-8 md:px-12 relative overflow-hidden opacity-0 animate-fade-in-up">
+          {/* Background Image with Overlay */}
+          <div className="absolute inset-0 z-0">
+            <div 
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-20"
+              style={{
+                backgroundImage: 'url(/lovable-uploads/WhatsApp Image 2025-07-09 at 00.46.38.jpeg)',
+                backgroundPosition: 'center',
+                transform: 'scale(1.1)',
+              }}
+            />
+            {/* Dark overlay for better text readability */}
+            <div className="absolute inset-0 bg-black/90" />
+            {/* Gradient overlay for depth */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/85 to-black/90" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/90 to-black/95" />
+          </div>
+          
           <div className="container mx-auto">
-            <div className="text-center mb-12 opacity-0 animate-fade-in-up">
-              <h2 className="text-3xl font-light mb-6">Engineering Approach</h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto opacity-0 animate-fade-in-up animation-delay-200">
+            <div className="text-center mb-12 opacity-0 animate-fade-in-up relative z-10">
+              <h2 className="text-3xl font-light mb-6 text-white drop-shadow-xl">Engineering Approach</h2>
+              <p className="text-lg text-white/80 max-w-3xl mx-auto opacity-0 animate-fade-in-up animation-delay-200 drop-shadow-lg leading-relaxed">
                 My engineering approach is rooted in analytical rigor, innovative algorithm design, and a relentless pursuit of efficient, impactful solutions.
               </p>
             </div>
 
-            <div className="mb-12 opacity-0 animate-fade-in-up animation-delay-400">
+            <div className="mb-12 opacity-0 animate-fade-in-up animation-delay-400 relative z-10">
               <Carousel
                 plugins={[autoplayPlugin.current]}
                 opts={{
@@ -202,7 +236,7 @@ const Portfolio = () => {
                           <Card className="text-left hover:shadow-xl hover:scale-105 transition-all duration-300 group h-[500px] flex flex-col">
                             <CardHeader>
                               <div className="flex items-center gap-3 mb-2">
-                                <div className="bg-secondary p-3 rounded-full w-fit group-hover:bg-primary/20 transition-colors duration-300">
+                                <div className="bg-secondary/80 backdrop-blur-sm p-3 rounded-full w-fit group-hover:bg-primary/30 transition-colors duration-300">
                                   <IconComponent className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-300" />
                                 </div>
                                 <CardTitle className="text-xl font-medium">{card.title}</CardTitle>
@@ -229,10 +263,10 @@ const Portfolio = () => {
               </Carousel>
             </div>
 
-            <div className="text-center flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-in-up animation-delay-600">
+            <div className="text-center flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-in-up animation-delay-600 relative z-10">
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button size="lg" className="hover:scale-105 transition-all duration-300 hover:shadow-lg">
+                  <Button size="lg" className="hover:scale-105 transition-all duration-300 hover:shadow-xl drop-shadow-lg">
                     <FileText />
                     My Resume
                   </Button>
@@ -247,7 +281,7 @@ const Portfolio = () => {
                   </div>
                 </DialogContent>
               </Dialog>
-              <Button size="lg" asChild className="hover:scale-105 transition-all duration-300 hover:shadow-lg">
+              <Button size="lg" asChild className="hover:scale-105 transition-all duration-300 hover:shadow-xl drop-shadow-lg">
                 <a href="https://www.linkedin.com/in/tharun-arety/" target="_blank" rel="noopener noreferrer">
                   <Linkedin />
                   LinkedIn Profile
@@ -258,7 +292,7 @@ const Portfolio = () => {
         </section>
 
         {/* Projects Section */}
-        <section className="py-20 md:py-32 px-8 md:px-12">
+        <section className="py-20 md:py-32 px-8 md:px-12 bg-background/95 backdrop-blur-sm">
           <div className="container mx-auto">
             <h2 className="text-3xl font-light text-center mb-12">Featured Projects</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
@@ -291,7 +325,7 @@ const Portfolio = () => {
         </section>
 
         {/* Skills Section */}
-        <section className="py-20 md:py-32 px-8 md:px-12 bg-black">
+        <section className="py-20 md:py-32 px-8 md:px-12 bg-black/95 backdrop-blur-sm">
           <div className="container mx-auto">
             <h2 className="text-3xl font-light text-center mb-12">Technical Skills</h2>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
