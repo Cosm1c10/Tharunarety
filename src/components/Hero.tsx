@@ -39,7 +39,7 @@ const Hero = () => {
             <div className="flex flex-col items-center text-center md:items-start md:text-left">
               <div className="opacity-0 animate-fade-in-up">
                 <div className="text-center">
-                  <h1 className="text-[4rem] sm:text-[5rem] md:text-[6rem] lg:text-[7rem] font-extralight leading-none text-white">Hello!</h1>
+                  <h1 className="text-[4rem] sm:text-[5rem] md:text-[6rem] lg:text-[7rem] font-extralight leading-none text-yellow-400">Hello!</h1>
                 </div>
                 <div className="flex flex-col md:flex-row items-center md:items-baseline gap-2 md:gap-4 mt-2 justify-center md:justify-start">
                   <span className="text-2xl md:text-3xl font-light text-muted-foreground">I'm</span>
