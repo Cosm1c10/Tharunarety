@@ -47,7 +47,7 @@ const Hero = () => {
                 </div>
               </div>
               <p className="text-lg md:text-xl font-light mt-4 text-white text-center opacity-0 animate-fade-in-up animation-delay-200">
-                — Shaping the Future with Materials Science, Framing the Present Through Photography.
+                Shaping the Future with Materials Science, Framing the Present Through Photography.
               </p>
               <div className="flex gap-4 mt-8 opacity-0 animate-fade-in-up animation-delay-600">
                 <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-300 hover:shadow-lg">
