@@ -43,7 +43,7 @@ const Hero = () => {
                 </div>
                 <div className="flex flex-col md:flex-row items-center md:items-baseline gap-2 md:gap-4 mt-2 justify-center md:justify-start">
                   <span className="text-2xl md:text-3xl font-light text-muted-foreground">I'm</span>
-                  <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-white">Tharun Arety</span>
+                  <span className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-light text-primary">Tharun Arety</span>
                 </div>
               </div>
               <p className="text-lg md:text-xl font-light mt-4 text-primary text-center md:text-left opacity-0 animate-fade-in-up animation-delay-200">— Shaping the Future with Materials Science, Framing the Present Through Photography.</p>
