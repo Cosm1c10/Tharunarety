@@ -15,7 +15,7 @@ const About = () => {
           {/* Left Column - Introduction Text */}
           <div className="opacity-0 animate-slide-in-left">
             <p className="text-muted-foreground leading-relaxed hover:text-foreground transition-colors duration-300 text-lg">
-              Greetings! I'm Tharun Arety, a dedicated <strong className="text-foreground">Materials Engineering professional</strong> with a drive for innovation and a strong aptitude for leveraging digital tools to solve complex engineering challenges. My journey is defined by a robust understanding of FEM simulations (Abaqus, Ansys) and a versatile programming skillset in Python, encompassing powerful libraries like Pandas, Matplotlib, Scikit-learn, and TensorFlow. I thrive on projects that demand analytical rigor and practical application, always seeking to push the boundaries of what's possible in materials science.
+              Greetings! I'm Tharun Arety, a dedicated <strong className="text-foreground">Materials Engineering professional</strong> with a drive for innovation and a strong aptitude for leveraging digital tools to solve complex engineering challenges. My journey is defined by a robust understanding of FEM simulations (Abaqus, Ansys) and a versatile programming skillset in Python, encompassing powerful libraries like Pandas, Matplotlib, Scikit-learn, and Torch-FEM. I thrive on projects that demand analytical rigor and practical application, always seeking to push the boundaries of what's possible in materials science.
             </p>
           </div>
 
