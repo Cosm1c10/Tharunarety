@@ -15,9 +15,9 @@ const Contact = () => {
             <div>
                 <h3 className="text-2xl font-light mb-6">Get In Touch</h3>
                 <div className="space-y-4">
-                    <a href="mailto:tharun.nstr@gmail.com" className="flex items-center gap-4 group hover:scale-105 transition-all duration-300 p-2 rounded-lg hover:bg-secondary/20">
+                    <a href="mailto:tharun.nstn@gmail.com" className="flex items-center gap-4 group hover:scale-105 transition-all duration-300 p-2 rounded-lg hover:bg-secondary/20">
                         <Mail className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-300"/>
-                        <span className="text-lg group-hover:underline group-hover:text-primary transition-colors duration-300">tharun.nstr@gmail.com</span>
+                        <span className="text-lg group-hover:underline group-hover:text-primary transition-colors duration-300">tharun.nstn@gmail.com</span>
                     </a>
                     <div className="flex items-center gap-4 hover:scale-105 transition-all duration-300 p-2 rounded-lg hover:bg-secondary/20">
                         <Mail className="h-6 w-6 text-primary hover:scale-110 transition-transform duration-300"/>
