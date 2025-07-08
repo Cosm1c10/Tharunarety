@@ -30,15 +30,24 @@ const Header = () => {
           <a href="/photography">Photography</a>
         </Button>
         <Button variant="ghost" asChild className="text-base px-5 py-3 hover:scale-105 transition-all duration-300">
-          <a href={location.pathname === "/" ? "#contact" : "/#contact"} onClick={(e) => {
-            if (location.pathname === "/") {
-              e.preventDefault();
-              const contactSection = document.getElementById('contact');
-              if (contactSection) {
-                contactSection.scrollIntoView({ behavior: 'smooth' });
+          <a 
+            href={location.pathname === "/" ? "#contact" : "/#contact"} 
+            onClick={(e) => {
+              if (location.pathname === "/") {
+                e.preventDefault();
+                const contactSection = document.getElementById('contact');
+                if (contactSection) {
+                  contactSection.scrollIntoView({ behavior: 'smooth' });
+                }
+              } else {
+                // For other pages, navigate to home page with contact hash
+                // The browser will automatically scroll to the contact section
+                window.location.href = "/#contact";
               }
-            }
-          }}>Contact</a>
+            }}
+          >
+            Contact
+          </a>
         </Button>
       </nav>
     </header>
