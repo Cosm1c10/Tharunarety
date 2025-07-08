@@ -41,7 +41,7 @@ const Photography = () => {
         <section className="py-20 md:py-32 px-8 md:px-12 opacity-0 animate-fade-in-up">
           <div className="container mx-auto text-center">
             <h1 className="font-light mb-4 opacity-0 animate-fade-in-up leading-tight">
-              <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-white">Welcome</div>
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white">Welcome</div>
               <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mt-2">to</div>
               <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-primary mt-2">Tharun's Perspective</div>
             </h1>
