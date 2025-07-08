@@ -180,7 +180,7 @@ const Portfolio = () => {
             <div className="text-center mb-12 opacity-0 animate-fade-in-up">
               <h2 className="text-3xl font-light mb-6">Engineering Approach</h2>
               <p className="text-lg text-muted-foreground max-w-3xl mx-auto opacity-0 animate-fade-in-up animation-delay-200">
-                My engineering approach is rooted in analytical rigor, innovative algorithm design, and a relentless pursuit of efficient, impactful solutions. I thrive on projects that demand analytical rigor and practical application, always seeking to push the boundaries of what's possible in materials science.
+                My engineering approach is rooted in analytical rigor, innovative algorithm design, and a relentless pursuit of efficient, impactful solutions.
               </p>
             </div>
 
