@@ -44,32 +44,26 @@ const Photography = () => {
             <div 
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{
-                backgroundImage: 'url(/lovable-uploads/Picsart_25-07-09_22-17-00-331.png)',
+                backgroundImage: 'url(/lovable-uploads/XS20.png)',
                 backgroundPosition: 'center right',
                 transform: 'scale(1.1)',
               }}
             />
-            {/* Sophisticated layered overlays for premium aesthetics */}
-            <div className="absolute inset-0 bg-black/75" />
-            {/* Multi-directional gradients for depth */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/70 to-black/85" />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-black/90" />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/95 via-transparent to-black/70" />
-            {/* Radial gradient for spotlight effect */}
-            <div className="absolute inset-0 bg-gradient-radial from-transparent via-black/50 to-black/80" />
-            {/* Subtle vignette effect */}
-            <div className="absolute inset-0 bg-gradient-to-br from-transparent via-transparent to-black/60" />
-            <div className="absolute inset-0 bg-gradient-to-tl from-transparent via-transparent to-black/60" />
+            {/* Dark overlay for better text readability */}
+            <div className="absolute inset-0 bg-black/70" />
+            {/* Gradient overlay for smooth text transition */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70" />
           </div>
           
           <div className="container mx-auto text-center">
             <h1 className="font-light mb-4 opacity-0 animate-fade-in-up leading-tight relative z-10">
-              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white drop-shadow-2xl filter backdrop-blur-sm">Welcome</div>
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white/95 mt-2 drop-shadow-2xl filter backdrop-blur-sm">to</div>
-              <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-primary mt-2 drop-shadow-2xl font-medium filter backdrop-blur-sm">Tharun's Perspective</div>
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white drop-shadow-2xl">Welcome</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mt-2 drop-shadow-2xl">to</div>
+              <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-primary mt-2 drop-shadow-2xl font-medium">Tharun's Perspective</div>
             </h1>
-            <p className="text-lg text-white/95 mb-4 opacity-0 animate-fade-in-up animation-delay-200 relative z-10 drop-shadow-xl font-medium filter backdrop-blur-sm">Photography, Filmmaking & Cinematic Videos</p>
-            <p className="text-base text-white/90 max-w-4xl mx-auto mb-8 opacity-0 animate-fade-in-up animation-delay-400 relative z-10 drop-shadow-xl leading-relaxed filter backdrop-blur-sm">
+            <p className="text-lg text-white/90 mb-4 opacity-0 animate-fade-in-up animation-delay-200 relative z-10 drop-shadow-lg font-medium">Photography, Filmmaking & Cinematic Videos</p>
+            <p className="text-base text-white/80 max-w-4xl mx-auto mb-8 opacity-0 animate-fade-in-up animation-delay-400 relative z-10 drop-shadow-lg leading-relaxed">
               Beyond the world of simulations and materials, I find immense joy and creative expression through visual storytelling. 
               Whether through the timeless art of photography or the dynamic narrative of filmmaking and cinematic videos, 
               I'm driven to observe the unseen, capture fleeting moments, and tell compelling stories through light, composition, and movement.
@@ -78,12 +72,12 @@ const Photography = () => {
         </section>
 
         {/* Photography Albums Section */}
-        <section className="py-20 md:py-32 px-8 md:px-12 opacity-0 animate-fade-in-up animation-delay-600 bg-background/98 backdrop-blur-md border-t border-white/10">
+        <section className="py-20 md:py-32 px-8 md:px-12 opacity-0 animate-fade-in-up animation-delay-600 bg-background/95 backdrop-blur-sm">
           <div className="container mx-auto">
-            <h2 className="text-3xl font-light text-center mb-12 opacity-0 animate-fade-in-up text-white drop-shadow-lg">Photography Albums</h2>
+            <h2 className="text-3xl font-light text-center mb-12 opacity-0 animate-fade-in-up">Photography Albums</h2>
             
             <Tabs value={activeAlbum} onValueChange={setActiveAlbum} className="w-full opacity-0 animate-scale-in animation-delay-200">
-              <TabsList className="grid w-full grid-cols-3 mb-12 hover:shadow-xl transition-all duration-300 bg-black/40 backdrop-blur-md border border-white/20">
+              <TabsList className="grid w-full grid-cols-3 mb-12 hover:shadow-lg transition-shadow duration-300">
                 <TabsTrigger value="portraits">Portraits</TabsTrigger>
                 <TabsTrigger value="landscapes">Landscapes</TabsTrigger>
                 <TabsTrigger value="street">Street Photography</TabsTrigger>
@@ -102,17 +96,17 @@ const Photography = () => {
                       {photos.map((photo, index) => (
                         <CarouselItem key={index} className="basis-full">
                           <div className="p-2">
-                            <Card className="hover:shadow-2xl transition-all duration-300 group bg-black/20 backdrop-blur-md border border-white/20">
+                            <Card className="hover:shadow-xl transition-shadow duration-300 group">
                               <CardContent className="p-0">
-                                <AspectRatio ratio={16 / 10} className="overflow-hidden rounded-lg shadow-xl group-hover:shadow-2xl transition-all duration-300">
+                                <AspectRatio ratio={16 / 10} className="overflow-hidden rounded-lg shadow-lg group-hover:shadow-2xl transition-shadow duration-300">
                                   <img 
                                     src={photo.src} 
                                     alt={photo.alt} 
-                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" 
+                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
                                   />
                                 </AspectRatio>
-                                <div className="p-3 text-center group-hover:bg-white/10 transition-colors duration-300">
-                                  <p className="text-xs text-white/80">{photo.alt}</p>
+                                <div className="p-3 text-center group-hover:bg-secondary/20 transition-colors duration-300">
+                                  <p className="text-xs text-muted-foreground">{photo.alt}</p>
                                 </div>
                               </CardContent>
                             </Card>
@@ -130,9 +124,9 @@ const Photography = () => {
         </section>
 
         {/* Videography Section */}
-        <section className="py-20 md:py-32 px-8 md:px-12 bg-black/98 backdrop-blur-md border-t border-white/10 opacity-0 animate-fade-in-up animation-delay-800">
+        <section className="py-20 md:py-32 px-8 md:px-12 bg-black/95 backdrop-blur-sm opacity-0 animate-fade-in-up animation-delay-800">
           <div className="container mx-auto">
-            <h2 className="text-3xl font-light text-center mb-12 opacity-0 animate-fade-in-up text-white drop-shadow-lg">Videography Showcase</h2>
+            <h2 className="text-3xl font-light text-center mb-12 opacity-0 animate-fade-in-up">Videography Showcase</h2>
             <Carousel
               opts={{
                 align: "start",
@@ -144,11 +138,11 @@ const Photography = () => {
                 {videos.map((video) => (
                   <CarouselItem key={video.id} className="basis-full">
                     <div className="p-2">
-                      <Card className="hover:shadow-2xl transition-all duration-300 group bg-black/20 backdrop-blur-md border border-white/20">
+                      <Card className="hover:shadow-xl transition-shadow duration-300 group">
                         <CardContent className="p-0">
-                          <AspectRatio ratio={16 / 10} className="overflow-hidden rounded-lg shadow-xl group-hover:shadow-2xl transition-all duration-300">
+                          <AspectRatio ratio={16 / 10} className="overflow-hidden rounded-lg shadow-lg group-hover:shadow-2xl transition-shadow duration-300">
                             <iframe 
-                              className="w-full h-full group-hover:scale-105 transition-transform duration-500"
+                              className="w-full h-full group-hover:scale-105 transition-transform duration-300"
                               src={`https://www.youtube-nocookie.com/embed/${video.id}?rel=0&modestbranding=1&autoplay=0&mute=0&controls=1&showinfo=0&fs=1&cc_load_policy=0&iv_load_policy=3&autohide=0`}
                               title={video.title}
                               frameBorder="0"
@@ -157,8 +151,8 @@ const Photography = () => {
                               allowFullScreen
                             />
                           </AspectRatio>
-                          <div className="p-3 text-center group-hover:bg-white/10 transition-colors duration-300">
-                            <p className="text-xs text-white/80">{video.title}</p>
+                          <div className="p-3 text-center group-hover:bg-secondary/20 transition-colors duration-300">
+                            <p className="text-xs text-muted-foreground">{video.title}</p>
                           </div>
                         </CardContent>
                       </Card>
