@@ -44,7 +44,7 @@ const Photography = () => {
             <div 
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{
-                backgroundImage: 'url(/lovable-uploads/XS20.png)',
+                backgroundImage: 'url("/lovable-uploads/XS20.png")',
                 backgroundPosition: 'center center',
                 transform: 'scale(1.1)',
               }}
