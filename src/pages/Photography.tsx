@@ -41,19 +41,38 @@ const Photography = () => {
         <section className="py-20 md:py-32 px-8 md:px-12 opacity-0 animate-fade-in-up relative overflow-hidden">
           {/* Background Image with Overlay */}
           <div className="absolute inset-0 z-0">
+            {/* Left side - iPhone 16 image */}
             <div 
-              className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-40"
+              style={{
+                backgroundImage: 'url(/lovable-uploads/pngimg.com%20-%20iphone16_PNG4.png)',
+                backgroundPosition: 'left center',
+                clipPath: 'polygon(0 0, 65% 0, 45% 100%, 0 100%)',
+                transform: 'scale(1.2) rotate(-2deg)',
+              }}
+            />
+            
+            {/* Right side - Original XS20 camera image */}
+            <div 
+              className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-35"
               style={{
                 backgroundImage: 'url(/lovable-uploads/XS20.png)',
                 backgroundPosition: 'center right',
-                transform: 'scale(1.1)',
+                clipPath: 'polygon(45% 0, 100% 0, 100% 100%, 65% 100%)',
+                transform: 'scale(1.15) rotate(1deg)',
               }}
             />
-            {/* Dark overlay for better text readability */}
-            <div className="absolute inset-0 bg-black/70" />
-            {/* Gradient overlay for smooth text transition */}
-            <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/60 to-transparent" />
-            <div className="absolute inset-0 bg-gradient-to-b from-black/50 via-transparent to-black/70" />
+            
+            {/* Sophisticated layered overlays for better text readability */}
+            <div className="absolute inset-0 bg-gradient-to-r from-black/95 via-black/85 to-black/90" />
+            <div className="absolute inset-0 bg-gradient-to-b from-black/80 via-black/60 to-black/85" />
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 via-transparent to-black/75" />
+            
+            {/* Center blend effect for seamless transition */}
+            <div className="absolute inset-0 bg-gradient-to-r from-transparent via-black/80 to-transparent" />
+            
+            {/* Additional depth overlay */}
+            <div className="absolute inset-0 bg-radial-gradient from-transparent via-black/50 to-black/80" />
           </div>
           
           <div className="container mx-auto text-center">
