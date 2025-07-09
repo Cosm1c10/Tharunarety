@@ -44,11 +44,13 @@ const Photography = () => {
             <div 
               className="absolute inset-0 bg-cover bg-center bg-no-repeat"
               style={{
-                backgroundImage: 'url("/lovable-uploads/XS20.png")',
+                backgroundImage: 'url(/lovable-uploads/XS20.png)',
                 backgroundPosition: 'center center',
                 transform: 'scale(1.1)',
               }}
             />
+            {/* Fallback background in case image doesn't load */}
+            <div className="absolute inset-0 bg-gradient-to-br from-gray-900 via-black to-gray-800" />
             {/* Sophisticated layered overlays for text readability */}
             <div className="absolute inset-0 bg-black/75" />
             {/* Multi-directional gradients for depth */}
