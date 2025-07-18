@@ -255,7 +255,7 @@ const Portfolio = () => {
 
             <div className="mb-12 opacity-0 animate-fade-in-up animation-delay-400 relative z-10">
               <Carousel
-                plugins={[autoplayPlugin.current]}
+                plugins={[autoplayPlugin.current as any]}
                 opts={{
                   align: "start",
                   loop: true,
