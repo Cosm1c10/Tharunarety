@@ -71,9 +71,6 @@ const Photography = () => {
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-in-up animation-delay-600 relative z-10">
               <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-300 hover:shadow-lg">
-                <a href="/engineering">View Engineering Work</a>
-              </Button>
-              <Button variant="outline" asChild className="border-white/30 text-white hover:bg-white hover:text-black hover:scale-105 transition-all duration-300 hover:shadow-lg">
                 <a href="/">Back to Home</a>
               </Button>
             </div>
