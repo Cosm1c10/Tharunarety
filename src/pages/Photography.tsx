@@ -8,16 +8,37 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const photographyAlbums = {
-  portraits: [
+  astro: [
     { src: "/lovable-uploads/27b0d5ec-f720-416e-b010-7827e0c65c4f.png", alt: "Portrait photography" },
     { src: "/lovable-uploads/68dc8ba2-bd19-4edc-8f22-a3733f916f19.png", alt: "Portrait in nature" },
+  ],
+  automobiles: [
+    { src: "/lovable-uploads/68dc8ba2-bd19-4edc-8f22-a3733f916f19.png", alt: "Misty mountain ranges at sunset" },
+    { src: "/lovable-uploads/ac76c6d4-2412-4651-93d0-b074874c0ed2.png", alt: "A boat on a lake with a village and snow-capped mountains" },
+    { src: "/lovable-uploads/ac62e9c6-0f11-49c8-8cc3-9bd6a009438f.png", alt: "A cityscape at dusk with a river and illuminated bridges" },
+  ],
+  cities: [
+    { src: "/lovable-uploads/7aa43e64-683d-4f49-b13b-88b789fe91a1.png", alt: "Boats on a river in front of a city waterfront" },
+    { src: "/lovable-uploads/b13c8b7a-aa51-4246-8c47-c5762a87f93c.png", alt: "A bustling Christmas market at night with snow falling" },
+  ],
+  festivals: [
+    { src: "/lovable-uploads/7aa43e64-683d-4f49-b13b-88b789fe91a1.png", alt: "Boats on a river in front of a city waterfront" },
+    { src: "/lovable-uploads/b13c8b7a-aa51-4246-8c47-c5762a87f93c.png", alt: "A bustling Christmas market at night with snow falling" },
   ],
   landscapes: [
     { src: "/lovable-uploads/68dc8ba2-bd19-4edc-8f22-a3733f916f19.png", alt: "Misty mountain ranges at sunset" },
     { src: "/lovable-uploads/ac76c6d4-2412-4651-93d0-b074874c0ed2.png", alt: "A boat on a lake with a village and snow-capped mountains" },
     { src: "/lovable-uploads/ac62e9c6-0f11-49c8-8cc3-9bd6a009438f.png", alt: "A cityscape at dusk with a river and illuminated bridges" },
   ],
+  portraits: [
+    { src: "/lovable-uploads/27b0d5ec-f720-416e-b010-7827e0c65c4f.png", alt: "Portrait photography" },
+    { src: "/lovable-uploads/68dc8ba2-bd19-4edc-8f22-a3733f916f19.png", alt: "Portrait in nature" },
+  ],
   street: [
+    { src: "/lovable-uploads/7aa43e64-683d-4f49-b13b-88b789fe91a1.png", alt: "Boats on a river in front of a city waterfront" },
+    { src: "/lovable-uploads/b13c8b7a-aa51-4246-8c47-c5762a87f93c.png", alt: "A bustling Christmas market at night with snow falling" },
+  ],
+  wildlife: [
     { src: "/lovable-uploads/7aa43e64-683d-4f49-b13b-88b789fe91a1.png", alt: "Boats on a river in front of a city waterfront" },
     { src: "/lovable-uploads/b13c8b7a-aa51-4246-8c47-c5762a87f93c.png", alt: "A bustling Christmas market at night with snow falling" },
   ]
@@ -31,7 +52,7 @@ const videos = [
 ];
 
 const Photography = () => {
-  const [activeAlbum, setActiveAlbum] = useState('portraits');
+  const [activeAlbum, setActiveAlbum] = useState('astro');
 
   return (
     <div className="bg-background text-foreground font-sans min-h-screen relative">
@@ -83,10 +104,15 @@ const Photography = () => {
             <h2 className="text-3xl font-light text-center mb-12 opacity-0 animate-fade-in-up">Photography Albums</h2>
             
             <Tabs value={activeAlbum} onValueChange={setActiveAlbum} className="w-full opacity-0 animate-scale-in animation-delay-200">
-              <TabsList className="grid w-full grid-cols-3 mb-12 hover:shadow-lg transition-shadow duration-300">
-                <TabsTrigger value="portraits">Portraits</TabsTrigger>
+              <TabsList className="grid w-full grid-cols-4 lg:grid-cols-8 mb-12 hover:shadow-lg transition-shadow duration-300 h-auto flex-wrap gap-1 p-2">
+                <TabsTrigger value="astro" className="text-xs px-2 py-1">Astro</TabsTrigger>
+                <TabsTrigger value="automobiles" className="text-xs px-2 py-1">Automobiles</TabsTrigger>
+                <TabsTrigger value="cities" className="text-xs px-2 py-1">Cities & Architecture</TabsTrigger>
+                <TabsTrigger value="festivals" className="text-xs px-2 py-1">Festivals</TabsTrigger>
                 <TabsTrigger value="landscapes">Landscapes</TabsTrigger>
-                <TabsTrigger value="street">Street Photography</TabsTrigger>
+                <TabsTrigger value="portraits">Portrait's</TabsTrigger>
+                <TabsTrigger value="street" className="text-xs px-2 py-1">Street Photography</TabsTrigger>
+                <TabsTrigger value="wildlife" className="text-xs px-2 py-1">Wild Life</TabsTrigger>
               </TabsList>
               
               {Object.entries(photographyAlbums).map(([albumName, photos]) => (
