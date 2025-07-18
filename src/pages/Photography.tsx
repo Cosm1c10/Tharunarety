@@ -9,8 +9,9 @@ import { Button } from "@/components/ui/button";
 
 const photographyAlbums = {
   astro: [
-    { src: "/lovable-uploads/27b0d5ec-f720-416e-b010-7827e0c65c4f.png", alt: "Portrait photography" },
-    { src: "/lovable-uploads/68dc8ba2-bd19-4edc-8f22-a3733f916f19.png", alt: "Portrait in nature" },
+    { src: "/lovable-uploads/152a5386-b9f0-4ca8-a7fe-5e32dc1f96ff.png", alt: "Milky Way over mountain peaks" },
+    { src: "/lovable-uploads/895d8030-8bb2-43ea-8cf6-3118b91aaa31.png", alt: "Night sky over cityscape with communication tower" },
+    { src: "/lovable-uploads/3f20d053-10d5-4293-96f1-b2e3d58926d7.png", alt: "Milky Way with silhouette and red light effects" },
   ],
   automobiles: [
     { src: "/lovable-uploads/68dc8ba2-bd19-4edc-8f22-a3733f916f19.png", alt: "Misty mountain ranges at sunset" },
