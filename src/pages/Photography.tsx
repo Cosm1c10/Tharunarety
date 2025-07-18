@@ -131,13 +131,13 @@ const Photography = () => {
                           <div className="p-2">
                             <Card className="hover:shadow-xl transition-shadow duration-300 group">
                               <CardContent className="p-0">
-                                <AspectRatio ratio={16 / 10} className="overflow-hidden rounded-lg shadow-lg group-hover:shadow-2xl transition-shadow duration-300">
-                                  <img 
-                                    src={photo.src} 
-                                    alt={photo.alt} 
-                                    className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" 
-                                  />
-                                </AspectRatio>
+                                 <AspectRatio ratio={16 / 10} className="overflow-hidden rounded-lg shadow-lg">
+                                   <img 
+                                     src={photo.src} 
+                                     alt={photo.alt} 
+                                     className="w-full h-full object-contain" 
+                                   />
+                                 </AspectRatio>
                                 <div className="p-3 text-center group-hover:bg-secondary/20 transition-colors duration-300">
                                   <p className="text-xs text-muted-foreground">{photo.alt}</p>
                                 </div>
