@@ -205,6 +205,16 @@ const Portfolio = () => {
                   LinkedIn Profile
                 </a>
               </Button>
+              <Button size="lg" variant="outline" asChild className="hover:scale-105 transition-all duration-300 hover:shadow-xl drop-shadow-lg border-white/30 text-white hover:bg-white hover:text-black">
+                <a href="/photography">
+                  View Photography
+                </a>
+              </Button>
+              <Button size="lg" variant="outline" asChild className="hover:scale-105 transition-all duration-300 hover:shadow-xl drop-shadow-lg border-white/30 text-white hover:bg-white hover:text-black">
+                <a href="/">
+                  Back to Home
+                </a>
+              </Button>
             </div>
           </div>
         </section>

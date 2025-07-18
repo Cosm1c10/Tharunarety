@@ -5,6 +5,7 @@ import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious
 import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
 
 const photographyAlbums = {
   portraits: [
@@ -68,6 +69,14 @@ const Photography = () => {
               Whether through the timeless art of photography or the dynamic narrative of filmmaking and cinematic videos, 
               I'm driven to observe the unseen, capture fleeting moments, and tell compelling stories through light, composition, and movement.
             </p>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-in-up animation-delay-600 relative z-10">
+              <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-300 hover:shadow-lg">
+                <a href="/engineering">View Engineering Work</a>
+              </Button>
+              <Button variant="outline" asChild className="border-white/30 text-white hover:bg-white hover:text-black hover:scale-105 transition-all duration-300 hover:shadow-lg">
+                <a href="/">Back to Home</a>
+              </Button>
+            </div>
           </div>
         </section>
 
