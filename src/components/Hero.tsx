@@ -51,10 +51,10 @@ const Hero = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-4 mt-8 justify-center opacity-0 animate-fade-in-up animation-delay-600">
                 <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-300 hover:shadow-lg">
-                  <a href="/engineering">Explore Engineering Projects</a>
+                  <a href="/Portfolio">Explore Engineering Projects</a>
                 </Button>
                 <Button variant="outline" asChild className="border-primary text-primary hover:bg-primary hover:text-primary-foreground hover:scale-105 transition-all duration-300 hover:shadow-lg">
-                  <a href="/photography">Discover My Visual Stories</a>
+                  <a href="/Photography">Discover My Visual Stories</a>
                 </Button>
               </div>
             </div>
