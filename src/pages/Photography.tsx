@@ -254,12 +254,10 @@ const Photography = () => {
                                    <img 
                                      src={photo.src} 
                                      alt={photo.alt} 
+                                     loading="lazy"
                                      className="w-full h-full object-contain" 
                                    />
                                  </AspectRatio>
-                                <div className="p-3 text-center group-hover:bg-secondary/20 transition-colors duration-300">
-                                  <p className="text-xs text-muted-foreground">{photo.alt}</p>
-                                </div>
                               </CardContent>
                             </Card>
                           </div>
