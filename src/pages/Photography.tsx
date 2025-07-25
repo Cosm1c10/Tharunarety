@@ -256,7 +256,7 @@ const Photography = () => {
                               <CardContent className="p-0">
                                  <AspectRatio ratio={16 / 10} className="overflow-hidden rounded-lg shadow-lg">
                                    <img 
-                                     src={getOptimizedImageUrl(photo.src)} 
+                                     src={photo.src} 
                                      alt={photo.alt} 
                                      loading="lazy"
                                      className="w-full h-full object-contain" 
