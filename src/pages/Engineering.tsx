@@ -115,6 +115,10 @@ const engineeringApproachCards = [
   }
 ];
 
+function getOptimizedImageUrl(path, width = 1200, quality = 80) {
+  return `/_next/image?url=${encodeURIComponent(path)}&w=${width}&q=${quality}`;
+}
+
 const Engineering = () => {
   const autoplayPlugin = useRef(
     Autoplay({ 

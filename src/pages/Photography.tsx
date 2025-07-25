@@ -171,6 +171,10 @@ const videos = [
   { id: "OVPgSBYB8Ok", title: "Videography Showcase 4" },
 ];
 
+function getOptimizedImageUrl(path, width = 1200, quality = 80) {
+  return `/_next/image?url=${encodeURIComponent(path)}&w=${width}&q=${quality}`;
+}
+
 const Photography = () => {
   const [activeAlbum, setActiveAlbum] = useState('astro');
 
@@ -252,7 +256,7 @@ const Photography = () => {
                               <CardContent className="p-0">
                                  <AspectRatio ratio={16 / 10} className="overflow-hidden rounded-lg shadow-lg">
                                    <img 
-                                     src={photo.src} 
+                                     src={getOptimizedImageUrl(photo.src)} 
                                      alt={photo.alt} 
                                      loading="lazy"
                                      className="w-full h-full object-contain" 
