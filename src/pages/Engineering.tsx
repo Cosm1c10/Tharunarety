@@ -115,7 +115,7 @@ const engineeringApproachCards = [
   }
 ];
 
-const Portfolio = () => {
+const Engineering = () => {
   const autoplayPlugin = useRef(
     Autoplay({ 
       delay: 3000, 
@@ -390,4 +390,4 @@ const Portfolio = () => {
   );
 };
 
-export default Portfolio;
+export default Engineering;

@@ -10,7 +10,7 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 
-const Portfolio = () => {
+const Engineering = () => {
   return (
     <section id="portfolio" className="py-20 md:py-32 px-8 md:px-12 opacity-0 animate-fade-in-up">
       <div className="container mx-auto">
@@ -167,4 +167,4 @@ const Portfolio = () => {
     </section>
   );
 };
-export default Portfolio;
+export default Engineering;
