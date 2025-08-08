@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
@@ -6,6 +6,7 @@ import { AspectRatio } from "@/components/ui/aspect-ratio";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
+import Autoplay from "embla-carousel-autoplay";
 
 const photographyAlbums = {
   astro: [
@@ -177,14 +178,31 @@ function getOptimizedImageUrl(path, width = 1200, quality = 80) {
 
 const Photography = () => {
   const [activeAlbum, setActiveAlbum] = useState('astro');
+  
+  // Create autoplay plugin with same settings as engineering page
+  const autoplayPlugin = useRef(
+    Autoplay({ 
+      delay: 3000, 
+      stopOnInteraction: false,
+      stopOnMouseEnter: true,
+      playOnInit: true
+    })
+  );
+
+  useEffect(() => {
+    const plugin = autoplayPlugin.current;
+    return () => {
+      plugin.destroy();
+    };
+  }, []);
 
   return (
     <div className="bg-background text-foreground font-sans min-h-screen relative">
       <Header />
       
-      <main className="pt-20">
+      <main className="pt-16 sm:pt-20">
         {/* Hero Section */}
-        <section className="py-20 md:py-32 px-8 md:px-12 opacity-0 animate-fade-in-up relative overflow-hidden">
+        <section className="py-12 sm:py-16 md:py-20 lg:py-32 px-4 sm:px-6 md:px-8 lg:px-12 opacity-0 animate-fade-in-up relative overflow-hidden">
           {/* Background Image with Overlay */}
           <div className="absolute inset-0 z-0">
             <div 
@@ -204,18 +222,18 @@ const Photography = () => {
           
           <div className="container mx-auto text-center">
             <h1 className="font-light mb-4 opacity-0 animate-fade-in-up leading-tight relative z-10">
-              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl text-white drop-shadow-2xl">Welcome</div>
-              <div className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl text-white mt-2 drop-shadow-2xl">to</div>
-              <div className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl text-primary mt-2 drop-shadow-2xl font-medium">Tharun's Perspective</div>
+              <div className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white drop-shadow-2xl">Welcome</div>
+              <div className="text-xl sm:text-2xl md:text-3xl lg:text-4xl xl:text-5xl text-white mt-2 drop-shadow-2xl">to</div>
+              <div className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl text-primary mt-2 drop-shadow-2xl font-medium">Tharun's Perspective</div>
             </h1>
-            <p className="text-lg text-white/90 mb-4 opacity-0 animate-fade-in-up animation-delay-200 relative z-10 drop-shadow-lg font-medium">Photography, Filmmaking & Cinematic Videos</p>
-            <p className="text-base text-white/80 max-w-4xl mx-auto mb-8 opacity-0 animate-fade-in-up animation-delay-400 relative z-10 drop-shadow-lg leading-relaxed">
+            <p className="text-base sm:text-lg text-white/90 mb-3 sm:mb-4 opacity-0 animate-fade-in-up animation-delay-200 relative z-10 drop-shadow-lg font-medium">Photography, Filmmaking & Cinematic Videos</p>
+            <p className="text-sm sm:text-base text-white/80 max-w-3xl sm:max-w-4xl mx-auto mb-6 sm:mb-8 opacity-0 animate-fade-in-up animation-delay-400 relative z-10 drop-shadow-lg leading-relaxed px-4">
               Beyond the world of simulations and materials, I find immense joy and creative expression through visual storytelling. 
               Whether through the timeless art of photography or the dynamic narrative of filmmaking and cinematic videos, 
               I'm driven to observe the unseen, capture fleeting moments, and tell compelling stories through light, composition, and movement.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-in-up animation-delay-600 relative z-10">
-              <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-300 hover:shadow-lg">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center opacity-0 animate-fade-in-up animation-delay-600 relative z-10 px-4">
+              <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-300 hover:shadow-lg text-sm sm:text-base">
                 <a href="/">Back to Home</a>
               </Button>
             </div>
@@ -223,18 +241,18 @@ const Photography = () => {
         </section>
 
         {/* Photography Albums Section */}
-        <section className="py-20 md:py-32 px-8 md:px-12 opacity-0 animate-fade-in-up animation-delay-600 bg-background/95 backdrop-blur-sm">
+        <section className="py-12 sm:py-16 md:py-20 lg:py-32 px-4 sm:px-6 md:px-8 lg:px-12 opacity-0 animate-fade-in-up animation-delay-600 bg-background/95 backdrop-blur-sm">
           <div className="container mx-auto">
-            <h2 className="text-3xl font-light text-center mb-12 opacity-0 animate-fade-in-up">Photography Albums</h2>
+            <h2 className="text-2xl sm:text-3xl font-light text-center mb-8 sm:mb-12 opacity-0 animate-fade-in-up">Photography Albums</h2>
             
             <Tabs value={activeAlbum} onValueChange={setActiveAlbum} className="w-full opacity-0 animate-scale-in animation-delay-200">
-              <TabsList className="grid w-full grid-cols-4 lg:grid-cols-8 mb-12 hover:shadow-lg transition-shadow duration-300 h-auto flex-wrap gap-1 p-2">
+              <TabsList className="grid w-full grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 mb-8 sm:mb-12 hover:shadow-lg transition-shadow duration-300 h-auto flex-wrap gap-1 p-2">
                 <TabsTrigger value="astro" className="text-xs px-2 py-1">Astro</TabsTrigger>
                 <TabsTrigger value="automobiles" className="text-xs px-2 py-1">Automobiles</TabsTrigger>
                 <TabsTrigger value="cities" className="text-xs px-2 py-1">Cities & Architecture</TabsTrigger>
                 <TabsTrigger value="festivals" className="text-xs px-2 py-1">Festivals</TabsTrigger>
-                <TabsTrigger value="landscapes">Landscapes</TabsTrigger>
-                <TabsTrigger value="portraits">Portrait's</TabsTrigger>
+                <TabsTrigger value="landscapes" className="text-xs px-2 py-1">Landscapes</TabsTrigger>
+                <TabsTrigger value="portraits" className="text-xs px-2 py-1">Portrait's</TabsTrigger>
                 <TabsTrigger value="street" className="text-xs px-2 py-1">Street Photography</TabsTrigger>
                 <TabsTrigger value="wildlife" className="text-xs px-2 py-1">Wild Life</TabsTrigger>
               </TabsList>
@@ -242,11 +260,12 @@ const Photography = () => {
               {Object.entries(photographyAlbums).map(([albumName, photos]) => (
                 <TabsContent key={albumName} value={albumName}>
                   <Carousel
+                    plugins={[autoplayPlugin.current as any]}
                     opts={{
                       align: "start",
                       loop: true,
                     }}
-                    className="w-full max-w-4xl mx-auto"
+                    className="w-full max-w-3xl sm:max-w-4xl mx-auto"
                   >
                     <CarouselContent>
                       {photos.map((photo, index) => (
@@ -268,8 +287,8 @@ const Photography = () => {
                         </CarouselItem>
                       ))}
                     </CarouselContent>
-                    <CarouselPrevious />
-                    <CarouselNext />
+                    <CarouselPrevious className="hidden sm:flex" />
+                    <CarouselNext className="hidden sm:flex" />
                   </Carousel>
                 </TabsContent>
               ))}
@@ -278,15 +297,16 @@ const Photography = () => {
         </section>
 
         {/* Videography Section */}
-        <section className="py-20 md:py-32 px-8 md:px-12 bg-black/95 backdrop-blur-sm opacity-0 animate-fade-in-up animation-delay-800">
+        <section className="py-12 sm:py-16 md:py-20 lg:py-32 px-4 sm:px-6 md:px-8 lg:px-12 bg-black/95 backdrop-blur-sm opacity-0 animate-fade-in-up animation-delay-800">
           <div className="container mx-auto">
-            <h2 className="text-3xl font-light text-center mb-12 opacity-0 animate-fade-in-up">Videography Showcase</h2>
+            <h2 className="text-2xl sm:text-3xl font-light text-center mb-8 sm:mb-12 opacity-0 animate-fade-in-up">Videography Showcase</h2>
             <Carousel
+              plugins={[autoplayPlugin.current as any]}
               opts={{
                 align: "start",
                 loop: true,
               }}
-              className="w-full max-w-4xl mx-auto opacity-0 animate-scale-in animation-delay-200"
+              className="w-full max-w-3xl sm:max-w-4xl mx-auto opacity-0 animate-scale-in animation-delay-200"
             >
               <CarouselContent>
                 {videos.map((video) => (
@@ -314,8 +334,8 @@ const Photography = () => {
                   </CarouselItem>
                 ))}
               </CarouselContent>
-              <CarouselPrevious />
-              <CarouselNext />
+              <CarouselPrevious className="hidden sm:flex" />
+              <CarouselNext className="hidden sm:flex" />
             </Carousel>
           </div>
         </section>

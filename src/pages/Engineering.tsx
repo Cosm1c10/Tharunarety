@@ -140,9 +140,9 @@ const Engineering = () => {
     <div className="bg-background text-foreground font-sans min-h-screen">
       <Header />
       
-      <main className="pt-20">
+      <main className="pt-16 sm:pt-20">
         {/* Hero Section */}
-        <section className="py-20 md:py-32 px-8 md:px-12 relative overflow-hidden">
+        <section className="py-12 sm:py-16 md:py-20 lg:py-32 px-4 sm:px-6 md:px-8 lg:px-12 relative overflow-hidden">
           {/* Blended Background Images */}
           <div className="absolute inset-0 z-0 opacity-100">
             {/* Left side - Material Cross-Section */}
@@ -179,17 +179,21 @@ const Engineering = () => {
           </div>
           
           <div className="container mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-light mb-4 relative z-10 text-white drop-shadow-2xl">My Engineering Projects</h1>
-            <h2 className="text-2xl font-light mb-4 text-primary relative z-10 drop-shadow-xl">Driving Innovation in Materials Science</h2>
-            <p className="text-xl text-white/90 mb-8 max-w-3xl mx-auto relative z-10 drop-shadow-lg leading-relaxed">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-light mb-3 sm:mb-4 relative z-10 text-white drop-shadow-2xl leading-tight">
+              My Engineering Projects
+            </h1>
+            <h2 className="text-lg sm:text-xl md:text-2xl font-light mb-3 sm:mb-4 text-primary relative z-10 drop-shadow-xl">
+              Driving Innovation in Materials Science
+            </h2>
+            <p className="text-base sm:text-lg md:text-xl text-white/90 mb-6 sm:mb-8 max-w-2xl sm:max-w-3xl mx-auto relative z-10 drop-shadow-lg leading-relaxed px-4">
               Materials Engineering professional with expertise in FEM simulations, Python programming, 
               and advanced optimization techniques. Dedicated to pushing the boundaries of what's possible in materials science.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center relative z-10">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center relative z-10 px-4">
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button size="lg" className="hover:scale-105 transition-all duration-300 hover:shadow-xl drop-shadow-lg">
-                    <FileText />
+                  <Button size="lg" className="hover:scale-105 transition-all duration-300 hover:shadow-xl drop-shadow-lg text-sm sm:text-base">
+                    <FileText className="w-4 h-4 sm:w-5 sm:h-5" />
                     View Resume
                   </Button>
                 </DialogTrigger>
@@ -203,9 +207,9 @@ const Engineering = () => {
                   </div>
                 </DialogContent>
               </Dialog>
-              <Button size="lg" variant="outline" asChild className="hover:scale-105 transition-all duration-300 hover:shadow-xl drop-shadow-lg border-white/30 text-white hover:bg-white hover:text-black">
+              <Button size="lg" variant="outline" asChild className="hover:scale-105 transition-all duration-300 hover:shadow-xl drop-shadow-lg border-white/30 text-white hover:bg-white hover:text-black text-sm sm:text-base">
                 <a href="https://www.linkedin.com/in/tharun-arety/" target="_blank" rel="noopener noreferrer">
-                  <Linkedin />
+                  <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
                   LinkedIn Profile
                 </a>
               </Button>
@@ -214,7 +218,7 @@ const Engineering = () => {
         </section>
 
         {/* Engineering Approach Section */}
-        <section className="py-20 md:py-32 px-8 md:px-12 relative overflow-hidden opacity-0 animate-fade-in-up">
+        <section className="py-12 sm:py-16 md:py-20 lg:py-32 px-4 sm:px-6 md:px-8 lg:px-12 relative overflow-hidden opacity-0 animate-fade-in-up">
           {/* Blended Background Images for Engineering Approach */}
           <div className="absolute inset-0 z-0">
             {/* Left side - FEM Simulation with different positioning */}
@@ -250,43 +254,43 @@ const Engineering = () => {
           </div>
           
           <div className="container mx-auto">
-            <div className="text-center mb-12 opacity-0 animate-fade-in-up relative z-10">
-              <h2 className="text-3xl font-light mb-6 text-white drop-shadow-xl">Engineering Approach</h2>
-              <p className="text-lg text-white/80 max-w-3xl mx-auto opacity-0 animate-fade-in-up animation-delay-200 drop-shadow-lg leading-relaxed">
+            <div className="text-center mb-8 sm:mb-12 opacity-0 animate-fade-in-up relative z-10">
+              <h2 className="text-2xl sm:text-3xl font-light mb-4 sm:mb-6 text-white drop-shadow-xl">Engineering Approach</h2>
+              <p className="text-sm sm:text-base md:text-lg text-white/80 max-w-2xl sm:max-w-3xl mx-auto opacity-0 animate-fade-in-up animation-delay-200 drop-shadow-lg leading-relaxed px-4">
                 My engineering approach is rooted in analytical rigor, innovative algorithm design, and a relentless pursuit of efficient, impactful solutions.
               </p>
             </div>
 
-            <div className="mb-12 opacity-0 animate-fade-in-up animation-delay-400 relative z-10">
+            <div className="mb-8 sm:mb-12 opacity-0 animate-fade-in-up animation-delay-400 relative z-10">
               <Carousel
                 plugins={[autoplayPlugin.current as any]}
                 opts={{
                   align: "start",
                   loop: true,
                 }}
-                className="w-full max-w-7xl mx-auto"
+                className="w-full max-w-6xl lg:max-w-7xl mx-auto"
               >
                 <CarouselContent className="-ml-2 md:-ml-4">
                   {engineeringApproachCards.map((card, index) => {
                     const IconComponent = card.icon;
                     return (
-                      <CarouselItem key={index} className="pl-2 md:pl-4 md:basis-1/2 lg:basis-1/3">
+                      <CarouselItem key={index} className="pl-2 md:pl-4 basis-full sm:basis-1/2 lg:basis-1/3">
                         <div className="p-1">
-                          <Card className="text-left hover:shadow-xl hover:scale-105 transition-all duration-300 group h-[500px] flex flex-col bg-background/95 backdrop-blur-sm border-white/10">
-                            <CardHeader>
-                              <div className="flex items-center gap-3 mb-2">
-                                <div className="bg-secondary/80 backdrop-blur-sm p-3 rounded-full w-fit group-hover:bg-primary/30 transition-colors duration-300">
-                                  <IconComponent className="h-6 w-6 text-primary group-hover:scale-110 transition-transform duration-300" />
+                          <Card className="text-left hover:shadow-xl hover:scale-105 transition-all duration-300 group h-auto min-h-[400px] sm:h-[450px] md:h-[500px] flex flex-col bg-background/95 backdrop-blur-sm border-white/10">
+                            <CardHeader className="pb-3 sm:pb-4">
+                              <div className="flex items-center gap-2 sm:gap-3 mb-2">
+                                <div className="bg-secondary/80 backdrop-blur-sm p-2 sm:p-3 rounded-full w-fit group-hover:bg-primary/30 transition-colors duration-300">
+                                  <IconComponent className="h-5 w-5 sm:h-6 sm:w-6 text-primary group-hover:scale-110 transition-transform duration-300" />
                                 </div>
-                                <CardTitle className="text-xl font-medium">{card.title}</CardTitle>
+                                <CardTitle className="text-lg sm:text-xl font-medium leading-tight">{card.title}</CardTitle>
                               </div>
                             </CardHeader>
                             <CardContent className="flex-1 flex flex-col justify-start overflow-hidden">
-                              <div className="space-y-4">
+                              <div className="space-y-3 sm:space-y-4">
                                 {card.sections.map((section, sectionIndex) => (
                                   <div key={sectionIndex} className="flex-shrink-0">
-                                    <h4 className="font-semibold text-primary mb-2">{section.subtitle}</h4>
-                                    <CardDescription className="text-sm leading-relaxed">{section.description}</CardDescription>
+                                    <h4 className="font-semibold text-primary mb-1 sm:mb-2 text-sm sm:text-base">{section.subtitle}</h4>
+                                    <CardDescription className="text-xs sm:text-sm leading-relaxed">{section.description}</CardDescription>
                                   </div>
                                 ))}
                               </div>
@@ -297,16 +301,16 @@ const Engineering = () => {
                     );
                   })}
                 </CarouselContent>
-                <CarouselPrevious />
-                <CarouselNext />
+                <CarouselPrevious className="hidden sm:flex" />
+                <CarouselNext className="hidden sm:flex" />
               </Carousel>
             </div>
 
-            <div className="text-center flex flex-col sm:flex-row gap-4 justify-center opacity-0 animate-fade-in-up animation-delay-600 relative z-10">
+            <div className="text-center flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center opacity-0 animate-fade-in-up animation-delay-600 relative z-10 px-4">
               <Dialog>
                 <DialogTrigger asChild>
-                  <Button size="lg" className="hover:scale-105 transition-all duration-300 hover:shadow-xl drop-shadow-lg">
-                    <FileText />
+                  <Button size="lg" className="hover:scale-105 transition-all duration-300 hover:shadow-xl drop-shadow-lg text-sm sm:text-base">
+                    <FileText className="w-4 h-4 sm:w-5 sm:h-5" />
                     My Resume
                   </Button>
                 </DialogTrigger>
@@ -320,9 +324,9 @@ const Engineering = () => {
                   </div>
                 </DialogContent>
               </Dialog>
-              <Button size="lg" asChild className="hover:scale-105 transition-all duration-300 hover:shadow-xl drop-shadow-lg">
+              <Button size="lg" asChild className="hover:scale-105 transition-all duration-300 hover:shadow-xl drop-shadow-lg text-sm sm:text-base">
                 <a href="https://www.linkedin.com/in/tharun-arety/" target="_blank" rel="noopener noreferrer">
-                  <Linkedin />
+                  <Linkedin className="w-4 h-4 sm:w-5 sm:h-5" />
                   LinkedIn Profile
                 </a>
               </Button>
@@ -331,14 +335,14 @@ const Engineering = () => {
         </section>
 
         {/* Projects Section */}
-        <section className="py-20 md:py-32 px-8 md:px-12 bg-background/95 backdrop-blur-sm">
+        <section className="py-12 sm:py-16 md:py-20 lg:py-32 px-4 sm:px-6 md:px-8 lg:px-12 bg-background/95 backdrop-blur-sm">
           <div className="container mx-auto">
-            <h2 className="text-3xl font-light text-center mb-12">Featured Projects</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <h2 className="text-2xl sm:text-3xl font-light text-center mb-8 sm:mb-12">Featured Projects</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
               {projects.map((project, index) => (
                 <Card key={index} className="h-full hover:shadow-xl hover:scale-105 transition-all duration-300 group opacity-0 animate-fade-in-up" style={{animationDelay: `${index * 0.2}s`}}>
-                  <CardHeader>
-                    <CardTitle className="text-xl group-hover:text-primary transition-colors duration-300">{project.title}</CardTitle>
+                  <CardHeader className="pb-3 sm:pb-4">
+                    <CardTitle className="text-lg sm:text-xl group-hover:text-primary transition-colors duration-300 leading-tight">{project.title}</CardTitle>
                     <div className="flex items-center gap-2">
                       <span className={`px-2 py-1 rounded-full text-xs ${
                         project.status === 'Completed' ? 'bg-green-100 text-green-800' : 'bg-blue-100 text-blue-800'
@@ -348,8 +352,8 @@ const Engineering = () => {
                     </div>
                   </CardHeader>
                   <CardContent>
-                    <CardDescription className="mb-4">{project.description}</CardDescription>
-                    <div className="flex flex-wrap gap-2 mb-4">
+                    <CardDescription className="mb-3 sm:mb-4 text-sm sm:text-base">{project.description}</CardDescription>
+                    <div className="flex flex-wrap gap-2 mb-3 sm:mb-4">
                       {project.technologies.map((tech, techIndex) => (
                         <span key={techIndex} className="px-2 py-1 bg-secondary text-secondary-foreground rounded text-xs">
                           {tech}
@@ -364,19 +368,19 @@ const Engineering = () => {
         </section>
 
         {/* Skills Section */}
-        <section className="py-20 md:py-32 px-8 md:px-12 bg-black/95 backdrop-blur-sm">
+        <section className="py-12 sm:py-16 md:py-20 lg:py-32 px-4 sm:px-6 md:px-8 lg:px-12 bg-black/95 backdrop-blur-sm">
           <div className="container mx-auto">
-            <h2 className="text-3xl font-light text-center mb-12">Technical Skills</h2>
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <h2 className="text-2xl sm:text-3xl font-light text-center mb-8 sm:mb-12">Technical Skills</h2>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
               {skills.map((skillGroup, index) => (
                 <Card key={index} className="hover:shadow-xl hover:scale-105 transition-all duration-300 group opacity-0 animate-fade-in-up" style={{animationDelay: `${index * 0.15}s`}}>
-                  <CardHeader>
-                    <CardTitle className="text-lg group-hover:text-primary transition-colors duration-300">{skillGroup.category}</CardTitle>
+                  <CardHeader className="pb-3 sm:pb-4">
+                    <CardTitle className="text-base sm:text-lg group-hover:text-primary transition-colors duration-300">{skillGroup.category}</CardTitle>
                   </CardHeader>
                   <CardContent>
-                    <div className="space-y-2">
+                    <div className="space-y-1 sm:space-y-2">
                       {skillGroup.items.map((skill, skillIndex) => (
-                        <div key={skillIndex} className="text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">
+                        <div key={skillIndex} className="text-xs sm:text-sm text-muted-foreground hover:text-foreground transition-colors duration-300">
                           {skill}
                         </div>
                       ))}

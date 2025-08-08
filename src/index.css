@@ -42,6 +42,25 @@
     @apply scroll-smooth;
   }
 
+  /* Mobile-specific improvements */
+  @media (max-width: 640px) {
+    /* Improve touch targets */
+    button, a {
+      min-height: 44px;
+      min-width: 44px;
+    }
+    
+    /* Better text readability on mobile */
+    p {
+      line-height: 1.6;
+    }
+    
+    /* Improve carousel touch experience */
+    .carousel {
+      touch-action: pan-y pinch-zoom;
+    }
+  }
+
   /* Custom animations */
   @keyframes fadeInUp {
     from {
