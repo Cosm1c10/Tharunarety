@@ -8,6 +8,8 @@ const Hero = () => {
       <div className="hidden md:block absolute top-1/2 left-auto -right-16 transform -translate-y-1/2 -rotate-90 z-20">
           <span className="text-sm font-light tracking-[0.3em] uppercase text-gray-500 whitespace-nowrap"></span>
       </div>
+      
+      {/* Scroll down button - repositioned for mobile */}
       <div className="absolute bottom-4 sm:bottom-8 left-4 sm:left-8 md:left-auto md:right-12 flex items-center gap-8 sm:gap-12 text-xs sm:text-sm font-light z-20">
         <span>
       </span>

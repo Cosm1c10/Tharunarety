@@ -71,13 +71,13 @@ const Header = () => {
         ))}
       </nav>
 
-      {/* Mobile Menu Button */}
-      <div className="md:hidden">
+      {/* Mobile Menu Button - Aligned with text */}
+      <div className="md:hidden flex items-center">
         <Button
           variant="ghost"
           size="sm"
           onClick={handleMobileMenuToggle}
-          className="p-2"
+          className="p-2 h-auto"
           aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
         >
           {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}

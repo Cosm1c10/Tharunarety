@@ -179,10 +179,10 @@ function getOptimizedImageUrl(path, width = 1200, quality = 80) {
 const Photography = () => {
   const [activeAlbum, setActiveAlbum] = useState('astro');
   
-  // Create autoplay plugin with same settings as engineering page
+  // Create autoplay plugin with 5 second delay
   const autoplayPlugin = useRef(
     Autoplay({ 
-      delay: 3000, 
+      delay: 5000, // Changed to 5 seconds
       stopOnInteraction: false,
       stopOnMouseEnter: true,
       playOnInit: true
@@ -232,11 +232,6 @@ const Photography = () => {
               Whether through the timeless art of photography or the dynamic narrative of filmmaking and cinematic videos, 
               I'm driven to observe the unseen, capture fleeting moments, and tell compelling stories through light, composition, and movement.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center opacity-0 animate-fade-in-up animation-delay-600 relative z-10 px-4">
-              <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-300 hover:shadow-lg text-sm sm:text-base">
-                <a href="/">Back to Home</a>
-              </Button>
-            </div>
           </div>
         </section>
 
@@ -265,12 +260,12 @@ const Photography = () => {
                       align: "start",
                       loop: true,
                     }}
-                    className="w-full max-w-3xl sm:max-w-4xl mx-auto"
+                    className="w-full max-w-4xl sm:max-w-5xl lg:max-w-6xl mx-auto"
                   >
                     <CarouselContent>
                       {photos.map((photo, index) => (
                         <CarouselItem key={index} className="basis-full">
-                          <div className="p-2">
+                          <div className="p-1 sm:p-2">
                             <Card className="hover:shadow-xl transition-shadow duration-300 group">
                               <CardContent className="p-0">
                                  <AspectRatio ratio={16 / 10} className="overflow-hidden rounded-lg shadow-lg">
@@ -306,12 +301,12 @@ const Photography = () => {
                 align: "start",
                 loop: true,
               }}
-              className="w-full max-w-3xl sm:max-w-4xl mx-auto opacity-0 animate-scale-in animation-delay-200"
+              className="w-full max-w-4xl sm:max-w-5xl lg:max-w-6xl mx-auto opacity-0 animate-scale-in animation-delay-200"
             >
               <CarouselContent>
                 {videos.map((video) => (
                   <CarouselItem key={video.id} className="basis-full">
-                    <div className="p-2">
+                    <div className="p-1 sm:p-2">
                       <Card className="hover:shadow-xl transition-shadow duration-300 group">
                         <CardContent className="p-0">
                           <AspectRatio ratio={16 / 10} className="overflow-hidden rounded-lg shadow-lg group-hover:shadow-2xl transition-shadow duration-300">
