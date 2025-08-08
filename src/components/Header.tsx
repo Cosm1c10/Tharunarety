@@ -12,15 +12,31 @@ const Header = () => {
   
   const navItems = [
     { href: "/", label: "Home" },
-    { href: location.pathname === "/" ? "#about" : "/#about", label: "About Me" },
+    { 
+      href: "#about", 
+      label: "About Me",
+      onClick: (e: React.MouseEvent) => {
+        e.preventDefault();
+        if (location.pathname === "/") {
+          // If on home page, scroll to about section
+          const aboutSection = document.getElementById('about');
+          if (aboutSection) {
+            aboutSection.scrollIntoView({ behavior: 'smooth' });
+          }
+        } else {
+          // If on other pages, navigate to home page and scroll to about
+          window.location.href = "/#about";
+        }
+      }
+    },
     { href: "/engineering", label: "Engineering" },
     { href: "/photography", label: "Photography" },
     { 
-      href: location.pathname === "/" ? "#contact" : "/#contact", 
+      href: "#contact", 
       label: "Contact",
       onClick: (e: React.MouseEvent) => {
+        e.preventDefault();
         if (location.pathname === "/") {
-          e.preventDefault();
           const contactSection = document.getElementById('contact');
           if (contactSection) {
             contactSection.scrollIntoView({ behavior: 'smooth' });
@@ -93,7 +109,7 @@ const Header = () => {
           variant="ghost"
           size="sm"
           onClick={handleMobileMenuToggle}
-          className="p-2 h-auto"
+          className="p-2 h-auto -mt-1"
           aria-label={isMobileMenuOpen ? "Close menu" : "Open menu"}
         >
           {isMobileMenuOpen ? <X size={20} /> : <Menu size={20} />}

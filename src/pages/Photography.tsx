@@ -260,12 +260,12 @@ const Photography = () => {
                       align: "start",
                       loop: true,
                     }}
-                    className="w-full max-w-4xl sm:max-w-5xl lg:max-w-6xl mx-auto"
+                    className="w-full max-w-full sm:max-w-5xl lg:max-w-6xl mx-auto"
                   >
                     <CarouselContent>
                       {photos.map((photo, index) => (
                         <CarouselItem key={index} className="basis-full">
-                          <div className="p-1 sm:p-2">
+                          <div className="p-0 sm:p-1 md:p-2">
                             <Card className="hover:shadow-xl transition-shadow duration-300 group">
                               <CardContent className="p-0">
                                  <AspectRatio ratio={16 / 10} className="overflow-hidden rounded-lg shadow-lg">
@@ -301,12 +301,12 @@ const Photography = () => {
                 align: "start",
                 loop: true,
               }}
-              className="w-full max-w-4xl sm:max-w-5xl lg:max-w-6xl mx-auto opacity-0 animate-scale-in animation-delay-200"
+              className="w-full max-w-full sm:max-w-5xl lg:max-w-6xl mx-auto opacity-0 animate-scale-in animation-delay-200"
             >
               <CarouselContent>
                 {videos.map((video) => (
                   <CarouselItem key={video.id} className="basis-full">
-                    <div className="p-1 sm:p-2">
+                    <div className="p-0 sm:p-1 md:p-2">
                       <Card className="hover:shadow-xl transition-shadow duration-300 group">
                         <CardContent className="p-0">
                           <AspectRatio ratio={16 / 10} className="overflow-hidden rounded-lg shadow-lg group-hover:shadow-2xl transition-shadow duration-300">
