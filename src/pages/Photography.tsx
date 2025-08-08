@@ -268,12 +268,12 @@ const Photography = () => {
                           <div className="p-0 sm:p-1 md:p-2">
                             <Card className="hover:shadow-xl transition-shadow duration-300 group">
                               <CardContent className="p-0">
-                                 <AspectRatio ratio={16 / 10} className="overflow-hidden rounded-lg shadow-lg">
+                                 <AspectRatio ratio={4 / 5} className="overflow-hidden rounded-lg shadow-lg">
                                    <img 
                                      src={photo.src} 
                                      alt={photo.alt} 
                                      loading="lazy"
-                                     className="w-full h-full object-contain" 
+                                     className="w-full h-full object-cover" 
                                    />
                                  </AspectRatio>
                               </CardContent>
@@ -309,7 +309,7 @@ const Photography = () => {
                     <div className="p-0 sm:p-1 md:p-2">
                       <Card className="hover:shadow-xl transition-shadow duration-300 group">
                         <CardContent className="p-0">
-                          <AspectRatio ratio={16 / 10} className="overflow-hidden rounded-lg shadow-lg group-hover:shadow-2xl transition-shadow duration-300">
+                          <AspectRatio ratio={16 / 9} className="overflow-hidden rounded-lg shadow-lg group-hover:shadow-2xl transition-shadow duration-300">
                             <iframe 
                               className="w-full h-full group-hover:scale-105 transition-transform duration-300"
                               src={`https://www.youtube-nocookie.com/embed/${video.id}?rel=0&modestbranding=1&autoplay=0&mute=0&controls=1&showinfo=0&fs=1&cc_load_policy=0&iv_load_policy=3&autohide=0`}
