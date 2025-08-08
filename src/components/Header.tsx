@@ -1,6 +1,6 @@
 
 import { Button } from "@/components/ui/button";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
 import { useMobile } from "@/hooks/use-mobile";
@@ -14,7 +14,7 @@ const Header = () => {
     { href: "/", label: "Home" },
     { href: location.pathname === "/" ? "#about" : "/#about", label: "About Me" },
     { href: "/engineering", label: "Engineering" },
-    { href: "/Photography", label: "Photography" },
+    { href: "/photography", label: "Photography" },
     { 
       href: location.pathname === "/" ? "#contact" : "/#contact", 
       label: "Contact",
@@ -48,27 +48,43 @@ const Header = () => {
   return (
     <header className="relative flex items-center justify-between w-full p-4 opacity-0 animate-fade-in z-50">
       <div className="flex items-center gap-2">
-        <a
-          href="/"
+        <Link
+          to="/"
           className="text-lg sm:text-xl font-semibold hover:opacity-70 hover:scale-105 transition-all duration-300"
         >
           Tharun Arety
-        </a>
+        </Link>
       </div>
 
       {/* Desktop Navigation */}
       <nav className="hidden md:flex absolute left-1/2 -translate-x-1/2 gap-1 opacity-0 animate-fade-in animation-delay-200">
-        {navItems.map((item, index) => (
-          <Button 
-            key={index}
-            variant="ghost" 
-            asChild 
-            className="text-sm lg:text-base px-3 lg:px-5 py-2 lg:py-3 hover:scale-105 transition-all duration-300"
-            onClick={(e) => handleNavItemClick(item, e)}
-          >
-            <a href={item.href}>{item.label}</a>
-          </Button>
-        ))}
+        {navItems.map((item, index) => {
+          if (item.href.startsWith('#')) {
+            // Handle anchor links
+            return (
+              <Button 
+                key={index}
+                variant="ghost" 
+                className="text-sm lg:text-base px-3 lg:px-5 py-2 lg:py-3 hover:scale-105 transition-all duration-300"
+                onClick={(e) => handleNavItemClick(item, e)}
+              >
+                {item.label}
+              </Button>
+            );
+          } else {
+            // Handle route links
+            return (
+              <Button 
+                key={index}
+                variant="ghost" 
+                asChild 
+                className="text-sm lg:text-base px-3 lg:px-5 py-2 lg:py-3 hover:scale-105 transition-all duration-300"
+              >
+                <Link to={item.href}>{item.label}</Link>
+              </Button>
+            );
+          }
+        })}
       </nav>
 
       {/* Mobile Menu Button - Aligned with text */}
@@ -88,17 +104,34 @@ const Header = () => {
       {isMobileMenuOpen && (
         <div className="absolute top-full left-0 right-0 bg-background/95 backdrop-blur-sm border-b border-border md:hidden z-50">
           <nav className="flex flex-col p-4 space-y-2">
-            {navItems.map((item, index) => (
-              <Button
-                key={index}
-                variant="ghost"
-                asChild
-                className="justify-start text-left py-3 hover:bg-secondary/50 transition-all duration-300"
-                onClick={(e) => handleNavItemClick(item, e)}
-              >
-                <a href={item.href}>{item.label}</a>
-              </Button>
-            ))}
+            {navItems.map((item, index) => {
+              if (item.href.startsWith('#')) {
+                // Handle anchor links
+                return (
+                  <Button
+                    key={index}
+                    variant="ghost"
+                    className="justify-start text-left py-3 hover:bg-secondary/50 transition-all duration-300"
+                    onClick={(e) => handleNavItemClick(item, e)}
+                  >
+                    {item.label}
+                  </Button>
+                );
+              } else {
+                // Handle route links
+                return (
+                  <Button
+                    key={index}
+                    variant="ghost"
+                    asChild
+                    className="justify-start text-left py-3 hover:bg-secondary/50 transition-all duration-300"
+                    onClick={() => setIsMobileMenuOpen(false)}
+                  >
+                    <Link to={item.href}>{item.label}</Link>
+                  </Button>
+                );
+              }
+            })}
           </nav>
         </div>
       )}

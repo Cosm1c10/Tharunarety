@@ -1,5 +1,6 @@
 import { ArrowDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
 import Header from '@/components/Header';
 const Hero = () => {
   return <section id="home" className="bg-background text-foreground min-h-screen font-sans relative">
@@ -53,10 +54,10 @@ const Hero = () => {
               </p>
               <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 sm:mt-8 justify-center opacity-0 animate-fade-in-up animation-delay-600 px-4">
                 <Button asChild className="bg-primary text-primary-foreground hover:bg-primary/90 hover:scale-105 transition-all duration-300 hover:shadow-lg text-sm sm:text-base">
-                  <a href="/engineering">Explore Engineering Projects</a>
+                  <Link to="/engineering">Explore Engineering Projects</Link>
                 </Button>
                 <Button variant="outline" asChild className="border-primary text-primary hover:bg-primary hover:text-primary-foreground hover:scale-105 transition-all duration-300 hover:shadow-lg text-sm sm:text-base">
-                  <a href="/Photography">Discover My Visual Stories</a>
+                  <Link to="/photography">Discover My Visual Stories</Link>
                 </Button>
               </div>
             </div>
